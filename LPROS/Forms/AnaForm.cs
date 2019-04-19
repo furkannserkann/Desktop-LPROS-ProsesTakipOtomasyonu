@@ -24,8 +24,6 @@ namespace LPROS
 
             this.Location = new Point(0, 0);
             this.Size = Screen.PrimaryScreen.WorkingArea.Size;
-            
-            // denenen
         }
 
         private void Form1_Load(object sender, EventArgs e)

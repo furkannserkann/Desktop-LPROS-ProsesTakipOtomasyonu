@@ -23,11 +23,10 @@ namespace LPROS.Forms_Panel
 
         private void YetkiRenk_Load(object sender, EventArgs e)
         {
-            Items.panelYetkiRenk = new PanelGridViewTwo
+            Items.panelYetkiRenk = new PanelGridView
             {
                 form = this,
-                //dataGridUst = datagridview_yetki,
-                dataGridAlt = datagridview_renk
+                dataGridview = datagridview_renk
             };
 
             //datagridview_yetki.DataSource = Sc.GET_DATATABLE(SqlConnector.TableYetki);

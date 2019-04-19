@@ -24,7 +24,7 @@ namespace LPROS.Custom
 
         public static PanelGridViewTwo panelDepartman { get; set; }
 
-        public static PanelGridViewTwo panelYetkiRenk { get; set; }
+        public static PanelGridView panelYetkiRenk { get; set; }
 
         public static PanelGridView panelMalzemeler { get; set; }
     }

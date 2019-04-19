@@ -31,13 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Add_Renk));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textbox_isim = new System.Windows.Forms.TextBox();
             this.panel_head = new System.Windows.Forms.Panel();
             this.label_head = new System.Windows.Forms.Label();
             this.pictureBox_close = new System.Windows.Forms.PictureBox();
             this.button_kaydet = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox_isim = new System.Windows.Forms.TextBox();
+            this.textbox_kod = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel_head.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_close)).BeginInit();
@@ -48,11 +48,11 @@
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.textBox5);
+            this.panel1.Controls.Add(this.textbox_isim);
             this.panel1.Controls.Add(this.panel_head);
             this.panel1.Controls.Add(this.button_kaydet);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.textBox_isim);
+            this.panel1.Controls.Add(this.textbox_kod);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -69,15 +69,15 @@
             this.label8.TabIndex = 64;
             this.label8.Text = "Renk İsmi";
             // 
-            // textBox5
+            // textbox_isim
             // 
-            this.textBox5.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox5.ForeColor = System.Drawing.Color.Black;
-            this.textBox5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textBox5.Location = new System.Drawing.Point(48, 162);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(211, 26);
-            this.textBox5.TabIndex = 63;
+            this.textbox_isim.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textbox_isim.ForeColor = System.Drawing.Color.Black;
+            this.textbox_isim.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.textbox_isim.Location = new System.Drawing.Point(48, 162);
+            this.textbox_isim.Name = "textbox_isim";
+            this.textbox_isim.Size = new System.Drawing.Size(211, 26);
+            this.textbox_isim.TabIndex = 63;
             // 
             // panel_head
             // 
@@ -141,15 +141,15 @@
             this.label7.TabIndex = 48;
             this.label7.Text = "Renk Kodu";
             // 
-            // textBox_isim
+            // textbox_kod
             // 
-            this.textBox_isim.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox_isim.ForeColor = System.Drawing.Color.Black;
-            this.textBox_isim.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textBox_isim.Location = new System.Drawing.Point(48, 94);
-            this.textBox_isim.Name = "textBox_isim";
-            this.textBox_isim.Size = new System.Drawing.Size(211, 26);
-            this.textBox_isim.TabIndex = 47;
+            this.textbox_kod.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textbox_kod.ForeColor = System.Drawing.Color.Black;
+            this.textbox_kod.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.textbox_kod.Location = new System.Drawing.Point(48, 94);
+            this.textbox_kod.Name = "textbox_kod";
+            this.textbox_kod.Size = new System.Drawing.Size(211, 26);
+            this.textbox_kod.TabIndex = 47;
             // 
             // Add_Renk
             // 
@@ -174,12 +174,12 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textbox_isim;
         private System.Windows.Forms.Panel panel_head;
         private System.Windows.Forms.Label label_head;
         private System.Windows.Forms.PictureBox pictureBox_close;
         private System.Windows.Forms.Button button_kaydet;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox_isim;
+        private System.Windows.Forms.TextBox textbox_kod;
     }
 }
