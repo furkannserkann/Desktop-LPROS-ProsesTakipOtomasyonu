@@ -22,7 +22,7 @@ namespace LPROS
         {
             InitializeComponent();
 
-            this.Location = new Point(0, 0);
+            this.Location = new Point(0, 0); 
 
             this.Size = Screen.PrimaryScreen.WorkingArea.Size;
         }
