@@ -1,4 +1,5 @@
-﻿using LPROS.Forms.Table.Add;
+﻿using LPROS.Custom;
+using LPROS.Forms.Table.Add;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -34,10 +35,16 @@ namespace LPROS.Forms_Panel_Control
 
         private void button_renk_guncelle_Click(object sender, EventArgs e)
         {
+            DataGridView Dtg = Items.panelYetkiRenk.dataGridview;
+
             Add_Renk addRenk = new Add_Renk()
             {
-                isUpdate = true
+                isUpdate = true,
+                _SelectedIsim = Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["İsim"].Value.ToString(),
+                _SelectedKod = Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["Renk Kodu"].Value.ToString(),
+                _SelectedId = Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["id"].Value.ToString()
             };
+
             addRenk.ShowDialog();
         }
     }
