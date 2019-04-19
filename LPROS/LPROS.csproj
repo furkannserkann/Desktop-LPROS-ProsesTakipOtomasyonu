@@ -63,6 +63,12 @@
     <Compile Include="Forms\CustomMessageDialog.Designer.cs">
       <DependentUpon>CustomMessageDialog.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\denemeeee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\denemeeee.Designer.cs">
+      <DependentUpon>denemeeee.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Raporlar.cs">
       <SubType>Form</SubType>
     </Compile>
