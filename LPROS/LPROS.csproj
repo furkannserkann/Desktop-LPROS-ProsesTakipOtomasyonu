@@ -1,0 +1,617 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4167D228-9E93-4CB4-A9B7-23B01BB1EE35}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LPROS</RootNamespace>
+    <AssemblyName>LPROS</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Custom\FormTasima.cs" />
+    <Compile Include="Custom\ItemControl\itemDepartmanControl.cs" />
+    <Compile Include="Custom\MySetting.cs" />
+    <Compile Include="Custom\PanelGridViewTwo.cs" />
+    <Compile Include="Custom\PanelProtezTalimatProses.cs" />
+    <Compile Include="Forms\Barkod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Barkod.Designer.cs">
+      <DependentUpon>Barkod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CustomMessageDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CustomMessageDialog.Designer.cs">
+      <DependentUpon>CustomMessageDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Raporlar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Raporlar.Designer.cs">
+      <DependentUpon>Raporlar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Table\Add\Add_Departman.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Table\Add\Add_Departman.Designer.cs">
+      <DependentUpon>Add_Departman.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Table\Add\Add_Doktor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Table\Add\Add_Doktor.Designer.cs">
+      <DependentUpon>Add_Doktor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Table\Add\Add_Hastane.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Table\Add\Add_Hastane.Designer.cs">
+      <DependentUpon>Add_Hastane.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Table\Add\Add_Malzemeler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Table\Add\Add_Malzemeler.Designer.cs">
+      <DependentUpon>Add_Malzemeler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Table\Add\Add_Personel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Table\Add\Add_Personel.Designer.cs">
+      <DependentUpon>Add_Personel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Table\Add\Add_Proses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Table\Add\Add_Proses.Designer.cs">
+      <DependentUpon>Add_Proses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Table\Add\Add_Protez.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Table\Add\Add_Protez.Designer.cs">
+      <DependentUpon>Add_Protez.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Table\Add\Add_Renk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Table\Add\Add_Renk.Designer.cs">
+      <DependentUpon>Add_Renk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Table\Add\Add_Siparis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Table\Add\Add_Siparis.Designer.cs">
+      <DependentUpon>Add_Siparis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Table\Add\Add_Talimat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Table\Add\Add_Talimat.Designer.cs">
+      <DependentUpon>Add_Talimat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Table\Add\Add_Yetki.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Table\Add\Add_Yetki.Designer.cs">
+      <DependentUpon>Add_Yetki.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Table\Info\Info_Personel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Table\Info\Info_Personel.Designer.cs">
+      <DependentUpon>Info_Personel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Table\Info\Info_Siparis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Table\Info\Info_Siparis.Designer.cs">
+      <DependentUpon>Info_Siparis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Table\Info\Info_Talimat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Table\Info\Info_Talimat.Designer.cs">
+      <DependentUpon>Info_Talimat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Table\Search\Search_Personel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Table\Search\Search_Personel.Designer.cs">
+      <DependentUpon>Search_Personel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Table\Search\Search_Siparis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Table\Search\Search_Siparis.Designer.cs">
+      <DependentUpon>Search_Siparis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Table\Update\Update_Departman.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Table\Update\Update_Departman.Designer.cs">
+      <DependentUpon>Update_Departman.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Table\Update\Update_Doktor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Table\Update\Update_Doktor.Designer.cs">
+      <DependentUpon>Update_Doktor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Table\Update\Update_Hastane.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Table\Update\Update_Hastane.Designer.cs">
+      <DependentUpon>Update_Hastane.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Table\Update\Update_Personel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Table\Update\Update_Personel.Designer.cs">
+      <DependentUpon>Update_Personel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Table\Update\Update_Proses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Table\Update\Update_Proses.Designer.cs">
+      <DependentUpon>Update_Proses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Table\Update\Update_Protez.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Table\Update\Update_Protez.Designer.cs">
+      <DependentUpon>Update_Protez.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Table\Update\Update_Renk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Table\Update\Update_Renk.Designer.cs">
+      <DependentUpon>Update_Renk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Table\Update\Update_Siparis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Table\Update\Update_Siparis.Designer.cs">
+      <DependentUpon>Update_Siparis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Table\Update\Update_Talimat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Table\Update\Update_Talimat.Designer.cs">
+      <DependentUpon>Update_Talimat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Table\Update\Update_Yetki.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Table\Update\Update_Yetki.Designer.cs">
+      <DependentUpon>Update_Yetki.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Panel\Departman.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Panel\Departman.Designer.cs">
+      <DependentUpon>Departman.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Panel\HastanelerDoktorlar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Panel\HastanelerDoktorlar.Designer.cs">
+      <DependentUpon>HastanelerDoktorlar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Panel\Malzemeler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Panel\Malzemeler.Designer.cs">
+      <DependentUpon>Malzemeler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Panel\Personel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Panel\Personel.Designer.cs">
+      <DependentUpon>Personel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Panel\Prosesler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Panel\Prosesler.Designer.cs">
+      <DependentUpon>Prosesler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Panel\Protezler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Panel\Protezler.Designer.cs">
+      <DependentUpon>Protezler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Panel\Protez_Talimat_Proses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Panel\Protez_Talimat_Proses.Designer.cs">
+      <DependentUpon>Protez_Talimat_Proses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Panel\Talimatlar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Panel\Talimatlar.Designer.cs">
+      <DependentUpon>Talimatlar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Panel\YetkiRenk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Panel\YetkiRenk.Designer.cs">
+      <DependentUpon>YetkiRenk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Panel_Control\DepartmanControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Panel_Control\DepartmanControl.Designer.cs">
+      <DependentUpon>DepartmanControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Panel_Control\HastanelerDoktorlarControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Panel_Control\HastanelerDoktorlarControl.Designer.cs">
+      <DependentUpon>HastanelerDoktorlarControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Panel_Control\MalzemelerControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Panel_Control\MalzemelerControl.Designer.cs">
+      <DependentUpon>MalzemelerControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Panel_Control\PersonelController.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Panel_Control\PersonelController.Designer.cs">
+      <DependentUpon>PersonelController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Panel_Control\Proses_Control.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Panel_Control\Proses_Control.Designer.cs">
+      <DependentUpon>Proses_Control.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Panel_Control\Protez_Control.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Panel_Control\Protez_Control.Designer.cs">
+      <DependentUpon>Protez_Control.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Panel_Control\Protez_Talimat_Proses_Control.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Panel_Control\Protez_Talimat_Proses_Control.Designer.cs">
+      <DependentUpon>Protez_Talimat_Proses_Control.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Panel_Control\SiparisControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Panel_Control\SiparisControl.Designer.cs">
+      <DependentUpon>SiparisControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom\Items.cs" />
+    <Compile Include="Custom\PanelGridView.cs" />
+    <Compile Include="Custom\SqlConnector.cs" />
+    <Compile Include="Forms\AnaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AnaForm.Designer.cs">
+      <DependentUpon>AnaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Panel\Ornek.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Panel\Ornek.Designer.cs">
+      <DependentUpon>Ornek.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Panel\Siparis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Panel\Siparis.Designer.cs">
+      <DependentUpon>Siparis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Panel_Control\Talimat_Control.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Panel_Control\Talimat_Control.Designer.cs">
+      <DependentUpon>Talimat_Control.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Panel_Control\YetkiRenkControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Panel_Control\YetkiRenkControl.Designer.cs">
+      <DependentUpon>YetkiRenkControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\RaporDepartman.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\RaporDepartman.Designer.cs">
+      <DependentUpon>RaporDepartman.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RaporHastaneDoktor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\RaporHastaneDoktor.Designer.cs">
+      <DependentUpon>RaporHastaneDoktor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RaporPersonel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\RaporPersonel.Designer.cs">
+      <DependentUpon>RaporPersonel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RaporProtezTalimatProses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\RaporProtezTalimatProses.Designer.cs">
+      <DependentUpon>RaporProtezTalimatProses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RaporSiparis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\RaporSiparis.Designer.cs">
+      <DependentUpon>RaporSiparis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RaporYetkiRenk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\RaporYetkiRenk.Designer.cs">
+      <DependentUpon>RaporYetkiRenk.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\Barkod.resx">
+      <DependentUpon>Barkod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CustomMessageDialog.resx">
+      <DependentUpon>CustomMessageDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Raporlar.resx">
+      <DependentUpon>Raporlar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Table\Add\Add_Departman.resx">
+      <DependentUpon>Add_Departman.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Table\Add\Add_Doktor.resx">
+      <DependentUpon>Add_Doktor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Table\Add\Add_Hastane.resx">
+      <DependentUpon>Add_Hastane.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Table\Add\Add_Malzemeler.resx">
+      <DependentUpon>Add_Malzemeler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Table\Add\Add_Personel.resx">
+      <DependentUpon>Add_Personel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Table\Add\Add_Proses.resx">
+      <DependentUpon>Add_Proses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Table\Add\Add_Protez.resx">
+      <DependentUpon>Add_Protez.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Table\Add\Add_Renk.resx">
+      <DependentUpon>Add_Renk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Table\Add\Add_Siparis.resx">
+      <DependentUpon>Add_Siparis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Table\Add\Add_Talimat.resx">
+      <DependentUpon>Add_Talimat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Table\Add\Add_Yetki.resx">
+      <DependentUpon>Add_Yetki.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Table\Info\Info_Personel.resx">
+      <DependentUpon>Info_Personel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Table\Info\Info_Siparis.resx">
+      <DependentUpon>Info_Siparis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Table\Info\Info_Talimat.resx">
+      <DependentUpon>Info_Talimat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Table\Search\Search_Personel.resx">
+      <DependentUpon>Search_Personel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Table\Search\Search_Siparis.resx">
+      <DependentUpon>Search_Siparis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Table\Update\Update_Departman.resx">
+      <DependentUpon>Update_Departman.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Table\Update\Update_Doktor.resx">
+      <DependentUpon>Update_Doktor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Table\Update\Update_Hastane.resx">
+      <DependentUpon>Update_Hastane.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Table\Update\Update_Personel.resx">
+      <DependentUpon>Update_Personel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Table\Update\Update_Proses.resx">
+      <DependentUpon>Update_Proses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Table\Update\Update_Protez.resx">
+      <DependentUpon>Update_Protez.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Table\Update\Update_Renk.resx">
+      <DependentUpon>Update_Renk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Table\Update\Update_Siparis.resx">
+      <DependentUpon>Update_Siparis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Table\Update\Update_Talimat.resx">
+      <DependentUpon>Update_Talimat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Table\Update\Update_Yetki.resx">
+      <DependentUpon>Update_Yetki.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Panel\Departman.resx">
+      <DependentUpon>Departman.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Panel\HastanelerDoktorlar.resx">
+      <DependentUpon>HastanelerDoktorlar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Panel\Malzemeler.resx">
+      <DependentUpon>Malzemeler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Panel\Personel.resx">
+      <DependentUpon>Personel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Panel\Prosesler.resx">
+      <DependentUpon>Prosesler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Panel\Protezler.resx">
+      <DependentUpon>Protezler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Panel\Protez_Talimat_Proses.resx">
+      <DependentUpon>Protez_Talimat_Proses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Panel\Talimatlar.resx">
+      <DependentUpon>Talimatlar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Panel\YetkiRenk.resx">
+      <DependentUpon>YetkiRenk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Panel_Control\DepartmanControl.resx">
+      <DependentUpon>DepartmanControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Panel_Control\HastanelerDoktorlarControl.resx">
+      <DependentUpon>HastanelerDoktorlarControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Panel_Control\MalzemelerControl.resx">
+      <DependentUpon>MalzemelerControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Panel_Control\PersonelController.resx">
+      <DependentUpon>PersonelController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Panel_Control\Proses_Control.resx">
+      <DependentUpon>Proses_Control.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Panel_Control\Protez_Control.resx">
+      <DependentUpon>Protez_Control.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Panel_Control\Protez_Talimat_Proses_Control.resx">
+      <DependentUpon>Protez_Talimat_Proses_Control.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Panel_Control\SiparisControl.resx">
+      <DependentUpon>SiparisControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AnaForm.resx">
+      <DependentUpon>AnaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Panel\Ornek.resx">
+      <DependentUpon>Ornek.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Panel\Siparis.resx">
+      <DependentUpon>Siparis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Panel_Control\Talimat_Control.resx">
+      <DependentUpon>Talimat_Control.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Panel_Control\YetkiRenkControl.resx">
+      <DependentUpon>YetkiRenkControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Reports\RaporDepartman.resx">
+      <DependentUpon>RaporDepartman.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RaporHastaneDoktor.resx">
+      <DependentUpon>RaporHastaneDoktor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RaporPersonel.resx">
+      <DependentUpon>RaporPersonel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RaporProtezTalimatProses.resx">
+      <DependentUpon>RaporProtezTalimatProses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RaporSiparis.resx">
+      <DependentUpon>RaporSiparis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RaporYetkiRenk.resx">
+      <DependentUpon>RaporYetkiRenk.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
