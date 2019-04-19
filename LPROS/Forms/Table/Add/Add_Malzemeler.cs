@@ -19,6 +19,7 @@ namespace LPROS.Forms.Table.Add
         }
 
         public bool isUpdate = false;
+        public String _Selectid, _Selectad, _Selectfiyat;
         SqlConnector Sc = new SqlConnector();
 
         private void Add_Malzemeler_Load(object sender, EventArgs e)
@@ -29,12 +30,24 @@ namespace LPROS.Forms.Table.Add
             {
                 label_head.Text = "Malzeme Güncelle";
                 button_kaydet.Text = "Malzeme Bilgilerini Güncelle";
+                textbox_isim.Text = _Selectad;
+                masktextbox_fiyat.Text = _Selectfiyat;
+                button_kaydet.Click += button_guncelle_Click;               
+            }
+            else
+            {
+                button_kaydet.Click += button_kaydet_Click;
             }
         }
 
         private void button_kaydet_Click(object sender, EventArgs e)
         {
             MalzemeKaydet();
+        }
+
+        private void button_guncelle_Click(object sender, EventArgs e)
+        {
+            MalzemeGuncelle();
         }
 
         private void MalzemeKaydet()
@@ -97,6 +110,41 @@ namespace LPROS.Forms.Table.Add
                 return true;
             }
             return base.ProcessCmdKey(ref msg, keyData);
+        }
+
+        private void MalzemeGuncelle()
+        {
+            String ad = textbox_isim.Text, fiyat = masktextbox_fiyat.Text.Replace(" ", "");
+            String _UpdateCode = "update Malzemeler set adi=@parametre1, fiyat=@parametre2 Where Id=@parametre3";
+
+            if (ad != "" && fiyat!= ",")
+            {
+                String _QueryKod = "select * from Malzemeler Where adi=@parametre1 and Id!=@parametre2";
+
+                if (Sc.GET_DATATABLE(_QueryKod, new String[] { ad, _Selectid }).Rows.Count > 0)
+                {
+                    MessageBox.Show("Girilen Ad Kayıtlı!", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    textbox_isim.Focus();
+                }
+                else if (Sc.QUERY_TABLE(_UpdateCode, new String[] { ad, fiyat, _Selectid }))
+                {
+                    MessageBox.Show("Malzeme Bilgileri Güncellendi!", "Kayıt", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    Items.panelMalzemeler.dataGridview.DataSource = Sc.GET_DATATABLE(SqlConnector.TableMalzemeler);
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("İşlem Başarısız!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Lüten Boş Yerleri Doldurunuz!", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                if (ad == "")
+                    textbox_isim.Focus();
+                else if (fiyat == "")
+                    masktextbox_fiyat.Focus();
+            }
         }
     }
 }
