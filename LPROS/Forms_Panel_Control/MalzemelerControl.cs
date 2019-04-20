@@ -60,45 +60,52 @@ namespace LPROS.Forms_Panel_Control
 
         private void button4_Click(object sender, EventArgs e)
         {
+            
             DataGridView Dtg = Items.panelMalzemeler.dataGridview;
-            //string malzeme_id = Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells[0].Value.ToString();
-            if (textBox1.Visible == false && textBox4.Text !="")
-            {
-                Items.panelMalzemeler.dataGridview.DataSource = Sc.GET_DATATABLE(SqlConnector.TableMalzemeler + " where fiyat=" + textBox4.Text);
-            }
-            else if (textBox1.Visible == true && textBox4.Text != "" && textBox1.Text != "")
-            {
-                Items.panelMalzemeler.dataGridview.DataSource = Sc.GET_DATATABLE(SqlConnector.TableMalzemeler + " where fiyat BETWEEN " +  textBox4.Text + " AND " +textBox1.Text);
-            }
-            else
+            if (textBox5.Text == "" && textBox1.Text == "" && textBox4.Text == "")
             {
                 Items.panelMalzemeler.dataGridview.DataSource = Sc.GET_DATATABLE(SqlConnector.TableMalzemeler);
             }
-            Items.panelMalzemeler.dataGridview.Columns[0].Visible = false;
+            else if (textBox5.Text == "")
+            { 
+                if (textBox4.Text !="" && textBox1.Text == "")
+                {
+                    Items.panelMalzemeler.dataGridview.DataSource = Sc.GET_DATATABLE(SqlConnector.TableMalzemeler + " where fiyat<=@parametre1", new string[] { textBox4.Text});
+                }
+                else if (textBox1.Text != "" && textBox4.Text == "")
+                {
+                    Items.panelMalzemeler.dataGridview.DataSource = Sc.GET_DATATABLE(SqlConnector.TableMalzemeler + " where fiyat>=@parametre1", new string[] { textBox1.Text });
+                }
+                else if (textBox4.Text != "" && textBox1.Text != "" && Convert.ToInt32(textBox1.Text) <= Convert.ToInt32(textBox4.Text))
+                {
+                    Items.panelMalzemeler.dataGridview.DataSource = Sc.GET_DATATABLE(SqlConnector.TableMalzemeler + " where fiyat BETWEEN @parametre1 AND @parametre2", new string[] { textBox1.Text, textBox4.Text });
+                }
+            }
+            else if (textBox5.Text != "")
+            {
+                if (textBox4.Text != "")
+                {
+                    Items.panelMalzemeler.dataGridview.DataSource = Sc.GET_DATATABLE(SqlConnector.TableMalzemeler + " where  fiyat<=@parametre1 AND adi=@parametre2 ", new string[] { textBox4.Text, textBox5.Text});
+                }
+                else if (textBox1.Text != "")
+                {
+                    Items.panelMalzemeler.dataGridview.DataSource = Sc.GET_DATATABLE(SqlConnector.TableMalzemeler + " where fiyat>=@parametre1  AND adi=@parametre2", new string[] { textBox1.Text, textBox5.Text });
+                }
+                else if (textBox4.Text != "" && textBox1.Text != "" && Convert.ToInt16(textBox1.Text) < Convert.ToInt16(textBox4.Text))
+                {
+                    Items.panelMalzemeler.dataGridview.DataSource = Sc.GET_DATATABLE(SqlConnector.TableMalzemeler + " where adi=@parametre1 AND fiyat BETWEEN @parametre2 AND @parametre3", new string[] { textBox5.Text, textBox1.Text,textBox4.Text });
+                }
+                else
+                {
+                    Items.panelMalzemeler.dataGridview.DataSource = Sc.GET_DATATABLE(SqlConnector.TableMalzemeler + " where adi=@parametre1", new string[] { textBox5.Text });
+                }
+            }
         }
-
-        private void checkBox2_CheckedChanged(object sender, EventArgs e)
-        {
-           if(checkBox2.Checked==true) checkBox1.Checked = false;
-            textBox1.Visible = true;
-            label4.Visible = true;
-        }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox1.Checked == true) checkBox2.Checked = false;
-            textBox1.Visible = false;
-            label4.Visible = false;
-        }
-
         private void button3_Click(object sender, EventArgs e)
         {
             textBox1.Text = "";
             textBox4.Text = "";
-            checkBox1.Checked = true;
-            checkBox2.Checked = false;
-            textBox1.Visible = false;
-            label4.Visible = false;
+            textBox5.Text = "";
 
         }
     }

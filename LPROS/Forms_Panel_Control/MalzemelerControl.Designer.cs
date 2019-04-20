@@ -35,8 +35,6 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button_malzeme_guncelle = new System.Windows.Forms.Button();
             this.ımageList2 = new System.Windows.Forms.ImageList(this.components);
@@ -44,6 +42,7 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button_malzeme_ekle = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // ımageList1
@@ -66,14 +65,13 @@
             this.label4.Size = new System.Drawing.Size(105, 16);
             this.label4.TabIndex = 95;
             this.label4.Text = "Maksimum Fiyat";
-            this.label4.Visible = false;
             // 
             // textBox4
             // 
             this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F);
             this.textBox4.ForeColor = System.Drawing.Color.Black;
             this.textBox4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textBox4.Location = new System.Drawing.Point(584, 7);
+            this.textBox4.Location = new System.Drawing.Point(584, 46);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(131, 23);
             this.textBox4.TabIndex = 94;
@@ -98,42 +96,15 @@
             this.textBox5.Size = new System.Drawing.Size(131, 23);
             this.textBox5.TabIndex = 92;
             // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Checked = true;
-            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.checkBox1.Location = new System.Drawing.Point(472, 7);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(106, 19);
-            this.checkBox1.TabIndex = 143;
-            this.checkBox1.Text = "Malzeme Fiyat";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.checkBox2.Location = new System.Drawing.Point(472, 26);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(79, 17);
-            this.checkBox2.TabIndex = 145;
-            this.checkBox2.Text = "Fiyat Aralığı";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
-            // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F);
             this.textBox1.ForeColor = System.Drawing.Color.Black;
             this.textBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textBox1.Location = new System.Drawing.Point(584, 47);
+            this.textBox1.Location = new System.Drawing.Point(584, 9);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(131, 23);
             this.textBox1.TabIndex = 144;
-            this.textBox1.Visible = false;
             // 
             // button_malzeme_guncelle
             // 
@@ -266,15 +237,24 @@
             this.button_malzeme_ekle.UseVisualStyleBackColor = false;
             this.button_malzeme_ekle.Click += new System.EventHandler(this.button_ekle_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.label1.Location = new System.Drawing.Point(469, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(93, 16);
+            this.label1.TabIndex = 145;
+            this.label1.Text = "Minimum Fiyat";
+            // 
             // MalzemelerControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1150, 77);
-            this.Controls.Add(this.checkBox2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.button_malzeme_guncelle);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button4);
@@ -305,9 +285,8 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ImageList ımageList2;
+        private System.Windows.Forms.Label label1;
     }
 }
