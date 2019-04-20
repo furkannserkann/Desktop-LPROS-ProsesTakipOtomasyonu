@@ -264,21 +264,21 @@ namespace LPROS.Forms.Table.Add
                     MessageBox.Show("Girilen Telefon Numarası Kayıtlı!", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     textBox_telefon.Focus();
                 }
-                else if (Sc.QUERY_TABLE(_UpdateCode, new String[] { isim, kod, _SelectedId }))
-                {
-                    MessageBox.Show("Personel Bilgileri Güncellendi!", "Kayıt", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                    Items.panelPersonel.dataGridview.DataSource = Sc.GET_DATATABLE(SqlConnector.TablePersonel);
-                    this.Close();
-                }
-                else
-                {
-                    MessageBox.Show("İşlem Başarısız!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
+                //else if (Sc.QUERY_TABLE(_UpdateCode, new String[] { isim, kod, _SelectedId }))
+                //{
+                //    MessageBox.Show("Personel Bilgileri Güncellendi!", "Kayıt", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                //    Items.panelPersonel.dataGridview.DataSource = Sc.GET_DATATABLE(SqlConnector.TablePersonel);
+                //    this.Close();
+                //}
+                //else
+                //{
+                //    MessageBox.Show("İşlem Başarısız!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //}
             }
             else
             {
                 MessageBox.Show("Lüten Boş Yerleri Doldurunuz!", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                textbox_isim.Focus();
+                //textbox_isim.Focus();
             }
         }
 

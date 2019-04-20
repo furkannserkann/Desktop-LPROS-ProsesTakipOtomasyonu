@@ -64,7 +64,7 @@ namespace LPROS.Custom
             get
             {
                 return "SELECT id as [ID], isim as [İsim], soyisim as [Soyisim], " +
-                    "(CASE WHEN aktif = 1 THEN 'Aktif' ELSE 'Aktif Değil' END) as [Durumu] " +
+                    "(CASE WHEN aktif = 1 THEN 'Aktif' ELSE 'Pasif' END) as [Durumu] " +
                     "from Doktorlar where hastane_id=@parametre1";
             }
         }
