@@ -16,6 +16,7 @@ namespace LPROS.Forms.Table.Add
         public Add_Renk()
         {
             InitializeComponent();
+            // asd
         }
 
         public bool isUpdate = false;

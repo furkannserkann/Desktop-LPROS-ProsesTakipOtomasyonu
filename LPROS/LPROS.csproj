@@ -51,6 +51,7 @@
     <Compile Include="Custom\MySetting.cs" />
     <Compile Include="Custom\PanelGridViewTwo.cs" />
     <Compile Include="Custom\PanelProtezTalimatProses.cs" />
+    <Compile Include="Custom\User.cs" />
     <Compile Include="Forms\Barkod.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -30,26 +30,26 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Add_Siparis));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.combobox_renk = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.combobox_protez = new System.Windows.Forms.ComboBox();
+            this.textbox_hasta_adsoyad = new System.Windows.Forms.TextBox();
             this.panel_head = new System.Windows.Forms.Panel();
             this.label_head = new System.Windows.Forms.Label();
             this.pictureBox_close = new System.Windows.Forms.PictureBox();
-            this.button9 = new System.Windows.Forms.Button();
+            this.button_kaydet = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.dateTimePicker_teslimattarihi = new System.Windows.Forms.DateTimePicker();
+            this.datepicker_teslimat = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePicker_siparistarihi = new System.Windows.Forms.DateTimePicker();
+            this.datepicker_siparis = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox_fisno = new System.Windows.Forms.TextBox();
+            this.textbox_fisno = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.comboBox_doktor = new System.Windows.Forms.ComboBox();
+            this.combobox_doktor = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.comboBox_hastane = new System.Windows.Forms.ComboBox();
+            this.combobox_hastane = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel_head.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_close)).BeginInit();
@@ -60,22 +60,22 @@
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.comboBox2);
+            this.panel1.Controls.Add(this.combobox_renk);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.combobox_protez);
+            this.panel1.Controls.Add(this.textbox_hasta_adsoyad);
             this.panel1.Controls.Add(this.panel_head);
-            this.panel1.Controls.Add(this.button9);
+            this.panel1.Controls.Add(this.button_kaydet);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.dateTimePicker_teslimattarihi);
+            this.panel1.Controls.Add(this.datepicker_teslimat);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.dateTimePicker_siparistarihi);
+            this.panel1.Controls.Add(this.datepicker_siparis);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.textBox_fisno);
+            this.panel1.Controls.Add(this.textbox_fisno);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.comboBox_doktor);
+            this.panel1.Controls.Add(this.combobox_doktor);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.comboBox_hastane);
+            this.panel1.Controls.Add(this.combobox_hastane);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -83,22 +83,23 @@
             this.panel1.Size = new System.Drawing.Size(658, 391);
             this.panel1.TabIndex = 41;
             // 
-            // label3
+            // label8
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Righteous", 9.5F);
-            this.label3.Location = new System.Drawing.Point(46, 121);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(74, 17);
-            this.label3.TabIndex = 58;
-            this.label3.Text = "Protez Tipi";
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Righteous", 9.5F);
+            this.label8.Location = new System.Drawing.Point(385, 236);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(37, 17);
+            this.label8.TabIndex = 60;
+            this.label8.Text = "Renk";
             // 
-            // comboBox1
+            // combobox_renk
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Font = new System.Drawing.Font("Montserrat", 11.25F);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.combobox_renk.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combobox_renk.Font = new System.Drawing.Font("Montserrat", 11.25F);
+            this.combobox_renk.FormattingEnabled = true;
+            this.combobox_renk.IntegralHeight = false;
+            this.combobox_renk.Items.AddRange(new object[] {
             "a",
             "b",
             "1",
@@ -110,20 +111,52 @@
             "as",
             "da",
             "sd"});
-            this.comboBox1.Location = new System.Drawing.Point(49, 140);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(211, 29);
-            this.comboBox1.TabIndex = 57;
+            this.combobox_renk.Location = new System.Drawing.Point(388, 255);
+            this.combobox_renk.Name = "combobox_renk";
+            this.combobox_renk.Size = new System.Drawing.Size(211, 29);
+            this.combobox_renk.TabIndex = 59;
             // 
-            // textBox1
+            // label3
             // 
-            this.textBox1.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox1.ForeColor = System.Drawing.Color.Black;
-            this.textBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textBox1.Location = new System.Drawing.Point(388, 86);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(211, 26);
-            this.textBox1.TabIndex = 48;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Righteous", 9.5F);
+            this.label3.Location = new System.Drawing.Point(46, 121);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(74, 17);
+            this.label3.TabIndex = 58;
+            this.label3.Text = "Protez Tipi";
+            // 
+            // combobox_protez
+            // 
+            this.combobox_protez.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combobox_protez.Font = new System.Drawing.Font("Montserrat", 11.25F);
+            this.combobox_protez.FormattingEnabled = true;
+            this.combobox_protez.Items.AddRange(new object[] {
+            "a",
+            "b",
+            "1",
+            "2",
+            "3",
+            "asd",
+            "asd",
+            "asd",
+            "as",
+            "da",
+            "sd"});
+            this.combobox_protez.Location = new System.Drawing.Point(49, 140);
+            this.combobox_protez.Name = "combobox_protez";
+            this.combobox_protez.Size = new System.Drawing.Size(211, 29);
+            this.combobox_protez.TabIndex = 57;
+            // 
+            // textbox_hasta_adsoyad
+            // 
+            this.textbox_hasta_adsoyad.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textbox_hasta_adsoyad.ForeColor = System.Drawing.Color.Black;
+            this.textbox_hasta_adsoyad.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.textbox_hasta_adsoyad.Location = new System.Drawing.Point(388, 86);
+            this.textbox_hasta_adsoyad.Name = "textbox_hasta_adsoyad";
+            this.textbox_hasta_adsoyad.Size = new System.Drawing.Size(211, 26);
+            this.textbox_hasta_adsoyad.TabIndex = 48;
             // 
             // panel_head
             // 
@@ -161,22 +194,21 @@
             this.pictureBox_close.TabIndex = 0;
             this.pictureBox_close.TabStop = false;
             // 
-            // button9
+            // button_kaydet
             // 
-            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-            this.button9.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Righteous", 12F);
-            this.button9.ForeColor = System.Drawing.Color.White;
-            this.button9.Location = new System.Drawing.Point(388, 316);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(211, 50);
-            this.button9.TabIndex = 55;
-            this.button9.Text = "Siparişi Kaydet";
-            this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button9.UseVisualStyleBackColor = false;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
+            this.button_kaydet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            this.button_kaydet.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_kaydet.FlatAppearance.BorderSize = 0;
+            this.button_kaydet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_kaydet.Font = new System.Drawing.Font("Righteous", 12F);
+            this.button_kaydet.ForeColor = System.Drawing.Color.White;
+            this.button_kaydet.Location = new System.Drawing.Point(388, 316);
+            this.button_kaydet.Name = "button_kaydet";
+            this.button_kaydet.Size = new System.Drawing.Size(211, 50);
+            this.button_kaydet.TabIndex = 55;
+            this.button_kaydet.Text = "Siparişi Kaydet";
+            this.button_kaydet.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button_kaydet.UseVisualStyleBackColor = false;
             // 
             // label2
             // 
@@ -188,14 +220,14 @@
             this.label2.TabIndex = 54;
             this.label2.Text = "Teslimat Tarihi";
             // 
-            // dateTimePicker_teslimattarihi
+            // datepicker_teslimat
             // 
-            this.dateTimePicker_teslimattarihi.Font = new System.Drawing.Font("Yu Gothic", 10F);
-            this.dateTimePicker_teslimattarihi.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker_teslimattarihi.Location = new System.Drawing.Point(49, 255);
-            this.dateTimePicker_teslimattarihi.Name = "dateTimePicker_teslimattarihi";
-            this.dateTimePicker_teslimattarihi.Size = new System.Drawing.Size(211, 29);
-            this.dateTimePicker_teslimattarihi.TabIndex = 53;
+            this.datepicker_teslimat.Font = new System.Drawing.Font("Yu Gothic", 10F);
+            this.datepicker_teslimat.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.datepicker_teslimat.Location = new System.Drawing.Point(49, 255);
+            this.datepicker_teslimat.Name = "datepicker_teslimat";
+            this.datepicker_teslimat.Size = new System.Drawing.Size(211, 29);
+            this.datepicker_teslimat.TabIndex = 53;
             // 
             // label1
             // 
@@ -207,15 +239,15 @@
             this.label1.TabIndex = 52;
             this.label1.Text = "Sipariş Tarihi";
             // 
-            // dateTimePicker_siparistarihi
+            // datepicker_siparis
             // 
-            this.dateTimePicker_siparistarihi.Checked = false;
-            this.dateTimePicker_siparistarihi.Font = new System.Drawing.Font("Yu Gothic", 10F);
-            this.dateTimePicker_siparistarihi.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker_siparistarihi.Location = new System.Drawing.Point(49, 195);
-            this.dateTimePicker_siparistarihi.Name = "dateTimePicker_siparistarihi";
-            this.dateTimePicker_siparistarihi.Size = new System.Drawing.Size(211, 29);
-            this.dateTimePicker_siparistarihi.TabIndex = 51;
+            this.datepicker_siparis.Checked = false;
+            this.datepicker_siparis.Font = new System.Drawing.Font("Yu Gothic", 10F);
+            this.datepicker_siparis.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.datepicker_siparis.Location = new System.Drawing.Point(49, 195);
+            this.datepicker_siparis.Name = "datepicker_siparis";
+            this.datepicker_siparis.Size = new System.Drawing.Size(211, 29);
+            this.datepicker_siparis.TabIndex = 51;
             // 
             // label7
             // 
@@ -228,17 +260,17 @@
             this.label7.TabIndex = 48;
             this.label7.Text = "Fiş Numarası";
             // 
-            // textBox_fisno
+            // textbox_fisno
             // 
-            this.textBox_fisno.Enabled = false;
-            this.textBox_fisno.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox_fisno.ForeColor = System.Drawing.Color.Black;
-            this.textBox_fisno.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textBox_fisno.Location = new System.Drawing.Point(49, 86);
-            this.textBox_fisno.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox_fisno.Name = "textBox_fisno";
-            this.textBox_fisno.Size = new System.Drawing.Size(211, 26);
-            this.textBox_fisno.TabIndex = 47;
+            this.textbox_fisno.Enabled = false;
+            this.textbox_fisno.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textbox_fisno.ForeColor = System.Drawing.Color.Black;
+            this.textbox_fisno.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.textbox_fisno.Location = new System.Drawing.Point(49, 86);
+            this.textbox_fisno.Margin = new System.Windows.Forms.Padding(0);
+            this.textbox_fisno.Name = "textbox_fisno";
+            this.textbox_fisno.Size = new System.Drawing.Size(211, 26);
+            this.textbox_fisno.TabIndex = 47;
             // 
             // label6
             // 
@@ -250,13 +282,13 @@
             this.label6.TabIndex = 46;
             this.label6.Text = "Doktor";
             // 
-            // comboBox_doktor
+            // combobox_doktor
             // 
-            this.comboBox_doktor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox_doktor.Enabled = false;
-            this.comboBox_doktor.Font = new System.Drawing.Font("Montserrat", 11.25F);
-            this.comboBox_doktor.FormattingEnabled = true;
-            this.comboBox_doktor.Items.AddRange(new object[] {
+            this.combobox_doktor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combobox_doktor.Enabled = false;
+            this.combobox_doktor.Font = new System.Drawing.Font("Montserrat", 11.25F);
+            this.combobox_doktor.FormattingEnabled = true;
+            this.combobox_doktor.Items.AddRange(new object[] {
             "a",
             "b",
             "1",
@@ -268,10 +300,10 @@
             "as",
             "da",
             "sd"});
-            this.comboBox_doktor.Location = new System.Drawing.Point(388, 196);
-            this.comboBox_doktor.Name = "comboBox_doktor";
-            this.comboBox_doktor.Size = new System.Drawing.Size(211, 29);
-            this.comboBox_doktor.TabIndex = 45;
+            this.combobox_doktor.Location = new System.Drawing.Point(388, 196);
+            this.combobox_doktor.Name = "combobox_doktor";
+            this.combobox_doktor.Size = new System.Drawing.Size(211, 29);
+            this.combobox_doktor.TabIndex = 45;
             // 
             // label5
             // 
@@ -283,12 +315,12 @@
             this.label5.TabIndex = 44;
             this.label5.Text = "Hastane";
             // 
-            // comboBox_hastane
+            // combobox_hastane
             // 
-            this.comboBox_hastane.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox_hastane.Font = new System.Drawing.Font("Montserrat", 11.25F);
-            this.comboBox_hastane.FormattingEnabled = true;
-            this.comboBox_hastane.Items.AddRange(new object[] {
+            this.combobox_hastane.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combobox_hastane.Font = new System.Drawing.Font("Montserrat", 11.25F);
+            this.combobox_hastane.FormattingEnabled = true;
+            this.combobox_hastane.Items.AddRange(new object[] {
             "a",
             "b",
             "1",
@@ -300,11 +332,11 @@
             "as",
             "da",
             "sd"});
-            this.comboBox_hastane.Location = new System.Drawing.Point(388, 140);
-            this.comboBox_hastane.Name = "comboBox_hastane";
-            this.comboBox_hastane.Size = new System.Drawing.Size(211, 29);
-            this.comboBox_hastane.TabIndex = 43;
-            this.comboBox_hastane.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            this.combobox_hastane.Location = new System.Drawing.Point(388, 140);
+            this.combobox_hastane.Name = "combobox_hastane";
+            this.combobox_hastane.Size = new System.Drawing.Size(211, 29);
+            this.combobox_hastane.TabIndex = 43;
+            this.combobox_hastane.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -315,39 +347,6 @@
             this.label4.Size = new System.Drawing.Size(110, 17);
             this.label4.TabIndex = 42;
             this.label4.Text = "Hasta Ad Soyad";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Righteous", 9.5F);
-            this.label8.Location = new System.Drawing.Point(385, 236);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(37, 17);
-            this.label8.TabIndex = 60;
-            this.label8.Text = "Renk";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.Font = new System.Drawing.Font("Montserrat", 11.25F);
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.IntegralHeight = false;
-            this.comboBox2.Items.AddRange(new object[] {
-            "a",
-            "b",
-            "1",
-            "2",
-            "3",
-            "asd",
-            "asd",
-            "asd",
-            "as",
-            "da",
-            "sd"});
-            this.comboBox2.Location = new System.Drawing.Point(388, 255);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(211, 29);
-            this.comboBox2.TabIndex = 59;
             // 
             // Add_Siparis
             // 
@@ -374,22 +373,22 @@
         private System.Windows.Forms.Panel panel_head;
         private System.Windows.Forms.Label label_head;
         private System.Windows.Forms.PictureBox pictureBox_close;
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button_kaydet;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker_teslimattarihi;
+        private System.Windows.Forms.DateTimePicker datepicker_teslimat;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker_siparistarihi;
+        private System.Windows.Forms.DateTimePicker datepicker_siparis;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox_fisno;
+        private System.Windows.Forms.TextBox textbox_fisno;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboBox_doktor;
+        private System.Windows.Forms.ComboBox combobox_doktor;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox_hastane;
+        private System.Windows.Forms.ComboBox combobox_hastane;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textbox_hasta_adsoyad;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox combobox_protez;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox combobox_renk;
     }
 }

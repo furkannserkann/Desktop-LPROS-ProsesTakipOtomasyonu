@@ -23,7 +23,7 @@ namespace LPROS.Custom
                 return "SELECT s.id, fis_no as [Fiş Numarası], p.ad + ' ' + p.soyad as [Kayıt Personeli], " +
                     "siparis_tarihi as [Sipariş Tarihi], teslim_tarihi as [Teslim Tarihi], h.ad as [Hastane], " +
                     "d.isim + ' ' + d.soyisim as [Doktor], hasta_ad_soyad as [Hasta İsmi], " +
-                    "pr.adi as [Protez Tipi], doktor_aciklama as [Doktor Açıklaması] from Siparis as s " +
+                    "pr.adi as [Protez Tipi] from Siparis as s " +
                     "inner join Personel as p on s.personel_id = p.personel_no " +
                     "inner join Doktorlar as d on d.id = s.doktor_id " +
                     "inner join Hastane as h on h.Id = d.hastane_id " +

@@ -58,7 +58,7 @@
             // 
             this.label_head.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label_head.Font = new System.Drawing.Font("Righteous", 12F);
+            this.label_head.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label_head.ForeColor = System.Drawing.Color.White;
             this.label_head.Location = new System.Drawing.Point(12, 0);
             this.label_head.Name = "label_head";
@@ -85,7 +85,7 @@
             this.button_kaydet.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button_kaydet.FlatAppearance.BorderSize = 0;
             this.button_kaydet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_kaydet.Font = new System.Drawing.Font("Righteous", 12F);
+            this.button_kaydet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.button_kaydet.ForeColor = System.Drawing.Color.White;
             this.button_kaydet.Location = new System.Drawing.Point(48, 223);
             this.button_kaydet.Name = "button_kaydet";
@@ -94,36 +94,35 @@
             this.button_kaydet.Text = "Malzemeyi Kaydet";
             this.button_kaydet.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button_kaydet.UseVisualStyleBackColor = false;
-            this.button_kaydet.Click += new System.EventHandler(this.button_kaydet_Click);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Righteous", 9.5F);
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
             this.label7.Location = new System.Drawing.Point(45, 82);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(88, 17);
+            this.label7.Size = new System.Drawing.Size(90, 16);
             this.label7.TabIndex = 48;
             this.label7.Text = "Malzeme İsmi";
             // 
             // textbox_isim
             // 
-            this.textbox_isim.Font = new System.Drawing.Font("Montserrat", 11.25F);
+            this.textbox_isim.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.textbox_isim.ForeColor = System.Drawing.Color.Black;
             this.textbox_isim.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.textbox_isim.Location = new System.Drawing.Point(48, 101);
             this.textbox_isim.Name = "textbox_isim";
-            this.textbox_isim.Size = new System.Drawing.Size(211, 26);
+            this.textbox_isim.Size = new System.Drawing.Size(211, 24);
             this.textbox_isim.TabIndex = 47;
             this.textbox_isim.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textbox_kayit_KeyDown);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Righteous", 9.5F);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
             this.label4.Location = new System.Drawing.Point(45, 136);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(42, 17);
+            this.label4.Size = new System.Drawing.Size(40, 16);
             this.label4.TabIndex = 42;
             this.label4.Text = "Fiyatı";
             // 
@@ -145,11 +144,11 @@
             // 
             // masktextbox_fiyat
             // 
-            this.masktextbox_fiyat.Font = new System.Drawing.Font("Montserrat", 11.25F);
+            this.masktextbox_fiyat.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.masktextbox_fiyat.Location = new System.Drawing.Point(48, 155);
             this.masktextbox_fiyat.Mask = "00000.0";
             this.masktextbox_fiyat.Name = "masktextbox_fiyat";
-            this.masktextbox_fiyat.Size = new System.Drawing.Size(211, 26);
+            this.masktextbox_fiyat.Size = new System.Drawing.Size(211, 24);
             this.masktextbox_fiyat.TabIndex = 57;
             this.masktextbox_fiyat.Text = "000";
             this.masktextbox_fiyat.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textbox_kayit_KeyDown);
