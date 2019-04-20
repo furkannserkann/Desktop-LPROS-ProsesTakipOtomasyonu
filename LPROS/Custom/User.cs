@@ -8,6 +8,6 @@ namespace LPROS.Custom
 {
     class User
     {
-        static public int id { get; set; }
+        static public int id { get { return 1; } }
     }
 }

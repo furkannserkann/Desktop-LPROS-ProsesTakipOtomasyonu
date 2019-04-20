@@ -84,7 +84,7 @@ namespace LPROS.Forms.Table.Add
 
                         for (int k = 0; k < prosesCount.Rows.Count; k++)
                         {
-                            Sc.ADD_TABLE("Anlik_Proses", new String[] { "talimat_id", "proses_id", "proses_sirasi", "personel_no" },
+                            Sc.ADD_TABLE("Anlik_Prosesler", new String[] { "talimat_id", "proses_id", "proses_sirasi", "personel_no", "siparis_id" },
                                                          new String[] { talimatCount.Rows[i]["talimat_id"].ToString(), prosesCount.Rows[k]["proses_id"].ToString(), prosesCount.Rows[k]["sira"].ToString(), User.id.ToString() });
                         }
                     }

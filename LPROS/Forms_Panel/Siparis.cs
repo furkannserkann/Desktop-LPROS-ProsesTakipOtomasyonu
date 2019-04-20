@@ -41,7 +41,11 @@ namespace LPROS.Panel_Forms
 
             if (e.ColumnIndex == senderGrid.Columns["ayrinti"].Index && e.RowIndex >= 0)
             {
-                (new Info_Siparis()).ShowDialog();
+                Info_Siparis infSiparis = new Info_Siparis()
+                {
+                    siparisid = datagridview_Siparis.Rows[e.RowIndex].Cells["id"].Value.ToString()
+                };
+                infSiparis.ShowDialog();
             }
         }
     }
