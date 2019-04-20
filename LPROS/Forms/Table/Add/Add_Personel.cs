@@ -317,7 +317,7 @@ namespace LPROS.Forms.Table.Add
             else
             {
                 MessageBox.Show("Lüten Boş Yerleri Doldurunuz!", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                
+                textbox_isim.Focus();
             }
         }
 

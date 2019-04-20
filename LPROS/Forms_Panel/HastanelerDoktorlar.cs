@@ -59,12 +59,18 @@ namespace LPROS.Forms_Panel
         private void datagridview_hastane_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             var senderGrid = (DataGridView)sender;
+            
 
             if (e.ColumnIndex == senderGrid.Columns["update"].Index && e.RowIndex >= 0)
             {
+                DataGridView Dtg = Items.panelHastaneDoktor.dataGridUst;
                 Add_Hastane addHastane = new Add_Hastane()
                 {
-                    isUpdate = true
+                    isUpdate = true,
+                    _Select_id = Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["ID"].Value.ToString(),
+                    _Select_kod = Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["Kod"].Value.ToString(),
+                    _Select_ad = Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["Adı"].Value.ToString(),
+                    _Select_adres = Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["Adres"].Value.ToString()
                 };
 
                 addHastane.ShowDialog();
@@ -74,12 +80,20 @@ namespace LPROS.Forms_Panel
         private void datagridview_doktor_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             var senderGrid = (DataGridView)sender;
+            DataGridView Dtg2 = Items.panelHastaneDoktor.dataGridUst;
+            DataGridView Dtg = Items.panelHastaneDoktor.dataGridAlt;
 
             if (e.ColumnIndex == senderGrid.Columns["duzenle"].Index && e.RowIndex >= 0)
             {
                 Add_Doktor addDoktor = new Add_Doktor()
                 {
-                    isUpdate = true
+                    isUpdate = true,
+                    _Select_id = Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["ID"].Value.ToString(),
+                    _Select_ad = Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["İsim"].Value.ToString(),
+                    _Select_soyad = Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["Soyisim"].Value.ToString(),
+                    _Select_hastane_id = Dtg2.Rows[Dtg2.CurrentCell.RowIndex].Cells["ID"].Value.ToString(),
+                    _selected_durum = Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["Durumu"].Value.ToString(),
+
                 };
 
                 addDoktor.ShowDialog();
