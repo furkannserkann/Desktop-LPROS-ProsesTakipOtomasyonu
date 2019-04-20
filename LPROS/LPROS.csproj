@@ -136,12 +136,6 @@
     <Compile Include="Forms\Table\Add\Add_Yetki.Designer.cs">
       <DependentUpon>Add_Yetki.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Table\Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Table\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\Table\Info\Info_Personel.cs">
       <SubType>Form</SubType>
     </Compile>

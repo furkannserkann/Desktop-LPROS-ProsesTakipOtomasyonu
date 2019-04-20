@@ -32,9 +32,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(YetkiRenkControl));
             this.ımageList1 = new System.Windows.Forms.ImageList(this.components);
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.Renkismi = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.Renkkod = new System.Windows.Forms.TextBox();
             this.button_renk_guncelle = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -56,42 +56,42 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Righteous", 9.5F);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
             this.label4.Location = new System.Drawing.Point(271, 46);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(69, 17);
+            this.label4.Size = new System.Drawing.Size(70, 16);
             this.label4.TabIndex = 84;
             this.label4.Text = "Renk İsmi:";
             // 
-            // textBox4
+            // Renkismi
             // 
-            this.textBox4.Font = new System.Drawing.Font("Montserrat", 10.5F);
-            this.textBox4.ForeColor = System.Drawing.Color.Black;
-            this.textBox4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textBox4.Location = new System.Drawing.Point(346, 41);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(131, 25);
-            this.textBox4.TabIndex = 83;
+            this.Renkismi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F);
+            this.Renkismi.ForeColor = System.Drawing.Color.Black;
+            this.Renkismi.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Renkismi.Location = new System.Drawing.Point(346, 41);
+            this.Renkismi.Name = "Renkismi";
+            this.Renkismi.Size = new System.Drawing.Size(131, 23);
+            this.Renkismi.TabIndex = 83;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Righteous", 9.5F);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
             this.label5.Location = new System.Drawing.Point(264, 13);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(76, 17);
+            this.label5.Size = new System.Drawing.Size(77, 16);
             this.label5.TabIndex = 82;
             this.label5.Text = "Renk Kodu:";
             // 
-            // textBox5
+            // Renkkod
             // 
-            this.textBox5.Font = new System.Drawing.Font("Montserrat", 10.5F);
-            this.textBox5.ForeColor = System.Drawing.Color.Black;
-            this.textBox5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textBox5.Location = new System.Drawing.Point(346, 7);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(131, 25);
-            this.textBox5.TabIndex = 81;
+            this.Renkkod.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F);
+            this.Renkkod.ForeColor = System.Drawing.Color.Black;
+            this.Renkkod.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Renkkod.Location = new System.Drawing.Point(346, 7);
+            this.Renkkod.Name = "Renkkod";
+            this.Renkkod.Size = new System.Drawing.Size(131, 23);
+            this.Renkkod.TabIndex = 81;
             // 
             // button_renk_guncelle
             // 
@@ -101,7 +101,7 @@
             this.button_renk_guncelle.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button_renk_guncelle.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button_renk_guncelle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_renk_guncelle.Font = new System.Drawing.Font("Righteous", 10F);
+            this.button_renk_guncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.button_renk_guncelle.ForeColor = System.Drawing.Color.White;
             this.button_renk_guncelle.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button_renk_guncelle.ImageKey = "icons8-pencil-96.png";
@@ -124,7 +124,7 @@
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Righteous", 10F);
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button3.ImageKey = "icons8-broom-96.png";
@@ -137,6 +137,7 @@
             this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -146,7 +147,7 @@
             this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button4.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Righteous", 10F);
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.button4.ForeColor = System.Drawing.Color.White;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button4.ImageKey = "icons8-search-208.png";
@@ -159,6 +160,7 @@
             this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
@@ -168,7 +170,7 @@
             this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button5.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Righteous", 10F);
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.button5.ForeColor = System.Drawing.Color.White;
             this.button5.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button5.ImageKey = "icons8-delete-90.png";
@@ -181,6 +183,7 @@
             this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button_renk_ekle
             // 
@@ -190,7 +193,7 @@
             this.button_renk_ekle.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button_renk_ekle.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button_renk_ekle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_renk_ekle.Font = new System.Drawing.Font("Righteous", 10F);
+            this.button_renk_ekle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.button_renk_ekle.ForeColor = System.Drawing.Color.White;
             this.button_renk_ekle.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button_renk_ekle.ImageKey = "icons8-plus-math-90.png";
@@ -217,9 +220,9 @@
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button_renk_ekle);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.Renkismi);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.Renkkod);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "YetkiRenkControl";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -237,9 +240,9 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button_renk_ekle;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox Renkismi;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox Renkkod;
         private System.Windows.Forms.Button button_renk_guncelle;
     }
 }

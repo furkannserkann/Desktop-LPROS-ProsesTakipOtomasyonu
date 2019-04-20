@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Add_Doktor));
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox_soyisim = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel_head = new System.Windows.Forms.Panel();
             this.label_head = new System.Windows.Forms.Label();
@@ -40,6 +40,8 @@
             this.textBox_isim = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.panel_head.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_close)).BeginInit();
             this.panel1.SuspendLayout();
@@ -55,15 +57,15 @@
             this.label8.TabIndex = 64;
             this.label8.Text = "Soyisim";
             // 
-            // textBox5
+            // textBox_soyisim
             // 
-            this.textBox5.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox5.ForeColor = System.Drawing.Color.Black;
-            this.textBox5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textBox5.Location = new System.Drawing.Point(48, 174);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(211, 26);
-            this.textBox5.TabIndex = 63;
+            this.textBox_soyisim.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textBox_soyisim.ForeColor = System.Drawing.Color.Black;
+            this.textBox_soyisim.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.textBox_soyisim.Location = new System.Drawing.Point(48, 174);
+            this.textBox_soyisim.Name = "textBox_soyisim";
+            this.textBox_soyisim.Size = new System.Drawing.Size(211, 24);
+            this.textBox_soyisim.TabIndex = 63;
             // 
             // label2
             // 
@@ -119,7 +121,7 @@
             this.button_kaydet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_kaydet.Font = new System.Drawing.Font("Righteous", 12F);
             this.button_kaydet.ForeColor = System.Drawing.Color.White;
-            this.button_kaydet.Location = new System.Drawing.Point(48, 311);
+            this.button_kaydet.Location = new System.Drawing.Point(48, 344);
             this.button_kaydet.Name = "button_kaydet";
             this.button_kaydet.Size = new System.Drawing.Size(211, 50);
             this.button_kaydet.TabIndex = 55;
@@ -139,21 +141,23 @@
             // 
             // textBox_isim
             // 
-            this.textBox_isim.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textBox_isim.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.textBox_isim.ForeColor = System.Drawing.Color.Black;
             this.textBox_isim.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.textBox_isim.Location = new System.Drawing.Point(48, 101);
             this.textBox_isim.Name = "textBox_isim";
-            this.textBox_isim.Size = new System.Drawing.Size(211, 26);
+            this.textBox_isim.Size = new System.Drawing.Size(211, 24);
             this.textBox_isim.TabIndex = 47;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.comboBox2);
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.textBox5);
+            this.panel1.Controls.Add(this.textBox_soyisim);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.panel_head);
             this.panel1.Controls.Add(this.button_kaydet);
@@ -167,24 +171,38 @@
             // 
             // comboBox1
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Montserrat", 11.25F);
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "a",
-            "b",
-            "1",
-            "2",
-            "3",
-            "asd",
-            "asd",
-            "asd",
-            "as",
-            "da",
-            "sd"});
             this.comboBox1.Location = new System.Drawing.Point(48, 247);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(211, 29);
+            this.comboBox1.Size = new System.Drawing.Size(211, 26);
             this.comboBox1.TabIndex = 65;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Righteous", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(45, 289);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(45, 17);
+            this.label1.TabIndex = 66;
+            this.label1.Text = "Durum";
+            this.label1.Visible = false;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Aktif",
+            "Pasif"});
+            this.comboBox2.Location = new System.Drawing.Point(48, 309);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(211, 26);
+            this.comboBox2.TabIndex = 67;
+            this.comboBox2.Visible = false;
             // 
             // Add_Doktor
             // 
@@ -208,7 +226,7 @@
         #endregion
 
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox_soyisim;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel_head;
         private System.Windows.Forms.Label label_head;
@@ -218,5 +236,7 @@
         private System.Windows.Forms.TextBox textBox_isim;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Label label1;
     }
 }

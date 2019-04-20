@@ -35,12 +35,11 @@ namespace LPROS.Custom
         {
             get
             {
-                return "SELECT personel_no, ad as [Adı], soyad as [Soyadı], "+
-                    "(CASE WHEN durumu = 1 THEN 'Aktif' ELSE 'Aktif Değil' END) as [Durumu], " + 
-                    "d.isim as [Departman], e_posta as [E_Posta], kullanici_adi as [Kullanıcı Adı], " + 
-                    "y.yetki_turu as [Yetki] from Personel as p "+
-                    "inner join Departman as d on d.id = p.departman_no "+
-                    "inner join Yetkiler as y on y.id = p.yetki_id";
+                return "SELECT personel_no, tc as [TC Kimlik Numarası], ad as [Adı], soyad as [Soyadı], telefon as [Telefon Numarası] ,cinsiyet as [Cinsiyet], ssk_no [SSK Numarası],adres as [Adres], " +
+                    " d.isim as [Departman], e_posta as [E_Posta], kullanici_adi as [Kullanıcı Adı], maas as [Maaş], sifre, " +
+                    " y.yetki_turu as [Yetki], ssk_bas_tarih as [SSK Başlangıç Tarihi] , ise_giris_tarih as [İşe Giriş Tarihi], (CASE WHEN durumu = 1 THEN 'Aktif' ELSE 'Pasif' END) as [Durumu] from Personel as p " +
+                    " inner join Departman as d on d.id = p.departman_no "+
+                    " inner join Yetkiler as y on y.id = p.yetki_id";
             }
         }
         public static String TablePersonelFilterByDepartmanid
@@ -66,7 +65,7 @@ namespace LPROS.Custom
             get
             {
                 return "SELECT id as [ID], isim as [İsim], soyisim as [Soyisim], " +
-                    "(CASE WHEN aktif = 1 THEN 'Aktif' ELSE 'Aktif Değil' END) as [Durumu] " +
+                    "(CASE WHEN aktif = 1 THEN 'Aktif' ELSE 'Pasif' END) as [Durumu] " +
                     "from Doktorlar where hastane_id=@parametre1";
             }
         }

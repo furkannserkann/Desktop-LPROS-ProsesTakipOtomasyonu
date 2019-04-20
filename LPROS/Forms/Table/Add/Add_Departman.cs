@@ -131,6 +131,11 @@ namespace LPROS.Forms.Table.Add
             return base.ProcessCmdKey(ref msg, keyData);
         }
 
+        private void button_kaydet_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
         private void textBox_kayit_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)

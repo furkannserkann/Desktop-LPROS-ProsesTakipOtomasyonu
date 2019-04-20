@@ -56,7 +56,7 @@
             // 
             this.label_head.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label_head.Font = new System.Drawing.Font("Righteous", 12F);
+            this.label_head.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label_head.ForeColor = System.Drawing.Color.White;
             this.label_head.Location = new System.Drawing.Point(12, 0);
             this.label_head.Name = "label_head";
@@ -83,7 +83,7 @@
             this.button_kaydet.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button_kaydet.FlatAppearance.BorderSize = 0;
             this.button_kaydet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_kaydet.Font = new System.Drawing.Font("Righteous", 12F);
+            this.button_kaydet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.button_kaydet.ForeColor = System.Drawing.Color.White;
             this.button_kaydet.Location = new System.Drawing.Point(48, 166);
             this.button_kaydet.Name = "button_kaydet";
@@ -92,25 +92,26 @@
             this.button_kaydet.Text = "Departmanı Kaydet";
             this.button_kaydet.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button_kaydet.UseVisualStyleBackColor = false;
+            this.button_kaydet.Click += new System.EventHandler(this.button_kaydet_Click_1);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Righteous", 9.5F);
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
             this.label7.Location = new System.Drawing.Point(45, 82);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(103, 17);
+            this.label7.Size = new System.Drawing.Size(102, 16);
             this.label7.TabIndex = 48;
             this.label7.Text = "Departman İsmi";
             // 
             // textbox_isim
             // 
-            this.textbox_isim.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textbox_isim.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.textbox_isim.ForeColor = System.Drawing.Color.Black;
             this.textbox_isim.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.textbox_isim.Location = new System.Drawing.Point(48, 101);
             this.textbox_isim.Name = "textbox_isim";
-            this.textbox_isim.Size = new System.Drawing.Size(211, 26);
+            this.textbox_isim.Size = new System.Drawing.Size(211, 24);
             this.textbox_isim.TabIndex = 47;
             this.textbox_isim.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_kayit_KeyDown);
             // 

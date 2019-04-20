@@ -47,5 +47,41 @@ namespace LPROS.Forms_Panel_Control
 
             addRenk.ShowDialog();
         }
+
+        SqlConnector Sc = new SqlConnector();
+        private void button5_Click(object sender, EventArgs e)
+        {
+            DialogResult Dr = MessageBox.Show("Seçilen Renk Siliniyor!", "Silme İşlemi", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
+            if (Dr == DialogResult.OK)
+            {
+                DataGridView Dtg = Items.panelYetkiRenk.dataGridview;
+
+                if (Sc.QUERY_TABLE("delete from Renk where id=@parametre1", new String[] { Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells[0].Value.ToString() }))
+                {
+                    MessageBox.Show("Silme İşlemi Başarılı!", "Silme İşlemi", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    Items.panelYetkiRenk.dataGridview.DataSource = Sc.GET_DATATABLE(SqlConnector.TableRenk);
+                }
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            searchRenk();
+        }
+        private void searchRenk()
+        {
+            DataGridView Dtg = Items.panelYetkiRenk.dataGridview;
+            string Id = Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells[0].Value.ToString();
+            Items.panelYetkiRenk.dataGridview.DataSource = Sc.GET_DATATABLE(SqlConnector.TableRenk + " where kod like '%'+@parametre1+'%' and isim like '%'+@parametre2+'%'  ", new String[] { Renkkod.Text, Renkismi.Text });
+
+            Items.panelYetkiRenk.dataGridview.Columns[0].Visible = false;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Renkkod.Text = "";
+            Renkismi.Text = "";
+            searchRenk();
+        }
     }
 }

@@ -32,7 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HastanelerDoktorlarControl));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.ımageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.ımageList2 = new System.Windows.Forms.ImageList(this.components);
             this.button1 = new System.Windows.Forms.Button();
             this.button_sil = new System.Windows.Forms.Button();
             this.button_eklehastane = new System.Windows.Forms.Button();
@@ -42,8 +42,8 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox_isim = new System.Windows.Forms.TextBox();
+            this.ımageList1 = new System.Windows.Forms.ImageList(this.components);
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
@@ -54,7 +54,6 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
-            this.ımageList2 = new System.Windows.Forms.ImageList(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -101,17 +100,23 @@
             this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // ımageList1
+            // ımageList2
             // 
-            this.ımageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ımageList1.ImageStream")));
-            this.ımageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.ımageList1.Images.SetKeyName(0, "icons8-plus-math-90.png");
-            this.ımageList1.Images.SetKeyName(1, "icons8-delete-90.png");
-            this.ımageList1.Images.SetKeyName(2, "icons8-pencil-96.png");
-            this.ımageList1.Images.SetKeyName(3, "icons8-search-more-90.png");
-            this.ımageList1.Images.SetKeyName(4, "icons8-search-208.png");
-            this.ımageList1.Images.SetKeyName(5, "icons8-broom-96.png");
+            this.ımageList2.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ımageList2.ImageStream")));
+            this.ımageList2.TransparentColor = System.Drawing.Color.Transparent;
+            this.ımageList2.Images.SetKeyName(0, "add.png");
+            this.ımageList2.Images.SetKeyName(1, "edit.png");
+            this.ımageList2.Images.SetKeyName(2, "clear.png");
+            this.ımageList2.Images.SetKeyName(3, "delete.png");
+            this.ımageList2.Images.SetKeyName(4, "search.png");
+            this.ımageList2.Images.SetKeyName(5, "icons8-broom-96.png");
+            this.ımageList2.Images.SetKeyName(6, "icons8-search-208.png");
+            this.ımageList2.Images.SetKeyName(7, "icons8-plus-math-90.png");
+            this.ımageList2.Images.SetKeyName(8, "icons8-search-more-90.png");
+            this.ımageList2.Images.SetKeyName(9, "icons8-delete-90.png");
+            this.ımageList2.Images.SetKeyName(10, "icons8-pencil-96.png");
             // 
             // button1
             // 
@@ -134,6 +139,7 @@
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button_sil
             // 
@@ -156,6 +162,7 @@
             this.button_sil.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button_sil.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button_sil.UseVisualStyleBackColor = false;
+            this.button_sil.Click += new System.EventHandler(this.button_sil_Click);
             // 
             // button_eklehastane
             // 
@@ -192,7 +199,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Font = new System.Drawing.Font("Montserrat", 10.5F);
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F);
             this.textBox2.ForeColor = System.Drawing.Color.Black;
             this.textBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.textBox2.Location = new System.Drawing.Point(381, 16);
@@ -213,12 +220,12 @@
             // 
             // textBox1
             // 
-            this.textBox1.Font = new System.Drawing.Font("Montserrat", 10.5F);
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F);
             this.textBox1.ForeColor = System.Drawing.Color.Black;
             this.textBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.textBox1.Location = new System.Drawing.Point(192, 47);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(131, 25);
+            this.textBox1.Size = new System.Drawing.Size(131, 23);
             this.textBox1.TabIndex = 73;
             // 
             // label7
@@ -233,19 +240,29 @@
             // 
             // textBox_isim
             // 
-            this.textBox_isim.Font = new System.Drawing.Font("Montserrat", 10.5F);
+            this.textBox_isim.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F);
             this.textBox_isim.ForeColor = System.Drawing.Color.Black;
             this.textBox_isim.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.textBox_isim.Location = new System.Drawing.Point(192, 16);
             this.textBox_isim.Name = "textBox_isim";
-            this.textBox_isim.Size = new System.Drawing.Size(131, 25);
+            this.textBox_isim.Size = new System.Drawing.Size(131, 23);
             this.textBox_isim.TabIndex = 71;
+            // 
+            // ımageList1
+            // 
+            this.ımageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ımageList1.ImageStream")));
+            this.ımageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.ımageList1.Images.SetKeyName(0, "icons8-plus-math-90.png");
+            this.ımageList1.Images.SetKeyName(1, "icons8-delete-90.png");
+            this.ımageList1.Images.SetKeyName(2, "icons8-pencil-96.png");
+            this.ımageList1.Images.SetKeyName(3, "icons8-search-more-90.png");
+            this.ımageList1.Images.SetKeyName(4, "icons8-search-208.png");
+            this.ımageList1.Images.SetKeyName(5, "icons8-broom-96.png");
             // 
             // groupBox2
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.BackColor = System.Drawing.Color.White;
-            this.groupBox2.Controls.Add(this.checkBox1);
             this.groupBox2.Controls.Add(this.comboBox1);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.button3);
@@ -264,37 +281,18 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "  Doktorlar";
             // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Righteous", 9F);
-            this.checkBox1.Location = new System.Drawing.Point(269, 50);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(106, 20);
-            this.checkBox1.TabIndex = 84;
-            this.checkBox1.Text = "Tüm Doktorlar";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
             // comboBox1
             // 
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Font = new System.Drawing.Font("Montserrat", 10.5F);
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F);
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "a",
-            "b",
-            "1",
-            "2",
-            "3",
-            "asd",
-            "asd",
-            "asd",
-            "as",
-            "da",
-            "sd"});
+            "Aktif",
+            "Pasif",
+            "Tümü"});
             this.comboBox1.Location = new System.Drawing.Point(321, 14);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(86, 28);
+            this.comboBox1.Size = new System.Drawing.Size(86, 25);
             this.comboBox1.TabIndex = 83;
             // 
             // label3
@@ -328,6 +326,7 @@
             this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -350,6 +349,7 @@
             this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
@@ -372,6 +372,7 @@
             this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button_ekledoktor
             // 
@@ -408,12 +409,12 @@
             // 
             // textBox4
             // 
-            this.textBox4.Font = new System.Drawing.Font("Montserrat", 10.5F);
+            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F);
             this.textBox4.ForeColor = System.Drawing.Color.Black;
             this.textBox4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.textBox4.Location = new System.Drawing.Point(153, 47);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(107, 25);
+            this.textBox4.Size = new System.Drawing.Size(107, 23);
             this.textBox4.TabIndex = 73;
             // 
             // label5
@@ -428,29 +429,13 @@
             // 
             // textBox5
             // 
-            this.textBox5.Font = new System.Drawing.Font("Montserrat", 10.5F);
+            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F);
             this.textBox5.ForeColor = System.Drawing.Color.Black;
             this.textBox5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.textBox5.Location = new System.Drawing.Point(153, 16);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(107, 25);
+            this.textBox5.Size = new System.Drawing.Size(107, 23);
             this.textBox5.TabIndex = 71;
-            // 
-            // ımageList2
-            // 
-            this.ımageList2.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ımageList2.ImageStream")));
-            this.ımageList2.TransparentColor = System.Drawing.Color.Transparent;
-            this.ımageList2.Images.SetKeyName(0, "add.png");
-            this.ımageList2.Images.SetKeyName(1, "edit.png");
-            this.ımageList2.Images.SetKeyName(2, "clear.png");
-            this.ımageList2.Images.SetKeyName(3, "delete.png");
-            this.ımageList2.Images.SetKeyName(4, "search.png");
-            this.ımageList2.Images.SetKeyName(5, "icons8-broom-96.png");
-            this.ımageList2.Images.SetKeyName(6, "icons8-search-208.png");
-            this.ımageList2.Images.SetKeyName(7, "icons8-plus-math-90.png");
-            this.ımageList2.Images.SetKeyName(8, "icons8-search-more-90.png");
-            this.ımageList2.Images.SetKeyName(9, "icons8-delete-90.png");
-            this.ımageList2.Images.SetKeyName(10, "icons8-pencil-96.png");
             // 
             // HastanelerDoktorlarControl
             // 
@@ -497,7 +482,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ImageList ımageList1;
-        private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.ImageList ımageList2;
     }
 }
