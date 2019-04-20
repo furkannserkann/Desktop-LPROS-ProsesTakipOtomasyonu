@@ -30,6 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Add_Personel));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label15 = new System.Windows.Forms.Label();
+            this.textBox_telefon = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.textBox_maas = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.TextBox_Tc = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -60,10 +64,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.Combo_yetki = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.textBox_maas = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.textBox_telefon = new System.Windows.Forms.TextBox();
+            this.Combo_durumu = new System.Windows.Forms.ComboBox();
+            this.label16 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel_head.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_close)).BeginInit();
@@ -73,6 +75,8 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.Combo_durumu);
+            this.panel1.Controls.Add(this.label16);
             this.panel1.Controls.Add(this.label15);
             this.panel1.Controls.Add(this.textBox_telefon);
             this.panel1.Controls.Add(this.label14);
@@ -108,8 +112,48 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(674, 499);
+            this.panel1.Size = new System.Drawing.Size(674, 528);
             this.panel1.TabIndex = 42;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.label15.Location = new System.Drawing.Point(44, 350);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(105, 15);
+            this.label15.TabIndex = 152;
+            this.label15.Text = "Telefon Numarası";
+            // 
+            // textBox_telefon
+            // 
+            this.textBox_telefon.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textBox_telefon.ForeColor = System.Drawing.Color.Black;
+            this.textBox_telefon.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.textBox_telefon.Location = new System.Drawing.Point(47, 369);
+            this.textBox_telefon.Name = "textBox_telefon";
+            this.textBox_telefon.Size = new System.Drawing.Size(211, 24);
+            this.textBox_telefon.TabIndex = 151;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.label14.Location = new System.Drawing.Point(383, 195);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(38, 15);
+            this.label14.TabIndex = 150;
+            this.label14.Text = "Maaş";
+            // 
+            // textBox_maas
+            // 
+            this.textBox_maas.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textBox_maas.ForeColor = System.Drawing.Color.Black;
+            this.textBox_maas.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.textBox_maas.Location = new System.Drawing.Point(386, 214);
+            this.textBox_maas.Name = "textBox_maas";
+            this.textBox_maas.Size = new System.Drawing.Size(211, 24);
+            this.textBox_maas.TabIndex = 149;
             // 
             // label13
             // 
@@ -136,7 +180,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label12.Location = new System.Drawing.Point(383, 255);
+            this.label12.Location = new System.Drawing.Point(386, 249);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(49, 15);
             this.label12.TabIndex = 146;
@@ -150,7 +194,7 @@
             this.Combo_cinsiyet.Items.AddRange(new object[] {
             "Erkek",
             "Kadın"});
-            this.Combo_cinsiyet.Location = new System.Drawing.Point(386, 284);
+            this.Combo_cinsiyet.Location = new System.Drawing.Point(386, 268);
             this.Combo_cinsiyet.Name = "Combo_cinsiyet";
             this.Combo_cinsiyet.Size = new System.Drawing.Size(211, 26);
             this.Combo_cinsiyet.TabIndex = 145;
@@ -303,7 +347,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label3.Location = new System.Drawing.Point(383, 313);
+            this.label3.Location = new System.Drawing.Point(383, 297);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 15);
             this.label3.TabIndex = 58;
@@ -326,7 +370,7 @@
             "as",
             "da",
             "sd"});
-            this.Combo_departman.Location = new System.Drawing.Point(386, 332);
+            this.Combo_departman.Location = new System.Drawing.Point(386, 316);
             this.Combo_departman.Name = "Combo_departman";
             this.Combo_departman.Size = new System.Drawing.Size(211, 26);
             this.Combo_departman.TabIndex = 57;
@@ -385,7 +429,7 @@
             this.button_kaydet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_kaydet.Font = new System.Drawing.Font("Yu Gothic", 10F);
             this.button_kaydet.ForeColor = System.Drawing.Color.White;
-            this.button_kaydet.Location = new System.Drawing.Point(386, 429);
+            this.button_kaydet.Location = new System.Drawing.Point(386, 472);
             this.button_kaydet.Name = "button_kaydet";
             this.button_kaydet.Size = new System.Drawing.Size(211, 34);
             this.button_kaydet.TabIndex = 55;
@@ -418,7 +462,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label6.Location = new System.Drawing.Point(383, 369);
+            this.label6.Location = new System.Drawing.Point(383, 353);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(33, 15);
             this.label6.TabIndex = 46;
@@ -441,7 +485,7 @@
             "as",
             "da",
             "sd"});
-            this.Combo_yetki.Location = new System.Drawing.Point(386, 388);
+            this.Combo_yetki.Location = new System.Drawing.Point(386, 372);
             this.Combo_yetki.Name = "Combo_yetki";
             this.Combo_yetki.Size = new System.Drawing.Size(211, 26);
             this.Combo_yetki.TabIndex = 45;
@@ -457,51 +501,43 @@
             this.label4.TabIndex = 42;
             this.label4.Text = "Soyisim";
             // 
-            // label14
+            // Combo_durumu
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label14.Location = new System.Drawing.Point(383, 195);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(38, 15);
-            this.label14.TabIndex = 150;
-            this.label14.Text = "Maaş";
+            this.Combo_durumu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Combo_durumu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.Combo_durumu.FormattingEnabled = true;
+            this.Combo_durumu.Items.AddRange(new object[] {
+            "a",
+            "b",
+            "1",
+            "2",
+            "3",
+            "asd",
+            "asd",
+            "asd",
+            "as",
+            "da",
+            "sd"});
+            this.Combo_durumu.Location = new System.Drawing.Point(386, 424);
+            this.Combo_durumu.Name = "Combo_durumu";
+            this.Combo_durumu.Size = new System.Drawing.Size(211, 26);
+            this.Combo_durumu.TabIndex = 187;
             // 
-            // textBox_maas
+            // label16
             // 
-            this.textBox_maas.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox_maas.ForeColor = System.Drawing.Color.Black;
-            this.textBox_maas.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textBox_maas.Location = new System.Drawing.Point(386, 214);
-            this.textBox_maas.Name = "textBox_maas";
-            this.textBox_maas.Size = new System.Drawing.Size(211, 24);
-            this.textBox_maas.TabIndex = 149;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label15.Location = new System.Drawing.Point(44, 350);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(105, 15);
-            this.label15.TabIndex = 152;
-            this.label15.Text = "Telefon Numarası";
-            // 
-            // textBox_telefon
-            // 
-            this.textBox_telefon.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox_telefon.ForeColor = System.Drawing.Color.Black;
-            this.textBox_telefon.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textBox_telefon.Location = new System.Drawing.Point(47, 369);
-            this.textBox_telefon.Name = "textBox_telefon";
-            this.textBox_telefon.Size = new System.Drawing.Size(211, 24);
-            this.textBox_telefon.TabIndex = 151;
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.label16.Location = new System.Drawing.Point(383, 405);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(52, 15);
+            this.label16.TabIndex = 186;
+            this.label16.Text = "Durumu";
             // 
             // Add_Personel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(674, 499);
+            this.ClientSize = new System.Drawing.Size(674, 528);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Add_Personel";
@@ -553,5 +589,7 @@
         private System.Windows.Forms.TextBox textBox_maas;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox textBox_telefon;
+        private System.Windows.Forms.ComboBox Combo_durumu;
+        private System.Windows.Forms.Label label16;
     }
 }
