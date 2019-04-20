@@ -23,11 +23,12 @@ namespace LPROS.Custom
                 return "SELECT s.id, fis_no as [Fiş Numarası], p.ad + ' ' + p.soyad as [Kayıt Personeli], " +
                     "siparis_tarihi as [Sipariş Tarihi], teslim_tarihi as [Teslim Tarihi], h.ad as [Hastane], " +
                     "d.isim + ' ' + d.soyisim as [Doktor], hasta_ad_soyad as [Hasta İsmi], " +
-                    "pr.adi as [Protez Tipi] from Siparis as s " +
+                    "pr.adi as [Protez Tipi], renk.isim as [Renk] from Siparis as s " +
                     "inner join Personel as p on s.personel_id = p.personel_no " +
                     "inner join Doktorlar as d on d.id = s.doktor_id " +
                     "inner join Hastane as h on h.Id = d.hastane_id " +
-                    "inner join Protez as pr on pr.id = s.protez_id";
+                    "inner join Protez as pr on pr.id = s.protez_id " + 
+                    "inner join Renk as renk on renk.id = s.renk_id";
             }
         }
         public static String TablePersonel
@@ -142,6 +143,17 @@ namespace LPROS.Custom
                 return "select pt.id, pt.sira as [Sıra], t.talimat_kodu as [Talimat Kodu], t.talimat_adi as [Talimat İsmi] from Protez_Talimatlari as pt " +
                     " inner join Talimat as t on t.Id=pt.talimat_id " +
                     " inner join Protez as p on p.Id=pt.protez_id where pt.protez_id=@parametre1 order by pt.sira asc";
+            }
+        }
+        public static String TableAnlikProsesBySiparis
+        {
+            get
+            {
+                return "select ap.Id, t.talimat_adi as [Talimat], proses_sirasi as [Sıra], p.isim as [Proses], per.ad+' '+per.soyad as [Personel], ap.baslangic_tarihi as [Başlangıç Tarihi], ap.bitis_tarihi as [Bitiş Tarihi] from Anlik_Prosesler as ap " +
+" left join Proses as p on ap.proses_id = p.Id " +
+" left join Talimat as t on ap.talimat_id = t.Id " +
+" left join Personel as per on ap.personel_no = per.personel_no " +
+" where siparis_id = @parametre1 order by talimat_id, proses_sirasi";
             }
         }
 

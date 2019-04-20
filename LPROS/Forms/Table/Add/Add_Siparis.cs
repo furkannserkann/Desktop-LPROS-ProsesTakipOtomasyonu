@@ -21,6 +21,7 @@ namespace LPROS.Forms.Table.Add
         SqlConnector Sc = new SqlConnector();
 
         public bool isUpdate = false;
+        public string fisno, hasta_adsoyad, protez_id, hastane_id, doktor_id, siparis_tarihi, teslimat_tarihi, renk_id;
 
 
         private void Add_Siparis_Load(object sender, EventArgs e)
@@ -84,7 +85,7 @@ namespace LPROS.Forms.Table.Add
 
                         for (int k = 0; k < prosesCount.Rows.Count; k++)
                         {
-                            Sc.ADD_TABLE("Anlik_Proses", new String[] { "talimat_id", "proses_id", "proses_sirasi", "personel_no" },
+                            Sc.ADD_TABLE("Anlik_Prosesler", new String[] { "talimat_id", "proses_id", "proses_sirasi", "personel_no", "siparis_id" },
                                                          new String[] { talimatCount.Rows[i]["talimat_id"].ToString(), prosesCount.Rows[k]["proses_id"].ToString(), prosesCount.Rows[k]["sira"].ToString(), User.id.ToString() });
                         }
                     }

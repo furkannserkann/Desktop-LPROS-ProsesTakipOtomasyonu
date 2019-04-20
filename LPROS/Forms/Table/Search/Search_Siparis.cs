@@ -18,9 +18,24 @@ namespace LPROS.Forms.Table.Search
             InitializeComponent();
         }
 
+        SqlConnector Sc = new SqlConnector();
+
         private void Search_Siparis_Load(object sender, EventArgs e)
         {
             new FormTasima(panel_head, label_head, this, pictureBox_close);
+
+            DataTable hastane = Sc.GET_DATATABLE(SqlConnector.TableHastane);
+
+            DataRow emptyRow = hastane.NewRow();
+            emptyRow["Id"] = 0;
+            emptyRow["Adı"] = "";
+            hastane.Rows.Add(emptyRow);
+
+            DataView newView = new DataView(hastane, "", "Adı", DataViewRowState.CurrentRows);
+
+            combobox_hastane.DataSource = newView;
+            combobox_hastane.DisplayMember = "Adı";
+            combobox_hastane.ValueMember = "ID";
         }
 
         private void checkBox_siparis_CheckedChanged(object sender, EventArgs e)

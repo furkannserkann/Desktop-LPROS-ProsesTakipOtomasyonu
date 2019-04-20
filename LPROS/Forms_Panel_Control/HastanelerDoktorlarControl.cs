@@ -59,14 +59,14 @@ namespace LPROS.Forms_Panel_Control
         {
             DataGridView Dtg2 = Items.panelHastaneDoktor.dataGridUst;
             DataGridView Dtg = Items.panelHastaneDoktor.dataGridAlt;
-                Add_Doktor addDoktor = new Add_Doktor()
-                {
-                    isUpdate = false,
-                    _Select_hastane_id = Dtg2.Rows[Dtg2.CurrentCell.RowIndex].Cells["ID"].Value.ToString()
+            Add_Doktor addDoktor = new Add_Doktor()
+            {
+                isUpdate = false,
+                _Select_hastane_id = Dtg2.Rows[Dtg2.CurrentCell.RowIndex].Cells["ID"].Value.ToString()
 
-                };
+            };
 
-                addDoktor.ShowDialog();
+            addDoktor.ShowDialog();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -77,7 +77,7 @@ namespace LPROS.Forms_Panel_Control
             }
             if (textBox2.Text != "" || textBox1.Text != "" || textBox_isim.Text != "")
             {
-                Items.panelHastaneDoktor.dataGridUst.DataSource = Sc.GET_DATATABLE(SqlConnector.TableHastane + " where adres like '%'+@parametre1+'%' AND ad like '%'+@parametre2+'%' AND kod like '%'+@parametre3+'%'", new string[] { textBox2.Text, textBox1.Text,textBox_isim.Text });
+                Items.panelHastaneDoktor.dataGridUst.DataSource = Sc.GET_DATATABLE(SqlConnector.TableHastane + " where adres like '%'+@parametre1+'%' AND ad like '%'+@parametre2+'%' AND kod like '%'+@parametre3+'%'", new string[] { textBox2.Text, textBox1.Text, textBox_isim.Text });
             }
         }
 
@@ -127,7 +127,7 @@ namespace LPROS.Forms_Panel_Control
             DataGridView Dtg2 = Items.panelHastaneDoktor.dataGridUst;
             textBox4.Text = "";
             textBox5.Text = "";
-            comboBox1.SelectedIndex=2;
+            comboBox1.SelectedIndex = 2;
             Items.panelHastaneDoktor.dataGridAlt.DataSource = Sc.GET_DATATABLE(SqlConnector.TableDoktorByHastaneid, new String[] { Dtg2.Rows[Dtg2.CurrentCell.RowIndex].Cells["ID"].Value.ToString() });
 
         }
@@ -135,8 +135,8 @@ namespace LPROS.Forms_Panel_Control
         private void button4_Click(object sender, EventArgs e)
         {
             DataGridView Dtg2 = Items.panelHastaneDoktor.dataGridUst;
-            Items.panelHastaneDoktor.dataGridAlt.DataSource = Sc.GET_DATATABLE(SqlConnector.TableDoktorByHastaneid + " AND isim like '%'+@parametre2+'%' AND soyisim like '%'+@parametre3+'%' AND aktif like '%'+@parametre4+'%'", new String[] { Dtg2.Rows[Dtg2.CurrentCell.RowIndex].Cells["ID"].Value.ToString(),textBox5.Text,textBox4.Text,comboBox1.SelectedIndex==0?"1":comboBox1.SelectedIndex==1?"0":"" });
-         
+            Items.panelHastaneDoktor.dataGridAlt.DataSource = Sc.GET_DATATABLE(SqlConnector.TableDoktorByHastaneid + " AND isim like '%'+@parametre2+'%' AND soyisim like '%'+@parametre3+'%' AND aktif like '%'+@parametre4+'%'", new String[] { Dtg2.Rows[Dtg2.CurrentCell.RowIndex].Cells["ID"].Value.ToString(), textBox5.Text, textBox4.Text, comboBox1.SelectedIndex == 0 ? "1" : comboBox1.SelectedIndex == 1 ? "0" : "" });
+
         }
     }
 }

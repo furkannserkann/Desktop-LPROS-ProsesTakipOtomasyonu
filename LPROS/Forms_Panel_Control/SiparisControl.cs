@@ -1,4 +1,5 @@
-﻿using LPROS.Forms;
+﻿using LPROS.Custom;
+using LPROS.Forms;
 using LPROS.Forms.Table.Add;
 using LPROS.Forms.Table.Search;
 using LPROS.Forms.Table.Update;
@@ -21,19 +22,17 @@ namespace LPROS.ControlPanelForms
 
         private void button_ekle_Click(object sender, EventArgs e)
         {
-            (new Add_Siparis()).ShowDialog();
+            Add_Siparis addSip = new Add_Siparis()
+            {
+                isUpdate = false
+            };
+            addSip.ShowDialog();
         }
 
         private void button_sil_Click(object sender, EventArgs e)
         {
-            new CDialog()
-            {
-                BaslikForm = "Dikkat",
-                BaslikMesaj = "Sipariş Siliniyor!",
-                Mesaj = "Siparişi Silme İşlemini Onaylıyor musunuz?",
-                Button1_Text = "Hayır",
-                Button2_Text = "Evet",
-            }.ShowDialog();
+
+
         }
 
         private void button_arama_Click(object sender, EventArgs e)
@@ -43,15 +42,20 @@ namespace LPROS.ControlPanelForms
 
         private void button_düzenle_Click(object sender, EventArgs e)
         {
-            (new Update_Siparis()).ShowDialog();
-        }
-    }
-
-    class CDialog : CustomMessageDialog
-    {
-        public override void Onayla()
-        {
-            MessageBox.Show("Test");
+            DataGridView Dtg = Items.panelSiparis.dataGridview;
+            Add_Siparis addSip = new Add_Siparis()
+            {
+                isUpdate = false,
+                fisno = Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["fis_no"].Value.ToString(),
+                hasta_adsoyad = Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["Hasta İsmi"].Value.ToString(),
+                protez_id = Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["Protez Tipi"].Value.ToString(),
+                hastane_id = Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["Hastane"].Value.ToString(),
+                doktor_id = Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["Doktor"].Value.ToString(),
+                siparis_tarihi = Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["Sipariş Tarihi"].Value.ToString(),
+                teslimat_tarihi = Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["Teslim Tarihi"].Value.ToString(),
+                renk_id = Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["Renk"].Value.ToString()
+            };
+            addSip.ShowDialog();
         }
     }
 }

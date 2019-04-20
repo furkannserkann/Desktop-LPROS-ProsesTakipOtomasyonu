@@ -38,12 +38,13 @@
             this.label_head = new System.Windows.Forms.Label();
             this.pictureBox_close = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button_siparis_sil = new System.Windows.Forms.Button();
+            this.ımageList_button = new System.Windows.Forms.ImageList(this.components);
             this.checkbox_maliyet_arasinda = new System.Windows.Forms.CheckBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.checkbox_maliyet = new System.Windows.Forms.CheckBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button_düzenle = new System.Windows.Forms.Button();
-            this.ımageList_button = new System.Windows.Forms.ImageList(this.components);
             this.checkbox_siparistarihibaslangic = new System.Windows.Forms.CheckBox();
             this.checkbox_teslimattarihibaslangic = new System.Windows.Forms.CheckBox();
             this.datagridview_Siparis = new System.Windows.Forms.DataGridView();
@@ -55,8 +56,6 @@
             this.checkBox_siparis = new System.Windows.Forms.CheckBox();
             this.label10 = new System.Windows.Forms.Label();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -70,9 +69,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.comboBox_doktor = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.comboBox_hastane = new System.Windows.Forms.ComboBox();
+            this.combobox_hastane = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.button_siparis_sil = new System.Windows.Forms.Button();
             this.panel_head.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_close)).BeginInit();
             this.panel1.SuspendLayout();
@@ -136,8 +134,6 @@
             this.panel1.Controls.Add(this.checkBox_siparis);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.comboBox4);
-            this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.comboBox3);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.comboBox2);
             this.panel1.Controls.Add(this.label3);
@@ -151,7 +147,7 @@
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.comboBox_doktor);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.comboBox_hastane);
+            this.panel1.Controls.Add(this.combobox_hastane);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.panel_head);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -159,6 +155,39 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1254, 603);
             this.panel1.TabIndex = 44;
+            // 
+            // button_siparis_sil
+            // 
+            this.button_siparis_sil.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.button_siparis_sil.BackColor = System.Drawing.Color.Brown;
+            this.button_siparis_sil.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_siparis_sil.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button_siparis_sil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_siparis_sil.Font = new System.Drawing.Font("Righteous", 10.5F);
+            this.button_siparis_sil.ForeColor = System.Drawing.Color.White;
+            this.button_siparis_sil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_siparis_sil.ImageKey = "icons8-delete-90.png";
+            this.button_siparis_sil.ImageList = this.ımageList_button;
+            this.button_siparis_sil.Location = new System.Drawing.Point(861, 185);
+            this.button_siparis_sil.Name = "button_siparis_sil";
+            this.button_siparis_sil.Size = new System.Drawing.Size(93, 48);
+            this.button_siparis_sil.TabIndex = 135;
+            this.button_siparis_sil.Text = " Sil";
+            this.button_siparis_sil.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button_siparis_sil.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button_siparis_sil.UseVisualStyleBackColor = false;
+            // 
+            // ımageList_button
+            // 
+            this.ımageList_button.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ımageList_button.ImageStream")));
+            this.ımageList_button.TransparentColor = System.Drawing.Color.Transparent;
+            this.ımageList_button.Images.SetKeyName(0, "icons8-broom-96.png");
+            this.ımageList_button.Images.SetKeyName(1, "icons8-search-208.png");
+            this.ımageList_button.Images.SetKeyName(2, "icons8-plus-math-90.png");
+            this.ımageList_button.Images.SetKeyName(3, "icons8-search-more-90.png");
+            this.ımageList_button.Images.SetKeyName(4, "icons8-delete-90.png");
+            this.ımageList_button.Images.SetKeyName(5, "icons8-pencil-96.png");
             // 
             // checkbox_maliyet_arasinda
             // 
@@ -225,17 +254,6 @@
             this.button_düzenle.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button_düzenle.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button_düzenle.UseVisualStyleBackColor = false;
-            // 
-            // ımageList_button
-            // 
-            this.ımageList_button.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ımageList_button.ImageStream")));
-            this.ımageList_button.TransparentColor = System.Drawing.Color.Transparent;
-            this.ımageList_button.Images.SetKeyName(0, "icons8-broom-96.png");
-            this.ımageList_button.Images.SetKeyName(1, "icons8-search-208.png");
-            this.ımageList_button.Images.SetKeyName(2, "icons8-plus-math-90.png");
-            this.ımageList_button.Images.SetKeyName(3, "icons8-search-more-90.png");
-            this.ımageList_button.Images.SetKeyName(4, "icons8-delete-90.png");
-            this.ımageList_button.Images.SetKeyName(5, "icons8-pencil-96.png");
             // 
             // checkbox_siparistarihibaslangic
             // 
@@ -381,7 +399,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Righteous", 9.5F);
-            this.label10.Location = new System.Drawing.Point(986, 103);
+            this.label10.Location = new System.Drawing.Point(740, 103);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(37, 17);
             this.label10.TabIndex = 79;
@@ -389,6 +407,7 @@
             // 
             // comboBox4
             // 
+            this.comboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox4.Font = new System.Drawing.Font("Montserrat", 11.25F);
             this.comboBox4.FormattingEnabled = true;
             this.comboBox4.Items.AddRange(new object[] {
@@ -403,47 +422,16 @@
             "as",
             "da",
             "sd"});
-            this.comboBox4.Location = new System.Drawing.Point(989, 123);
+            this.comboBox4.Location = new System.Drawing.Point(743, 123);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(211, 29);
             this.comboBox4.TabIndex = 78;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Righteous", 9.5F);
-            this.label9.Location = new System.Drawing.Point(986, 43);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(124, 17);
-            this.label9.TabIndex = 77;
-            this.label9.Text = "Hasta İsim Soyisim";
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.Font = new System.Drawing.Font("Montserrat", 11.25F);
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "a",
-            "b",
-            "1",
-            "2",
-            "3",
-            "asd",
-            "asd",
-            "asd",
-            "as",
-            "da",
-            "sd"});
-            this.comboBox3.Location = new System.Drawing.Point(989, 63);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(211, 29);
-            this.comboBox3.TabIndex = 76;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Righteous", 9.5F);
-            this.label8.Location = new System.Drawing.Point(740, 103);
+            this.label8.Location = new System.Drawing.Point(986, 43);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(99, 17);
             this.label8.TabIndex = 75;
@@ -451,6 +439,7 @@
             // 
             // comboBox2
             // 
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.Font = new System.Drawing.Font("Montserrat", 11.25F);
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
@@ -465,7 +454,7 @@
             "as",
             "da",
             "sd"});
-            this.comboBox2.Location = new System.Drawing.Point(743, 123);
+            this.comboBox2.Location = new System.Drawing.Point(989, 63);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(211, 29);
             this.comboBox2.TabIndex = 74;
@@ -482,6 +471,7 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.Font = new System.Drawing.Font("Montserrat", 11.25F);
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
@@ -580,6 +570,7 @@
             // 
             // comboBox_doktor
             // 
+            this.comboBox_doktor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_doktor.Font = new System.Drawing.Font("Montserrat", 11.25F);
             this.comboBox_doktor.FormattingEnabled = true;
             this.comboBox_doktor.Items.AddRange(new object[] {
@@ -609,11 +600,12 @@
             this.label5.TabIndex = 61;
             this.label5.Text = "Hastane";
             // 
-            // comboBox_hastane
+            // combobox_hastane
             // 
-            this.comboBox_hastane.Font = new System.Drawing.Font("Montserrat", 11.25F);
-            this.comboBox_hastane.FormattingEnabled = true;
-            this.comboBox_hastane.Items.AddRange(new object[] {
+            this.combobox_hastane.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combobox_hastane.Font = new System.Drawing.Font("Montserrat", 11.25F);
+            this.combobox_hastane.FormattingEnabled = true;
+            this.combobox_hastane.Items.AddRange(new object[] {
             "a",
             "b",
             "1",
@@ -625,10 +617,10 @@
             "as",
             "da",
             "sd"});
-            this.comboBox_hastane.Location = new System.Drawing.Point(501, 63);
-            this.comboBox_hastane.Name = "comboBox_hastane";
-            this.comboBox_hastane.Size = new System.Drawing.Size(211, 29);
-            this.comboBox_hastane.TabIndex = 60;
+            this.combobox_hastane.Location = new System.Drawing.Point(501, 63);
+            this.combobox_hastane.Name = "combobox_hastane";
+            this.combobox_hastane.Size = new System.Drawing.Size(211, 29);
+            this.combobox_hastane.TabIndex = 60;
             // 
             // label4
             // 
@@ -639,28 +631,6 @@
             this.label4.Size = new System.Drawing.Size(110, 17);
             this.label4.TabIndex = 59;
             this.label4.Text = "Hasta Ad Soyad";
-            // 
-            // button_siparis_sil
-            // 
-            this.button_siparis_sil.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.button_siparis_sil.BackColor = System.Drawing.Color.Brown;
-            this.button_siparis_sil.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_siparis_sil.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button_siparis_sil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_siparis_sil.Font = new System.Drawing.Font("Righteous", 10.5F);
-            this.button_siparis_sil.ForeColor = System.Drawing.Color.White;
-            this.button_siparis_sil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_siparis_sil.ImageKey = "icons8-delete-90.png";
-            this.button_siparis_sil.ImageList = this.ımageList_button;
-            this.button_siparis_sil.Location = new System.Drawing.Point(861, 185);
-            this.button_siparis_sil.Name = "button_siparis_sil";
-            this.button_siparis_sil.Size = new System.Drawing.Size(93, 48);
-            this.button_siparis_sil.TabIndex = 135;
-            this.button_siparis_sil.Text = " Sil";
-            this.button_siparis_sil.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button_siparis_sil.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button_siparis_sil.UseVisualStyleBackColor = false;
             // 
             // Search_Siparis
             // 
@@ -699,12 +669,10 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox comboBox_doktor;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox_hastane;
+        private System.Windows.Forms.ComboBox combobox_hastane;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.Label label11;
