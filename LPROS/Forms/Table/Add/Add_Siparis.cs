@@ -21,6 +21,7 @@ namespace LPROS.Forms.Table.Add
         SqlConnector Sc = new SqlConnector();
 
         public bool isUpdate = false;
+        public string fisno, hasta_adsoyad, protez_id, hastane_id, doktor_id, siparis_tarihi, teslimat_tarihi, renk_id;
 
 
         private void Add_Siparis_Load(object sender, EventArgs e)

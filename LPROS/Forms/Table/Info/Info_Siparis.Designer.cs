@@ -33,6 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label10 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -57,13 +58,13 @@
             this.textbox_hastane = new System.Windows.Forms.TextBox();
             this.textbox_kayitpersoneli = new System.Windows.Forms.TextBox();
             this.textbox_proteztipi = new System.Windows.Forms.TextBox();
-            this.datagridview_anlikproses = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.datagridview_anlikproses = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_close)).BeginInit();
             this.panel_head.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.datagridview_anlikproses)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.datagridview_anlikproses)).BeginInit();
             this.SuspendLayout();
             // 
             // label10
@@ -218,6 +219,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.datagridview_anlikproses);
             this.panel1.Controls.Add(this.textbox_tmaliyet);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.textbox_renk);
@@ -227,7 +229,6 @@
             this.panel1.Controls.Add(this.textbox_hastane);
             this.panel1.Controls.Add(this.textbox_kayitpersoneli);
             this.panel1.Controls.Add(this.textbox_proteztipi);
-            this.panel1.Controls.Add(this.datagridview_anlikproses);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label3);
@@ -344,58 +345,6 @@
             this.textbox_proteztipi.TabIndex = 89;
             this.textbox_proteztipi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textbox_KeyPress);
             // 
-            // datagridview_anlikproses
-            // 
-            this.datagridview_anlikproses.AllowUserToAddRows = false;
-            this.datagridview_anlikproses.AllowUserToDeleteRows = false;
-            this.datagridview_anlikproses.AllowUserToResizeColumns = false;
-            this.datagridview_anlikproses.AllowUserToResizeRows = false;
-            this.datagridview_anlikproses.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
-            this.datagridview_anlikproses.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(230)))), ((int)(((byte)(201)))));
-            this.datagridview_anlikproses.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.datagridview_anlikproses.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Sitka Banner", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datagridview_anlikproses.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.datagridview_anlikproses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(230)))), ((int)(((byte)(201)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Yu Gothic", 9.1F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(7);
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.datagridview_anlikproses.DefaultCellStyle = dataGridViewCellStyle2;
-            this.datagridview_anlikproses.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.datagridview_anlikproses.EnableHeadersVisualStyles = false;
-            this.datagridview_anlikproses.Location = new System.Drawing.Point(0, 252);
-            this.datagridview_anlikproses.MultiSelect = false;
-            this.datagridview_anlikproses.Name = "datagridview_anlikproses";
-            this.datagridview_anlikproses.ReadOnly = true;
-            this.datagridview_anlikproses.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(230)))), ((int)(((byte)(201)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datagridview_anlikproses.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.datagridview_anlikproses.RowHeadersWidth = 35;
-            this.datagridview_anlikproses.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datagridview_anlikproses.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.datagridview_anlikproses.RowTemplate.Height = 45;
-            this.datagridview_anlikproses.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.datagridview_anlikproses.Size = new System.Drawing.Size(975, 318);
-            this.datagridview_anlikproses.TabIndex = 87;
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Black;
@@ -405,6 +354,59 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(977, 572);
             this.panel2.TabIndex = 46;
+            // 
+            // datagridview_anlikproses
+            // 
+            this.datagridview_anlikproses.AllowUserToAddRows = false;
+            this.datagridview_anlikproses.AllowUserToDeleteRows = false;
+            this.datagridview_anlikproses.AllowUserToResizeColumns = false;
+            this.datagridview_anlikproses.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datagridview_anlikproses.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.datagridview_anlikproses.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.datagridview_anlikproses.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(230)))), ((int)(((byte)(201)))));
+            this.datagridview_anlikproses.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Righteous", 10F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datagridview_anlikproses.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.datagridview_anlikproses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(230)))), ((int)(((byte)(201)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Fredoka One", 10F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(7, 3, 7, 3);
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.datagridview_anlikproses.DefaultCellStyle = dataGridViewCellStyle3;
+            this.datagridview_anlikproses.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.datagridview_anlikproses.EnableHeadersVisualStyles = false;
+            this.datagridview_anlikproses.Location = new System.Drawing.Point(0, 242);
+            this.datagridview_anlikproses.MultiSelect = false;
+            this.datagridview_anlikproses.Name = "datagridview_anlikproses";
+            this.datagridview_anlikproses.ReadOnly = true;
+            this.datagridview_anlikproses.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(230)))), ((int)(((byte)(201)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datagridview_anlikproses.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.datagridview_anlikproses.RowHeadersWidth = 35;
+            this.datagridview_anlikproses.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datagridview_anlikproses.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.datagridview_anlikproses.RowTemplate.Height = 39;
+            this.datagridview_anlikproses.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.datagridview_anlikproses.Size = new System.Drawing.Size(975, 328);
+            this.datagridview_anlikproses.TabIndex = 102;
             // 
             // Info_Siparis
             // 
@@ -421,8 +423,8 @@
             this.panel_head.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.datagridview_anlikproses)).EndInit();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.datagridview_anlikproses)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -444,7 +446,6 @@
         private System.Windows.Forms.PictureBox pictureBox_close;
         private System.Windows.Forms.Panel panel_head;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView datagridview_anlikproses;
         private System.Windows.Forms.TextBox textbox_renk;
         private System.Windows.Forms.TextBox textbox_teslimattarihi;
         private System.Windows.Forms.TextBox textbox_siparistarihi;
@@ -455,5 +456,6 @@
         private System.Windows.Forms.TextBox textbox_tmaliyet;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.DataGridView datagridview_anlikproses;
     }
 }

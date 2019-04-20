@@ -48,6 +48,7 @@ namespace LPROS.Forms.Table.Info
                 DataTable TableSiparis = Sc.GET_DATATABLE(siparistablosu, new string[] { siparisid });
 
                 datagridview_anlikproses.DataSource = Sc.GET_DATATABLE(SqlConnector.TableAnlikProsesBySiparis, new String[] { siparisid });
+                datagridview_anlikproses.Columns["Id"].Visible = false;
 
                 siparistarihi = DateTime.Parse(TableSiparis.Rows[0]["Sipariş Tarihi"].ToString());
                 teslimtarihi = DateTime.Parse(TableSiparis.Rows[0]["Teslim Tarihi"].ToString());

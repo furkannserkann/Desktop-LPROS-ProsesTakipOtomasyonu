@@ -149,7 +149,7 @@ namespace LPROS.Custom
         {
             get
             {
-                return "select ap.Id, t.talimat_adi as [Talimat], p.isim as [Proses], proses_sirasi as [Sıra], per.ad+' '+per.soyad as [Personel], ap.baslangic_tarihi as [Başlangıç Tarihi], ap.bitis_tarihi as [Bitiş Tarihi] from Anlik_Prosesler as ap " +
+                return "select ap.Id, t.talimat_adi as [Talimat], proses_sirasi as [Sıra], p.isim as [Proses], per.ad+' '+per.soyad as [Personel], ap.baslangic_tarihi as [Başlangıç Tarihi], ap.bitis_tarihi as [Bitiş Tarihi] from Anlik_Prosesler as ap " +
 " left join Proses as p on ap.proses_id = p.Id " +
 " left join Talimat as t on ap.talimat_id = t.Id " +
 " left join Personel as per on ap.personel_no = per.personel_no " +

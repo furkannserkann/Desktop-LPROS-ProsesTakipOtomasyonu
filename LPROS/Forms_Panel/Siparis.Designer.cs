@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.datagridview_Siparis = new System.Windows.Forms.DataGridView();
             this.ayrinti = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.datagridview_Siparis)).BeginInit();
@@ -44,18 +44,19 @@
             this.datagridview_Siparis.AllowUserToDeleteRows = false;
             this.datagridview_Siparis.AllowUserToResizeColumns = false;
             this.datagridview_Siparis.AllowUserToResizeRows = false;
-            this.datagridview_Siparis.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
-            this.datagridview_Siparis.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(230)))), ((int)(((byte)(201)))));
-            this.datagridview_Siparis.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.datagridview_Siparis.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Righteous", 10F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datagridview_Siparis.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.datagridview_Siparis.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.datagridview_Siparis.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.datagridview_Siparis.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(230)))), ((int)(((byte)(201)))));
+            this.datagridview_Siparis.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Righteous", 10F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datagridview_Siparis.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.datagridview_Siparis.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.datagridview_Siparis.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ayrinti});
@@ -63,7 +64,7 @@
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(230)))), ((int)(((byte)(201)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Fredoka One", 10F);
             dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(7);
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(7, 3, 7, 3);
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
@@ -87,25 +88,21 @@
             this.datagridview_Siparis.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.datagridview_Siparis.RowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.datagridview_Siparis.RowTemplate.Height = 45;
+            this.datagridview_Siparis.RowTemplate.Height = 39;
             this.datagridview_Siparis.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.datagridview_Siparis.Size = new System.Drawing.Size(408, 351);
-            this.datagridview_Siparis.TabIndex = 1;
+            this.datagridview_Siparis.TabIndex = 103;
             this.datagridview_Siparis.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagridview_Siparis_CellClick);
             // 
             // ayrinti
             // 
             this.ayrinti.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Righteous", 10F);
-            this.ayrinti.DefaultCellStyle = dataGridViewCellStyle2;
             this.ayrinti.HeaderText = "Ayrıntılar";
             this.ayrinti.Name = "ayrinti";
             this.ayrinti.ReadOnly = true;
-            this.ayrinti.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.ayrinti.Text = "Detay";
             this.ayrinti.UseColumnTextForButtonValue = true;
-            this.ayrinti.Width = 108;
+            this.ayrinti.Width = 88;
             // 
             // Siparis
             // 
