@@ -85,19 +85,19 @@ namespace LPROS.Forms_Panel_Control
             {
                 if (textBox4.Text != "")
                 {
-                    Items.panelMalzemeler.dataGridview.DataSource = Sc.GET_DATATABLE(SqlConnector.TableMalzemeler + " where  fiyat<=@parametre1 AND adi=@parametre2 ", new string[] { textBox4.Text, textBox5.Text});
+                    Items.panelMalzemeler.dataGridview.DataSource = Sc.GET_DATATABLE(SqlConnector.TableMalzemeler + " where  fiyat<=@parametre1 AND adi like '%'+@parametre2+'%' ", new string[] { textBox4.Text, textBox5.Text});
                 }
                 else if (textBox1.Text != "")
                 {
-                    Items.panelMalzemeler.dataGridview.DataSource = Sc.GET_DATATABLE(SqlConnector.TableMalzemeler + " where fiyat>=@parametre1  AND adi=@parametre2", new string[] { textBox1.Text, textBox5.Text });
+                    Items.panelMalzemeler.dataGridview.DataSource = Sc.GET_DATATABLE(SqlConnector.TableMalzemeler + " where fiyat>=@parametre1  AND adi like '%'+@parametre2+'%'", new string[] { textBox1.Text, textBox5.Text });
                 }
                 else if (textBox4.Text != "" && textBox1.Text != "" && Convert.ToInt16(textBox1.Text) < Convert.ToInt16(textBox4.Text))
                 {
-                    Items.panelMalzemeler.dataGridview.DataSource = Sc.GET_DATATABLE(SqlConnector.TableMalzemeler + " where adi=@parametre1 AND fiyat BETWEEN @parametre2 AND @parametre3", new string[] { textBox5.Text, textBox1.Text,textBox4.Text });
+                    Items.panelMalzemeler.dataGridview.DataSource = Sc.GET_DATATABLE(SqlConnector.TableMalzemeler + " where adi like '%'+@parametre1+'%' AND fiyat BETWEEN @parametre2 AND @parametre3", new string[] { textBox5.Text, textBox1.Text,textBox4.Text });
                 }
                 else
                 {
-                    Items.panelMalzemeler.dataGridview.DataSource = Sc.GET_DATATABLE(SqlConnector.TableMalzemeler + " where adi=@parametre1", new string[] { textBox5.Text });
+                    Items.panelMalzemeler.dataGridview.DataSource = Sc.GET_DATATABLE(SqlConnector.TableMalzemeler + " where adi like '%'+@parametre1+'%'", new string[] { textBox5.Text });
                 }
             }
         }
@@ -106,6 +106,7 @@ namespace LPROS.Forms_Panel_Control
             textBox1.Text = "";
             textBox4.Text = "";
             textBox5.Text = "";
+            Items.panelMalzemeler.dataGridview.DataSource = Sc.GET_DATATABLE(SqlConnector.TableMalzemeler);
 
         }
     }
