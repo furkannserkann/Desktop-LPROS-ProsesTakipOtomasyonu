@@ -34,6 +34,7 @@ namespace LPROS.Forms_Panel
 
             datagridview_personel.DataSource = Sc.GET_DATATABLE(SqlConnector.TablePersonel);
             datagridview_personel.Columns[1].Visible = false;
+            datagridview_personel.Columns["sifre"].Visible = false;
         }
 
         private void datagridview_personel_CellClick(object sender, DataGridViewCellEventArgs e)
