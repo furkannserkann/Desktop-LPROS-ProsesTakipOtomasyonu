@@ -15,6 +15,8 @@ namespace LPROS.ControlPanelForms
             InitializeComponent();
         }
 
+        SqlConnector Sc = new SqlConnector();
+
         private void SiparisControl_Load(object sender, EventArgs e)
         {
             datetimepicker_teslimtarihi.Value = DateTime.Now.AddDays(1);
@@ -45,15 +47,15 @@ namespace LPROS.ControlPanelForms
             DataGridView Dtg = Items.panelSiparis.dataGridview;
             Add_Siparis addSip = new Add_Siparis()
             {
-                isUpdate = false,
-                fisno = Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["fis_no"].Value.ToString(),
+                isUpdate = true,
+                fisno = Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["Fiş Numarası"].Value.ToString(),
                 hasta_adsoyad = Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["Hasta İsmi"].Value.ToString(),
-                protez_id = Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["Protez Tipi"].Value.ToString(),
-                hastane_id = Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["Hastane"].Value.ToString(),
-                doktor_id = Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["Doktor"].Value.ToString(),
+                protez_id = Sc.GET_TEKDEGER("select top 1 Id from Protez where adi=@parametre1", new string[] { Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["Protez Tipi"].Value.ToString() }),
+                hastane_id = Sc.GET_TEKDEGER("select top 1 Id from Hastane where ad=@parametre1", new string[] { Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["Hastane"].Value.ToString() }),
+                doktor_id = Sc.GET_TEKDEGER("select top 1 Id from Doktorlar where isim+' '+soyisim=@parametre1", new string[] { Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["Doktor"].Value.ToString() }),
                 siparis_tarihi = Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["Sipariş Tarihi"].Value.ToString(),
                 teslimat_tarihi = Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["Teslim Tarihi"].Value.ToString(),
-                renk_id = Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["Renk"].Value.ToString()
+                renk_id = Sc.GET_TEKDEGER("select top 1 Id from Renk where isim=@parametre1", new string[] { Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["Renk"].Value.ToString() })
             };
             addSip.ShowDialog();
         }

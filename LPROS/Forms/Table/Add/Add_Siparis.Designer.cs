@@ -242,12 +242,14 @@
             // datepicker_siparis
             // 
             this.datepicker_siparis.Checked = false;
+            this.datepicker_siparis.Enabled = false;
             this.datepicker_siparis.Font = new System.Drawing.Font("Yu Gothic", 10F);
             this.datepicker_siparis.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.datepicker_siparis.Location = new System.Drawing.Point(49, 195);
             this.datepicker_siparis.Name = "datepicker_siparis";
             this.datepicker_siparis.Size = new System.Drawing.Size(211, 29);
             this.datepicker_siparis.TabIndex = 51;
+            this.datepicker_siparis.ValueChanged += new System.EventHandler(this.datepicker_siparis_ValueChanged);
             // 
             // label7
             // 
