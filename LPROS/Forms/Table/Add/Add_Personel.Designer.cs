@@ -65,6 +65,7 @@
             this.Combo_yetki = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.Combo_durumu = new System.Windows.Forms.ComboBox();
+            this.durum = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel_head.SuspendLayout();
@@ -75,8 +76,9 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.Combo_durumu);
             this.panel1.Controls.Add(this.label16);
+            this.panel1.Controls.Add(this.Combo_durumu);
+            this.panel1.Controls.Add(this.durum);
             this.panel1.Controls.Add(this.label15);
             this.panel1.Controls.Add(this.textBox_telefon);
             this.panel1.Controls.Add(this.label14);
@@ -134,6 +136,7 @@
             this.textBox_telefon.Name = "textBox_telefon";
             this.textBox_telefon.Size = new System.Drawing.Size(211, 24);
             this.textBox_telefon.TabIndex = 151;
+            this.textBox_telefon.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_telefon_KeyPress);
             // 
             // label14
             // 
@@ -152,8 +155,9 @@
             this.textBox_maas.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.textBox_maas.Location = new System.Drawing.Point(386, 214);
             this.textBox_maas.Name = "textBox_maas";
-            this.textBox_maas.Size = new System.Drawing.Size(211, 24);
+            this.textBox_maas.Size = new System.Drawing.Size(142, 24);
             this.textBox_maas.TabIndex = 149;
+            this.textBox_maas.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_maas_KeyPress);
             // 
             // label13
             // 
@@ -175,6 +179,7 @@
             this.TextBox_Tc.Name = "TextBox_Tc";
             this.TextBox_Tc.Size = new System.Drawing.Size(211, 24);
             this.TextBox_Tc.TabIndex = 147;
+            this.TextBox_Tc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox_Tc_KeyPress);
             // 
             // label12
             // 
@@ -301,6 +306,7 @@
             this.textBox_ssk_no.Size = new System.Drawing.Size(211, 24);
             this.textBox_ssk_no.TabIndex = 65;
             this.textBox_ssk_no.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox_ssk_no.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_ssk_no_KeyPress);
             // 
             // label8
             // 
@@ -385,6 +391,7 @@
             this.textBox_soyisim.Size = new System.Drawing.Size(211, 24);
             this.textBox_soyisim.TabIndex = 48;
             this.textBox_soyisim.TextChanged += new System.EventHandler(this.createkullaniciadi);
+            this.textBox_soyisim.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_soyisim_KeyPress);
             // 
             // panel_head
             // 
@@ -457,6 +464,7 @@
             this.textBox_isim.Size = new System.Drawing.Size(211, 24);
             this.textBox_isim.TabIndex = 47;
             this.textBox_isim.TextChanged += new System.EventHandler(this.createkullaniciadi);
+            this.textBox_isim.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_isim_KeyPress);
             // 
             // label6
             // 
@@ -507,31 +515,32 @@
             this.Combo_durumu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.Combo_durumu.FormattingEnabled = true;
             this.Combo_durumu.Items.AddRange(new object[] {
-            "a",
-            "b",
-            "1",
-            "2",
-            "3",
-            "asd",
-            "asd",
-            "asd",
-            "as",
-            "da",
-            "sd"});
+            "Aktif",
+            "Pasif"});
             this.Combo_durumu.Location = new System.Drawing.Point(386, 424);
             this.Combo_durumu.Name = "Combo_durumu";
             this.Combo_durumu.Size = new System.Drawing.Size(211, 26);
             this.Combo_durumu.TabIndex = 187;
             // 
+            // durum
+            // 
+            this.durum.AutoSize = true;
+            this.durum.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.durum.Location = new System.Drawing.Point(383, 405);
+            this.durum.Name = "durum";
+            this.durum.Size = new System.Drawing.Size(52, 15);
+            this.durum.TabIndex = 186;
+            this.durum.Text = "Durumu";
+            // 
             // label16
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label16.Location = new System.Drawing.Point(383, 405);
+            this.label16.Location = new System.Drawing.Point(534, 214);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(52, 15);
-            this.label16.TabIndex = 186;
-            this.label16.Text = "Durumu";
+            this.label16.Size = new System.Drawing.Size(21, 15);
+            this.label16.TabIndex = 188;
+            this.label16.Text = "TL";
             // 
             // Add_Personel
             // 
@@ -590,6 +599,7 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox textBox_telefon;
         private System.Windows.Forms.ComboBox Combo_durumu;
+        private System.Windows.Forms.Label durum;
         private System.Windows.Forms.Label label16;
     }
 }
