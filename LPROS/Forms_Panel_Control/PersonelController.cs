@@ -69,5 +69,50 @@ namespace LPROS.Forms_Panel_Control
         {
             (new Search_Personel()).ShowDialog();
         }
+        SqlConnector Sc = new SqlConnector();
+        private void button_sil_Click_1(object sender, EventArgs e)
+        {
+            DialogResult Dr = MessageBox.Show("Seçilen Personel Siliniyor!", "Silme İşlemi", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
+            if (Dr == DialogResult.OK)
+            {
+                DataGridView Dtg = Items.panelPersonel.dataGridview;
+
+                if (Sc.QUERY_TABLE("delete from Personel where personel_no=@parametre1", new String[] { Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["personel_no"].Value.ToString() }))
+                {
+                    MessageBox.Show("Silme İşlemi Başarılı!", "Silme İşlemi", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    Items.panelPersonel.dataGridview.DataSource = Sc.GET_DATATABLE(SqlConnector.TablePersonel);
+                }
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Search_Personel();
+        }
+        private void Search_Personel()
+        {
+            DataGridView Dtg = Items.panelPersonel.dataGridview;
+            
+            Items.panelPersonel.dataGridview.DataSource = Sc.GET_DATATABLE(SqlConnector.TablePersonel + " where ad like '%'+@parametre1+'%' and soyad like '%'+@parametre2+'%' and durumu like '%'+@parametre3+'%' and yetki_id like '%'+@parametre4+'%'  ", new String[] { textBox_isim.Text, textBox_soyisim.Text , Combo_durumu.SelectedIndex==0 ?"1":"0", Combo_yetki.SelectedValue.ToString() });
+
+            Items.panelPersonel.dataGridview.Columns[0].Visible = false;
+        }
+
+        private void PersonelController_Load(object sender, EventArgs e)
+        {
+            Combo_yetki.DataSource = Sc.GET_DATATABLE(SqlConnector.TableYetki);
+           
+            Combo_yetki.ValueMember = "id";
+            Combo_yetki.DisplayMember = "Yetki Türü";
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            textBox_isim.Text = "";
+            textBox_soyisim.Text = "";
+            Combo_durumu.Text = "";
+            Combo_yetki.Text = "";
+            Search_Personel();
+        }
     }
 }

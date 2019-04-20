@@ -22,5 +22,10 @@ namespace LPROS.Forms.Table.Search
         {
             new FormTasima(panel_head, label_head, this, pictureBox_close);
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -55,6 +55,17 @@
             this.label6 = new System.Windows.Forms.Label();
             this.comboBox_doktor = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.TextBox_Tc = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox_eposta = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.textBox_telefon = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.textBox_maas = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.panel_head.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_close)).BeginInit();
             this.panel1.SuspendLayout();
@@ -64,17 +75,17 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Montserrat", 9F);
-            this.label5.Location = new System.Drawing.Point(524, 101);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.label5.Location = new System.Drawing.Point(266, 273);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(111, 16);
+            this.label5.Size = new System.Drawing.Size(52, 15);
             this.label5.TabIndex = 68;
-            this.label5.Text = "Çalışma Durumu";
+            this.label5.Text = "Durumu";
             // 
             // comboBox2
             // 
             this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.Font = new System.Drawing.Font("Montserrat", 11.25F);
+            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
             "a",
@@ -88,65 +99,65 @@
             "as",
             "da",
             "sd"});
-            this.comboBox2.Location = new System.Drawing.Point(527, 120);
+            this.comboBox2.Location = new System.Drawing.Point(269, 292);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(211, 29);
+            this.comboBox2.Size = new System.Drawing.Size(211, 26);
             this.comboBox2.TabIndex = 67;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Montserrat", 9F);
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.label8.Location = new System.Drawing.Point(524, 44);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(57, 16);
+            this.label8.Size = new System.Drawing.Size(53, 15);
             this.label8.TabIndex = 64;
             this.label8.Text = "E_Posta";
             // 
             // textBox5
             // 
-            this.textBox5.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.textBox5.ForeColor = System.Drawing.Color.Black;
             this.textBox5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.textBox5.Location = new System.Drawing.Point(527, 63);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(211, 26);
+            this.textBox5.Size = new System.Drawing.Size(211, 24);
             this.textBox5.TabIndex = 63;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Montserrat", 9F);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.label2.Location = new System.Drawing.Point(14, 101);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 16);
+            this.label2.Size = new System.Drawing.Size(74, 15);
             this.label2.TabIndex = 62;
             this.label2.Text = "Kullanıcı Adı";
             // 
             // textBox_kullaniciadi
             // 
-            this.textBox_kullaniciadi.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textBox_kullaniciadi.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.textBox_kullaniciadi.ForeColor = System.Drawing.Color.Black;
             this.textBox_kullaniciadi.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.textBox_kullaniciadi.Location = new System.Drawing.Point(17, 120);
             this.textBox_kullaniciadi.Name = "textBox_kullaniciadi";
-            this.textBox_kullaniciadi.Size = new System.Drawing.Size(211, 26);
+            this.textBox_kullaniciadi.Size = new System.Drawing.Size(211, 24);
             this.textBox_kullaniciadi.TabIndex = 61;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Montserrat", 9F);
-            this.label3.Location = new System.Drawing.Point(780, 44);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.label3.Location = new System.Drawing.Point(524, 273);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(78, 16);
+            this.label3.Size = new System.Drawing.Size(69, 15);
             this.label3.TabIndex = 58;
             this.label3.Text = "Departman";
             // 
             // comboBox1
             // 
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Font = new System.Drawing.Font("Montserrat", 11.25F);
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "a",
@@ -160,19 +171,19 @@
             "as",
             "da",
             "sd"});
-            this.comboBox1.Location = new System.Drawing.Point(783, 63);
+            this.comboBox1.Location = new System.Drawing.Point(527, 292);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(211, 29);
+            this.comboBox1.Size = new System.Drawing.Size(211, 26);
             this.comboBox1.TabIndex = 57;
             // 
             // textBox_soyisim
             // 
-            this.textBox_soyisim.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textBox_soyisim.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.textBox_soyisim.ForeColor = System.Drawing.Color.Black;
             this.textBox_soyisim.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.textBox_soyisim.Location = new System.Drawing.Point(269, 63);
             this.textBox_soyisim.Name = "textBox_soyisim";
-            this.textBox_soyisim.Size = new System.Drawing.Size(211, 26);
+            this.textBox_soyisim.Size = new System.Drawing.Size(211, 24);
             this.textBox_soyisim.TabIndex = 48;
             // 
             // panel_head
@@ -190,7 +201,7 @@
             // 
             this.label_head.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label_head.Font = new System.Drawing.Font("Orator Std", 15F);
+            this.label_head.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.label_head.ForeColor = System.Drawing.Color.White;
             this.label_head.Location = new System.Drawing.Point(12, 0);
             this.label_head.Name = "label_head";
@@ -214,6 +225,17 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.label14);
+            this.panel1.Controls.Add(this.textBox_maas);
+            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.label15);
+            this.panel1.Controls.Add(this.textBox_telefon);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.textBox_eposta);
+            this.panel1.Controls.Add(this.label13);
+            this.panel1.Controls.Add(this.TextBox_Tc);
             this.panel1.Controls.Add(this.datagridview_personel);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.comboBox2);
@@ -236,6 +258,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1007, 570);
             this.panel1.TabIndex = 44;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // datagridview_personel
             // 
@@ -269,7 +292,7 @@
             this.datagridview_personel.DefaultCellStyle = dataGridViewCellStyle3;
             this.datagridview_personel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.datagridview_personel.EnableHeadersVisualStyles = false;
-            this.datagridview_personel.Location = new System.Drawing.Point(0, 155);
+            this.datagridview_personel.Location = new System.Drawing.Point(0, 342);
             this.datagridview_personel.MultiSelect = false;
             this.datagridview_personel.Name = "datagridview_personel";
             this.datagridview_personel.ReadOnly = true;
@@ -288,7 +311,7 @@
             this.datagridview_personel.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.datagridview_personel.RowTemplate.Height = 45;
             this.datagridview_personel.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.datagridview_personel.Size = new System.Drawing.Size(1005, 413);
+            this.datagridview_personel.Size = new System.Drawing.Size(1005, 226);
             this.datagridview_personel.TabIndex = 70;
             // 
             // düzenle
@@ -313,7 +336,7 @@
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Font = new System.Drawing.Font("Yu Gothic", 10F);
             this.button9.ForeColor = System.Drawing.Color.White;
-            this.button9.Location = new System.Drawing.Point(783, 120);
+            this.button9.Location = new System.Drawing.Point(783, 307);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(211, 29);
             this.button9.TabIndex = 55;
@@ -324,37 +347,37 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Montserrat", 9F);
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.label7.Location = new System.Drawing.Point(14, 44);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(34, 16);
+            this.label7.Size = new System.Drawing.Size(30, 15);
             this.label7.TabIndex = 48;
             this.label7.Text = "İsim";
             // 
             // textBox_isim
             // 
-            this.textBox_isim.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textBox_isim.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.textBox_isim.ForeColor = System.Drawing.Color.Black;
             this.textBox_isim.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.textBox_isim.Location = new System.Drawing.Point(17, 63);
             this.textBox_isim.Name = "textBox_isim";
-            this.textBox_isim.Size = new System.Drawing.Size(211, 26);
+            this.textBox_isim.Size = new System.Drawing.Size(211, 24);
             this.textBox_isim.TabIndex = 47;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Montserrat", 9F);
-            this.label6.Location = new System.Drawing.Point(266, 101);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.label6.Location = new System.Drawing.Point(14, 273);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(37, 16);
+            this.label6.Size = new System.Drawing.Size(33, 15);
             this.label6.TabIndex = 46;
             this.label6.Text = "Yetki";
             // 
             // comboBox_doktor
             // 
             this.comboBox_doktor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox_doktor.Font = new System.Drawing.Font("Montserrat", 11.25F);
+            this.comboBox_doktor.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.comboBox_doktor.FormattingEnabled = true;
             this.comboBox_doktor.Items.AddRange(new object[] {
             "a",
@@ -368,20 +391,131 @@
             "as",
             "da",
             "sd"});
-            this.comboBox_doktor.Location = new System.Drawing.Point(269, 120);
+            this.comboBox_doktor.Location = new System.Drawing.Point(17, 292);
             this.comboBox_doktor.Name = "comboBox_doktor";
-            this.comboBox_doktor.Size = new System.Drawing.Size(211, 29);
+            this.comboBox_doktor.Size = new System.Drawing.Size(211, 26);
             this.comboBox_doktor.TabIndex = 45;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Montserrat", 9F);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.label4.Location = new System.Drawing.Point(266, 44);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(55, 16);
+            this.label4.Size = new System.Drawing.Size(50, 15);
             this.label4.TabIndex = 42;
             this.label4.Text = "Soyisim";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.label13.Location = new System.Drawing.Point(780, 44);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(116, 15);
+            this.label13.TabIndex = 150;
+            this.label13.Text = "TC Kimlik Numarası";
+            // 
+            // TextBox_Tc
+            // 
+            this.TextBox_Tc.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.TextBox_Tc.ForeColor = System.Drawing.Color.Black;
+            this.TextBox_Tc.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.TextBox_Tc.Location = new System.Drawing.Point(783, 63);
+            this.TextBox_Tc.MaxLength = 11;
+            this.TextBox_Tc.Name = "TextBox_Tc";
+            this.TextBox_Tc.Size = new System.Drawing.Size(211, 24);
+            this.TextBox_Tc.TabIndex = 149;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.label1.Location = new System.Drawing.Point(266, 101);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(53, 15);
+            this.label1.TabIndex = 152;
+            this.label1.Text = "E_Posta";
+            // 
+            // textBox_eposta
+            // 
+            this.textBox_eposta.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textBox_eposta.ForeColor = System.Drawing.Color.Black;
+            this.textBox_eposta.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.textBox_eposta.Location = new System.Drawing.Point(269, 120);
+            this.textBox_eposta.Name = "textBox_eposta";
+            this.textBox_eposta.Size = new System.Drawing.Size(211, 24);
+            this.textBox_eposta.TabIndex = 151;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.label15.Location = new System.Drawing.Point(524, 101);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(105, 15);
+            this.label15.TabIndex = 154;
+            this.label15.Text = "Telefon Numarası";
+            // 
+            // textBox_telefon
+            // 
+            this.textBox_telefon.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textBox_telefon.ForeColor = System.Drawing.Color.Black;
+            this.textBox_telefon.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.textBox_telefon.Location = new System.Drawing.Point(527, 120);
+            this.textBox_telefon.Name = "textBox_telefon";
+            this.textBox_telefon.Size = new System.Drawing.Size(211, 24);
+            this.textBox_telefon.TabIndex = 153;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textBox1.ForeColor = System.Drawing.Color.Black;
+            this.textBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.textBox1.Location = new System.Drawing.Point(783, 120);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(211, 24);
+            this.textBox1.TabIndex = 156;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.label10.Location = new System.Drawing.Point(780, 101);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(38, 15);
+            this.label10.TabIndex = 155;
+            this.label10.Text = "Adres";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.label14.Location = new System.Drawing.Point(100, 147);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(38, 15);
+            this.label14.TabIndex = 190;
+            this.label14.Text = "Maaş";
+            // 
+            // textBox_maas
+            // 
+            this.textBox_maas.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textBox_maas.ForeColor = System.Drawing.Color.Black;
+            this.textBox_maas.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.textBox_maas.Location = new System.Drawing.Point(17, 178);
+            this.textBox_maas.Name = "textBox_maas";
+            this.textBox_maas.Size = new System.Drawing.Size(87, 24);
+            this.textBox_maas.TabIndex = 189;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textBox2.ForeColor = System.Drawing.Color.Black;
+            this.textBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.textBox2.Location = new System.Drawing.Point(141, 178);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(87, 24);
+            this.textBox2.TabIndex = 191;
             // 
             // Search_Personel
             // 
@@ -426,5 +560,16 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView datagridview_personel;
         private System.Windows.Forms.DataGridViewButtonColumn düzenle;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox TextBox_Tc;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox_eposta;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox textBox_telefon;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox textBox_maas;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }

@@ -71,7 +71,7 @@ namespace LPROS.Forms_Panel_Control
         private void searchRenk()
         {
             DataGridView Dtg = Items.panelYetkiRenk.dataGridview;
-            string Id = Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells[0].Value.ToString();
+    
             Items.panelYetkiRenk.dataGridview.DataSource = Sc.GET_DATATABLE(SqlConnector.TableRenk + " where kod like '%'+@parametre1+'%' and isim like '%'+@parametre2+'%'  ", new String[] { Renkkod.Text, Renkismi.Text });
 
             Items.panelYetkiRenk.dataGridview.Columns[0].Visible = false;
