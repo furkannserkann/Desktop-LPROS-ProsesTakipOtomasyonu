@@ -67,6 +67,10 @@
             this.label6 = new System.Windows.Forms.Label();
             this.Combo_yetki = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.textBox_güvenlik = new System.Windows.Forms.TextBox();
+            this.combo_güvenlik = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel_head.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_close)).BeginInit();
@@ -76,6 +80,10 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.combo_güvenlik);
+            this.panel1.Controls.Add(this.label18);
+            this.panel1.Controls.Add(this.textBox_güvenlik);
+            this.panel1.Controls.Add(this.label17);
             this.panel1.Controls.Add(this.label16);
             this.panel1.Controls.Add(this.Combo_durumu);
             this.panel1.Controls.Add(this.durum);
@@ -130,21 +138,21 @@
             // Combo_durumu
             // 
             this.Combo_durumu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Combo_durumu.Font = new System.Drawing.Font("Montserrat", 10.5F);
+            this.Combo_durumu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F);
             this.Combo_durumu.FormattingEnabled = true;
             this.Combo_durumu.Items.AddRange(new object[] {
             "Aktif",
             "Pasif"});
-            this.Combo_durumu.Location = new System.Drawing.Point(389, 471);
+            this.Combo_durumu.Location = new System.Drawing.Point(392, 579);
             this.Combo_durumu.Name = "Combo_durumu";
-            this.Combo_durumu.Size = new System.Drawing.Size(211, 28);
+            this.Combo_durumu.Size = new System.Drawing.Size(211, 25);
             this.Combo_durumu.TabIndex = 187;
             // 
             // durum
             // 
             this.durum.AutoSize = true;
             this.durum.Font = new System.Drawing.Font("Righteous", 9.5F);
-            this.durum.Location = new System.Drawing.Point(389, 451);
+            this.durum.Location = new System.Drawing.Point(392, 559);
             this.durum.Name = "durum";
             this.durum.Size = new System.Drawing.Size(52, 17);
             this.durum.TabIndex = 186;
@@ -162,12 +170,12 @@
             // 
             // textBox_telefon
             // 
-            this.textBox_telefon.Font = new System.Drawing.Font("Montserrat", 10.5F);
+            this.textBox_telefon.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F);
             this.textBox_telefon.ForeColor = System.Drawing.Color.Black;
             this.textBox_telefon.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.textBox_telefon.Location = new System.Drawing.Point(47, 413);
             this.textBox_telefon.Name = "textBox_telefon";
-            this.textBox_telefon.Size = new System.Drawing.Size(211, 25);
+            this.textBox_telefon.Size = new System.Drawing.Size(211, 23);
             this.textBox_telefon.TabIndex = 151;
             this.textBox_telefon.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_telefon_KeyPress);
             // 
@@ -183,12 +191,12 @@
             // 
             // textBox_maas
             // 
-            this.textBox_maas.Font = new System.Drawing.Font("Montserrat", 10.5F);
+            this.textBox_maas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F);
             this.textBox_maas.ForeColor = System.Drawing.Color.Black;
             this.textBox_maas.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.textBox_maas.Location = new System.Drawing.Point(389, 242);
             this.textBox_maas.Name = "textBox_maas";
-            this.textBox_maas.Size = new System.Drawing.Size(142, 25);
+            this.textBox_maas.Size = new System.Drawing.Size(142, 23);
             this.textBox_maas.TabIndex = 149;
             this.textBox_maas.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_maas_KeyPress);
             // 
@@ -204,13 +212,13 @@
             // 
             // TextBox_Tc
             // 
-            this.TextBox_Tc.Font = new System.Drawing.Font("Montserrat", 10.5F);
+            this.TextBox_Tc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F);
             this.TextBox_Tc.ForeColor = System.Drawing.Color.Black;
             this.TextBox_Tc.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.TextBox_Tc.Location = new System.Drawing.Point(47, 65);
             this.TextBox_Tc.MaxLength = 11;
             this.TextBox_Tc.Name = "TextBox_Tc";
-            this.TextBox_Tc.Size = new System.Drawing.Size(211, 25);
+            this.TextBox_Tc.Size = new System.Drawing.Size(211, 23);
             this.TextBox_Tc.TabIndex = 147;
             this.TextBox_Tc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox_Tc_KeyPress);
             // 
@@ -227,14 +235,14 @@
             // Combo_cinsiyet
             // 
             this.Combo_cinsiyet.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Combo_cinsiyet.Font = new System.Drawing.Font("Montserrat", 10.5F);
+            this.Combo_cinsiyet.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F);
             this.Combo_cinsiyet.FormattingEnabled = true;
             this.Combo_cinsiyet.Items.AddRange(new object[] {
             "Erkek",
             "Kadın"});
             this.Combo_cinsiyet.Location = new System.Drawing.Point(389, 297);
             this.Combo_cinsiyet.Name = "Combo_cinsiyet";
-            this.Combo_cinsiyet.Size = new System.Drawing.Size(211, 28);
+            this.Combo_cinsiyet.Size = new System.Drawing.Size(211, 25);
             this.Combo_cinsiyet.TabIndex = 145;
             // 
             // label11
@@ -249,12 +257,12 @@
             // 
             // textBox_sifre
             // 
-            this.textBox_sifre.Font = new System.Drawing.Font("Montserrat", 10.5F);
+            this.textBox_sifre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F);
             this.textBox_sifre.ForeColor = System.Drawing.Color.Black;
             this.textBox_sifre.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.textBox_sifre.Location = new System.Drawing.Point(47, 297);
             this.textBox_sifre.Name = "textBox_sifre";
-            this.textBox_sifre.Size = new System.Drawing.Size(211, 25);
+            this.textBox_sifre.Size = new System.Drawing.Size(211, 23);
             this.textBox_sifre.TabIndex = 143;
             // 
             // label10
@@ -269,7 +277,7 @@
             // 
             // textBox_adres
             // 
-            this.textBox_adres.Font = new System.Drawing.Font("Montserrat", 10.5F);
+            this.textBox_adres.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F);
             this.textBox_adres.ForeColor = System.Drawing.Color.Black;
             this.textBox_adres.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.textBox_adres.Location = new System.Drawing.Point(47, 471);
@@ -331,12 +339,12 @@
             // 
             // textBox_ssk_no
             // 
-            this.textBox_ssk_no.Font = new System.Drawing.Font("Montserrat", 10.5F);
+            this.textBox_ssk_no.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F);
             this.textBox_ssk_no.ForeColor = System.Drawing.Color.Black;
             this.textBox_ssk_no.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.textBox_ssk_no.Location = new System.Drawing.Point(389, 65);
             this.textBox_ssk_no.Name = "textBox_ssk_no";
-            this.textBox_ssk_no.Size = new System.Drawing.Size(211, 25);
+            this.textBox_ssk_no.Size = new System.Drawing.Size(211, 23);
             this.textBox_ssk_no.TabIndex = 65;
             this.textBox_ssk_no.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.textBox_ssk_no.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_ssk_no_KeyPress);
@@ -353,12 +361,12 @@
             // 
             // textBox_eposta
             // 
-            this.textBox_eposta.Font = new System.Drawing.Font("Montserrat", 10.5F);
+            this.textBox_eposta.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F);
             this.textBox_eposta.ForeColor = System.Drawing.Color.Black;
             this.textBox_eposta.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.textBox_eposta.Location = new System.Drawing.Point(47, 355);
             this.textBox_eposta.Name = "textBox_eposta";
-            this.textBox_eposta.Size = new System.Drawing.Size(211, 25);
+            this.textBox_eposta.Size = new System.Drawing.Size(211, 23);
             this.textBox_eposta.TabIndex = 63;
             // 
             // label2
@@ -374,12 +382,12 @@
             // textBox_kullaniciadi
             // 
             this.textBox_kullaniciadi.Enabled = false;
-            this.textBox_kullaniciadi.Font = new System.Drawing.Font("Montserrat", 10.5F);
+            this.textBox_kullaniciadi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F);
             this.textBox_kullaniciadi.ForeColor = System.Drawing.Color.Black;
             this.textBox_kullaniciadi.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.textBox_kullaniciadi.Location = new System.Drawing.Point(47, 239);
             this.textBox_kullaniciadi.Name = "textBox_kullaniciadi";
-            this.textBox_kullaniciadi.Size = new System.Drawing.Size(211, 25);
+            this.textBox_kullaniciadi.Size = new System.Drawing.Size(211, 23);
             this.textBox_kullaniciadi.TabIndex = 61;
             // 
             // label3
@@ -395,7 +403,7 @@
             // Combo_departman
             // 
             this.Combo_departman.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Combo_departman.Font = new System.Drawing.Font("Montserrat", 10.5F);
+            this.Combo_departman.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F);
             this.Combo_departman.FormattingEnabled = true;
             this.Combo_departman.Items.AddRange(new object[] {
             "a",
@@ -411,17 +419,17 @@
             "sd"});
             this.Combo_departman.Location = new System.Drawing.Point(389, 355);
             this.Combo_departman.Name = "Combo_departman";
-            this.Combo_departman.Size = new System.Drawing.Size(211, 28);
+            this.Combo_departman.Size = new System.Drawing.Size(211, 25);
             this.Combo_departman.TabIndex = 57;
             // 
             // textBox_soyisim
             // 
-            this.textBox_soyisim.Font = new System.Drawing.Font("Montserrat", 10.5F);
+            this.textBox_soyisim.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F);
             this.textBox_soyisim.ForeColor = System.Drawing.Color.Black;
             this.textBox_soyisim.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.textBox_soyisim.Location = new System.Drawing.Point(47, 181);
             this.textBox_soyisim.Name = "textBox_soyisim";
-            this.textBox_soyisim.Size = new System.Drawing.Size(211, 25);
+            this.textBox_soyisim.Size = new System.Drawing.Size(211, 23);
             this.textBox_soyisim.TabIndex = 48;
             this.textBox_soyisim.TextChanged += new System.EventHandler(this.createkullaniciadi);
             this.textBox_soyisim.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_soyisim_KeyPress);
@@ -470,7 +478,7 @@
             this.button_kaydet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_kaydet.Font = new System.Drawing.Font("Righteous", 12F);
             this.button_kaydet.ForeColor = System.Drawing.Color.White;
-            this.button_kaydet.Location = new System.Drawing.Point(389, 575);
+            this.button_kaydet.Location = new System.Drawing.Point(47, 565);
             this.button_kaydet.Name = "button_kaydet";
             this.button_kaydet.Size = new System.Drawing.Size(211, 50);
             this.button_kaydet.TabIndex = 55;
@@ -490,12 +498,12 @@
             // 
             // textBox_isim
             // 
-            this.textBox_isim.Font = new System.Drawing.Font("Montserrat", 10.5F);
+            this.textBox_isim.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F);
             this.textBox_isim.ForeColor = System.Drawing.Color.Black;
             this.textBox_isim.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.textBox_isim.Location = new System.Drawing.Point(47, 123);
             this.textBox_isim.Name = "textBox_isim";
-            this.textBox_isim.Size = new System.Drawing.Size(211, 25);
+            this.textBox_isim.Size = new System.Drawing.Size(211, 23);
             this.textBox_isim.TabIndex = 47;
             this.textBox_isim.TextChanged += new System.EventHandler(this.createkullaniciadi);
             this.textBox_isim.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_isim_KeyPress);
@@ -513,7 +521,7 @@
             // Combo_yetki
             // 
             this.Combo_yetki.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Combo_yetki.Font = new System.Drawing.Font("Montserrat", 10.5F);
+            this.Combo_yetki.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F);
             this.Combo_yetki.FormattingEnabled = true;
             this.Combo_yetki.Items.AddRange(new object[] {
             "a",
@@ -529,7 +537,7 @@
             "sd"});
             this.Combo_yetki.Location = new System.Drawing.Point(389, 413);
             this.Combo_yetki.Name = "Combo_yetki";
-            this.Combo_yetki.Size = new System.Drawing.Size(211, 28);
+            this.Combo_yetki.Size = new System.Drawing.Size(211, 25);
             this.Combo_yetki.TabIndex = 45;
             this.Combo_yetki.SelectedIndexChanged += new System.EventHandler(this.Combo_yetki_SelectedIndexChanged);
             // 
@@ -542,6 +550,52 @@
             this.label4.Size = new System.Drawing.Size(54, 17);
             this.label4.TabIndex = 42;
             this.label4.Text = "Soyisim";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Righteous", 9.5F);
+            this.label17.Location = new System.Drawing.Point(389, 448);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(104, 17);
+            this.label17.TabIndex = 190;
+            this.label17.Text = "Güvenlik Sorusu";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Righteous", 9.5F);
+            this.label18.Location = new System.Drawing.Point(389, 502);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(149, 17);
+            this.label18.TabIndex = 192;
+            this.label18.Text = "Güvenlik Sorusu Cevabı";
+            // 
+            // textBox_güvenlik
+            // 
+            this.textBox_güvenlik.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F);
+            this.textBox_güvenlik.ForeColor = System.Drawing.Color.Black;
+            this.textBox_güvenlik.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.textBox_güvenlik.Location = new System.Drawing.Point(392, 522);
+            this.textBox_güvenlik.Name = "textBox_güvenlik";
+            this.textBox_güvenlik.Size = new System.Drawing.Size(211, 23);
+            this.textBox_güvenlik.TabIndex = 191;
+            // 
+            // combo_güvenlik
+            // 
+            this.combo_güvenlik.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combo_güvenlik.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F);
+            this.combo_güvenlik.FormattingEnabled = true;
+            this.combo_güvenlik.Items.AddRange(new object[] {
+            "ANNENIZIN KIZLIK SOYADI?",
+            "DOGUM YERINIZ ?",
+            "ILK EVCIL HAYVANINIZ ?",
+            "EN SEVDIGINIZ YIYECEK?",
+            "EN SEVDIGINIZ RENK?"});
+            this.combo_güvenlik.Location = new System.Drawing.Point(392, 469);
+            this.combo_güvenlik.Name = "combo_güvenlik";
+            this.combo_güvenlik.Size = new System.Drawing.Size(211, 25);
+            this.combo_güvenlik.TabIndex = 193;
             // 
             // Add_Personel
             // 
@@ -602,5 +656,9 @@
         private System.Windows.Forms.ComboBox Combo_durumu;
         private System.Windows.Forms.Label durum;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.ComboBox combo_güvenlik;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox textBox_güvenlik;
+        private System.Windows.Forms.Label label17;
     }
 }

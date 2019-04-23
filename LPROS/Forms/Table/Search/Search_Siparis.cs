@@ -192,14 +192,14 @@ namespace LPROS.Forms.Table.Search
             {
                 if (checkbox_siparisarasinda.Checked)
                 {
-                    queryCustom = " and s.siparis_tarihi between @parametre" + parametreSirasi + " and @parametre" + (parametreSirasi + 1) + " ";
+                    queryCustom = " and convert(DATE, s.siparis_tarihi) between @parametre" + parametreSirasi + " and @parametre" + (parametreSirasi + 1) + " ";
                     constArray = stringArrayBirlestir(constArray, new string[] { SSiparisTarihiBaslangic.ToString("yyyy/MM/dd"), SSiparisTarihiBitis.ToString("yyyy/MM/dd") });
 
                     parametreSirasi += 2;
                 }
                 else
                 {
-                    queryCustom = " and s.siparis_tarihi=@parametre" + parametreSirasi + " ";
+                    queryCustom = " and convert(DATE, s.siparis_tarihi)=@parametre" + parametreSirasi + " ";
                     constArray = stringArrayBirlestir(constArray, new string[] { SSiparisTarihiBaslangic.ToString("yyyy/MM/dd") });
 
                     parametreSirasi += 1;
