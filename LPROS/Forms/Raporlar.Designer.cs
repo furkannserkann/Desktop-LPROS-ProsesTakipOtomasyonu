@@ -29,31 +29,34 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Raporlar));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel_head = new System.Windows.Forms.Panel();
             this.pictureBox_minimize = new System.Windows.Forms.PictureBox();
             this.label_head = new System.Windows.Forms.Label();
             this.pictureBox_close = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel_forms = new System.Windows.Forms.Panel();
-            this.datagridview_Siparis = new System.Windows.Forms.DataGridView();
-            this.label8 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button_ara = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.datepicker_tarihson = new System.Windows.Forms.DateTimePicker();
             this.datepicker_tarihbas = new System.Windows.Forms.DateTimePicker();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.datagridview_Siparis = new System.Windows.Forms.DataGridView();
+            this.button_ara = new System.Windows.Forms.Button();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.panel_head.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_minimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_close)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel_forms.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagridview_Siparis)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_head
@@ -122,13 +125,13 @@
             // 
             // panel_forms
             // 
+            this.panel_forms.Controls.Add(this.checkBox2);
+            this.panel_forms.Controls.Add(this.chart1);
             this.panel_forms.Controls.Add(this.label1);
             this.panel_forms.Controls.Add(this.checkBox1);
             this.panel_forms.Controls.Add(this.datepicker_tarihson);
             this.panel_forms.Controls.Add(this.datepicker_tarihbas);
             this.panel_forms.Controls.Add(this.datagridview_Siparis);
-            this.panel_forms.Controls.Add(this.label8);
-            this.panel_forms.Controls.Add(this.pictureBox1);
             this.panel_forms.Controls.Add(this.button_ara);
             this.panel_forms.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_forms.Location = new System.Drawing.Point(0, 30);
@@ -136,92 +139,27 @@
             this.panel_forms.Size = new System.Drawing.Size(1364, 696);
             this.panel_forms.TabIndex = 58;
             // 
-            // datagridview_Siparis
+            // label1
             // 
-            this.datagridview_Siparis.AllowUserToAddRows = false;
-            this.datagridview_Siparis.AllowUserToDeleteRows = false;
-            this.datagridview_Siparis.AllowUserToResizeColumns = false;
-            this.datagridview_Siparis.AllowUserToResizeRows = false;
-            this.datagridview_Siparis.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
-            this.datagridview_Siparis.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(230)))), ((int)(((byte)(201)))));
-            this.datagridview_Siparis.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.datagridview_Siparis.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Sitka Banner", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datagridview_Siparis.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
-            this.datagridview_Siparis.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(230)))), ((int)(((byte)(201)))));
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Yu Gothic", 9.1F);
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle10.Padding = new System.Windows.Forms.Padding(7);
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.datagridview_Siparis.DefaultCellStyle = dataGridViewCellStyle10;
-            this.datagridview_Siparis.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.datagridview_Siparis.EnableHeadersVisualStyles = false;
-            this.datagridview_Siparis.Location = new System.Drawing.Point(0, 369);
-            this.datagridview_Siparis.MultiSelect = false;
-            this.datagridview_Siparis.Name = "datagridview_Siparis";
-            this.datagridview_Siparis.ReadOnly = true;
-            this.datagridview_Siparis.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(230)))), ((int)(((byte)(201)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datagridview_Siparis.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
-            this.datagridview_Siparis.RowHeadersWidth = 35;
-            this.datagridview_Siparis.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datagridview_Siparis.RowsDefaultCellStyle = dataGridViewCellStyle12;
-            this.datagridview_Siparis.RowTemplate.Height = 45;
-            this.datagridview_Siparis.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.datagridview_Siparis.Size = new System.Drawing.Size(1364, 327);
-            this.datagridview_Siparis.TabIndex = 170;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Righteous", 9.5F);
+            this.label1.Location = new System.Drawing.Point(27, 31);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(41, 17);
+            this.label1.TabIndex = 189;
+            this.label1.Text = "label1";
             // 
-            // label8
+            // checkBox1
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Righteous", 9.5F);
-            this.label8.Location = new System.Drawing.Point(1112, 164);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(129, 17);
-            this.label8.TabIndex = 169;
-            this.label8.Text = "Pasta Grafiği gelsin";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(999, 33);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(354, 274);
-            this.pictureBox1.TabIndex = 168;
-            this.pictureBox1.TabStop = false;
-            // 
-            // button_ara
-            // 
-            this.button_ara.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-            this.button_ara.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_ara.FlatAppearance.BorderSize = 0;
-            this.button_ara.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_ara.Font = new System.Drawing.Font("Righteous", 12F);
-            this.button_ara.ForeColor = System.Drawing.Color.White;
-            this.button_ara.Location = new System.Drawing.Point(579, 44);
-            this.button_ara.Name = "button_ara";
-            this.button_ara.Size = new System.Drawing.Size(354, 50);
-            this.button_ara.TabIndex = 167;
-            this.button_ara.Text = "Raporu Göster";
-            this.button_ara.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button_ara.UseVisualStyleBackColor = false;
-            this.button_ara.Click += new System.EventHandler(this.button_ara_Click);
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Font = new System.Drawing.Font("Righteous", 9.5F);
+            this.checkBox1.Location = new System.Drawing.Point(267, 27);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(69, 21);
+            this.checkBox1.TabIndex = 188;
+            this.checkBox1.Text = "Tarih 2";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // datepicker_tarihson
             // 
@@ -243,27 +181,108 @@
             this.datepicker_tarihbas.Name = "datepicker_tarihbas";
             this.datepicker_tarihbas.Size = new System.Drawing.Size(211, 29);
             this.datepicker_tarihbas.TabIndex = 178;
+            this.datepicker_tarihbas.ValueChanged += new System.EventHandler(this.datepicker_tarihbas_ValueChanged);
             // 
-            // checkBox1
+            // datagridview_Siparis
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Righteous", 9.5F);
-            this.checkBox1.Location = new System.Drawing.Point(267, 27);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(69, 21);
-            this.checkBox1.TabIndex = 188;
-            this.checkBox1.Text = "Tarih 2";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.datagridview_Siparis.AllowUserToAddRows = false;
+            this.datagridview_Siparis.AllowUserToDeleteRows = false;
+            this.datagridview_Siparis.AllowUserToResizeColumns = false;
+            this.datagridview_Siparis.AllowUserToResizeRows = false;
+            this.datagridview_Siparis.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.datagridview_Siparis.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(230)))), ((int)(((byte)(201)))));
+            this.datagridview_Siparis.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.datagridview_Siparis.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Sitka Banner", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datagridview_Siparis.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.datagridview_Siparis.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(230)))), ((int)(((byte)(201)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Yu Gothic", 9.1F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(7);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.datagridview_Siparis.DefaultCellStyle = dataGridViewCellStyle2;
+            this.datagridview_Siparis.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.datagridview_Siparis.EnableHeadersVisualStyles = false;
+            this.datagridview_Siparis.Location = new System.Drawing.Point(0, 369);
+            this.datagridview_Siparis.MultiSelect = false;
+            this.datagridview_Siparis.Name = "datagridview_Siparis";
+            this.datagridview_Siparis.ReadOnly = true;
+            this.datagridview_Siparis.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(230)))), ((int)(((byte)(201)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datagridview_Siparis.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.datagridview_Siparis.RowHeadersWidth = 35;
+            this.datagridview_Siparis.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datagridview_Siparis.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.datagridview_Siparis.RowTemplate.Height = 45;
+            this.datagridview_Siparis.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.datagridview_Siparis.Size = new System.Drawing.Size(1364, 327);
+            this.datagridview_Siparis.TabIndex = 170;
             // 
-            // label1
+            // button_ara
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Righteous", 9.5F);
-            this.label1.Location = new System.Drawing.Point(27, 31);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 17);
-            this.label1.TabIndex = 189;
-            this.label1.Text = "label1";
+            this.button_ara.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            this.button_ara.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_ara.FlatAppearance.BorderSize = 0;
+            this.button_ara.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_ara.Font = new System.Drawing.Font("Righteous", 12F);
+            this.button_ara.ForeColor = System.Drawing.Color.White;
+            this.button_ara.Location = new System.Drawing.Point(43, 181);
+            this.button_ara.Name = "button_ara";
+            this.button_ara.Size = new System.Drawing.Size(354, 50);
+            this.button_ara.TabIndex = 167;
+            this.button_ara.Text = "Raporu Göster";
+            this.button_ara.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button_ara.UseVisualStyleBackColor = false;
+            this.button_ara.Click += new System.EventHandler(this.button_ara_Click);
+            // 
+            // chart1
+            // 
+            this.chart1.BorderlineColor = System.Drawing.Color.Transparent;
+            this.chart1.BorderSkin.BackColor = System.Drawing.Color.Transparent;
+            this.chart1.BorderSkin.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
+            this.chart1.BorderSkin.PageColor = System.Drawing.Color.Transparent;
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(595, 0);
+            this.chart1.Name = "chart1";
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series1.Legend = "Legend1";
+            series1.Name = "PASTA";
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(733, 363);
+            this.chart1.TabIndex = 190;
+            this.chart1.Text = "chart1";
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(640, 6);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(113, 17);
+            this.checkBox2.TabIndex = 191;
+            this.checkBox2.Text = "Toplam Gelir Gider";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
             // Raporlar
             // 
@@ -284,7 +303,7 @@
             this.panel_forms.ResumeLayout(false);
             this.panel_forms.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagridview_Siparis)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -298,12 +317,12 @@
         private System.Windows.Forms.PictureBox pictureBox_minimize;
         private System.Windows.Forms.Panel panel_forms;
         private System.Windows.Forms.Button button_ara;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridView datagridview_Siparis;
         private System.Windows.Forms.DateTimePicker datepicker_tarihson;
         private System.Windows.Forms.DateTimePicker datepicker_tarihbas;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.CheckBox checkBox2;
     }
 }
