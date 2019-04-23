@@ -29,6 +29,7 @@ namespace LPROS.Forms
         private void Raporlar_Load(object sender, EventArgs e)
         {
             ara();
+            datepicker_tarihson.MinDate = datepicker_tarihbas.Value;
         }
 
         private void Raporlar_FormClosed(object sender, FormClosedEventArgs e)
