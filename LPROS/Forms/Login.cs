@@ -1,4 +1,5 @@
 ﻿using LPROS.Custom;
+using LPROS.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,7 +20,7 @@ namespace LPROS
             InitializeComponent();
         }
 
-        SqlConnector Scon = new SqlConnector();
+        SqlConnector Sc = new SqlConnector();
 
         private String USERNAME_OR_PASSWORD_NULL = "Lütfen Boş Yerleri Doldurunuz";
         private String USERNAME_OR_PASSWORD_FALSE = "Kullanıcı Adı veya Şifre Yanlış";
@@ -98,31 +99,47 @@ namespace LPROS
 
         private void button_login_Click(object sender, EventArgs e)
         {
-            //Form1 f1 = new LPROS.Form1();
-            //f1.Show();
-            //this.Hide();
+            login();
+        }
 
+        private void PANEL_TEXT_USERNAME_Click(object sender, EventArgs e)
+        {
+            TEXT_USERNAME.Focus();
+        }
 
+        private void PANEL_TEXT_PASSWORD_Click(object sender, EventArgs e)
+        {
+            TEXT_PASSWORD.Focus();
+        }
 
+        private void login()
+        {
             String USER_NAME = this.TEXT_USERNAME.Text.ToString();
             String PASSWORD = this.TEXT_PASSWORD.Text.ToString();
 
             if (USER_NAME != "Kullanıcı Adı" && PASSWORD != "Şifre")
             {
                 SqlCommand SC_USERNAME_PASSWORD = new SqlCommand("Select * From Personel Where kullanici_adi=" +
-                "@USERNAME and sifre=@PASSWORD", Scon.CON);
+                "@USERNAME and sifre=@PASSWORD", Sc.CON);
 
                 SC_USERNAME_PASSWORD.Parameters.AddWithValue("@USERNAME", USER_NAME);
                 SC_USERNAME_PASSWORD.Parameters.AddWithValue("@PASSWORD", PASSWORD);
 
                 try
                 {
-                    Scon.setCON_EMPTY(true);
+                    Sc.setCON_EMPTY(true);
                     int TABLE_COUNT = Convert.ToInt32(SC_USERNAME_PASSWORD.ExecuteScalar());
 
                     if (TABLE_COUNT != 0)
                     {
-                        Scon.setCON_EMPTY(false);
+                        DataTable dt = Sc.GET_DATATABLE("select * from Personel where kullanici_adi=@parametre1 and sifre=@parametre2", new string[] { USER_NAME, PASSWORD });
+                        User.id = dt.Rows[0]["personel_no"].ToString();
+                        User.yetki_id = dt.Rows[0]["yetki_id"].ToString();
+                        User.yetki_tipi = Sc.GET_TEKDEGER("select yetki_turu from Yetkiler where Id=@parametre1", new string[] { User.yetki_id });
+                        User.ad = dt.Rows[0]["ad"].ToString();
+                        User.soyad = dt.Rows[0]["soyad"].ToString(); ;
+
+                        Sc.setCON_EMPTY(false);
                         (new Main()).Show();
                         this.Hide();
                     }
@@ -144,6 +161,20 @@ namespace LPROS
                 this.LABEL_NOT_LOGIN_INFO.Text = USERNAME_OR_PASSWORD_NULL;
                 this.LABEL_NOT_LOGIN_INFO.Visible = true;
             }
+        }
+
+        private void Enter_Login_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                login();
+            }
+        }
+
+        private void label_sifremiunttum_Click(object sender, EventArgs e)
+        {
+            ForgetPassword Fp = new ForgetPassword();
+            Fp.ShowDialog();
         }
     }
 }

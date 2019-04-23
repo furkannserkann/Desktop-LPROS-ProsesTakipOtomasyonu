@@ -29,30 +29,27 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Add_Talimat));
             this.panel1 = new System.Windows.Forms.Panel();
             this.datagridview_proses = new System.Windows.Forms.DataGridView();
             this.ekle = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.sira = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button_temizle_isim = new System.Windows.Forms.Button();
-            this.ımageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.textbox_ara_kod = new System.Windows.Forms.TextBox();
-            this.textbox_ara_isim = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.textbot_talimat_isim = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.textbox_talimat_isim = new System.Windows.Forms.TextBox();
             this.panel_head = new System.Windows.Forms.Panel();
             this.label_head = new System.Windows.Forms.Label();
             this.pictureBox_close = new System.Windows.Forms.PictureBox();
             this.button_talimat_kaydet = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.textbot_talimat_kod = new System.Windows.Forms.TextBox();
+            this.textbox_talimat_kod = new System.Windows.Forms.TextBox();
+            this.ımageList2 = new System.Windows.Forms.ImageList(this.components);
+            this.ımageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.checkbox_secili = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagridview_proses)).BeginInit();
             this.panel_head.SuspendLayout();
@@ -63,22 +60,18 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.checkbox_secili);
             this.panel1.Controls.Add(this.datagridview_proses);
-            this.panel1.Controls.Add(this.button_temizle_isim);
-            this.panel1.Controls.Add(this.textbox_ara_kod);
-            this.panel1.Controls.Add(this.textbox_ara_isim);
-            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.textbot_talimat_isim);
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.textbox_talimat_isim);
             this.panel1.Controls.Add(this.panel_head);
             this.panel1.Controls.Add(this.button_talimat_kaydet);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.textbot_talimat_kod);
+            this.panel1.Controls.Add(this.textbox_talimat_kod);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(836, 496);
+            this.panel1.Size = new System.Drawing.Size(836, 572);
             this.panel1.TabIndex = 44;
             // 
             // datagridview_proses
@@ -87,56 +80,59 @@
             this.datagridview_proses.AllowUserToDeleteRows = false;
             this.datagridview_proses.AllowUserToResizeColumns = false;
             this.datagridview_proses.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datagridview_proses.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datagridview_proses.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle26;
             this.datagridview_proses.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.datagridview_proses.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.datagridview_proses.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(230)))), ((int)(((byte)(201)))));
             this.datagridview_proses.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Righteous", 10F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datagridview_proses.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle27.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle27.Font = new System.Drawing.Font("Righteous", 10F);
+            dataGridViewCellStyle27.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datagridview_proses.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle27;
             this.datagridview_proses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.datagridview_proses.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ekle,
             this.sira});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(230)))), ((int)(((byte)(201)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Fredoka One", 10F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(7, 3, 7, 3);
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.datagridview_proses.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(230)))), ((int)(((byte)(201)))));
+            dataGridViewCellStyle28.Font = new System.Drawing.Font("Fredoka One", 10F);
+            dataGridViewCellStyle28.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle28.Padding = new System.Windows.Forms.Padding(7, 3, 7, 3);
+            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.datagridview_proses.DefaultCellStyle = dataGridViewCellStyle28;
             this.datagridview_proses.EnableHeadersVisualStyles = false;
-            this.datagridview_proses.Location = new System.Drawing.Point(306, 90);
+            this.datagridview_proses.Location = new System.Drawing.Point(306, 64);
             this.datagridview_proses.MultiSelect = false;
             this.datagridview_proses.Name = "datagridview_proses";
             this.datagridview_proses.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(230)))), ((int)(((byte)(201)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datagridview_proses.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(230)))), ((int)(((byte)(201)))));
+            dataGridViewCellStyle29.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            dataGridViewCellStyle29.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datagridview_proses.RowHeadersDefaultCellStyle = dataGridViewCellStyle29;
             this.datagridview_proses.RowHeadersWidth = 35;
             this.datagridview_proses.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datagridview_proses.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datagridview_proses.RowsDefaultCellStyle = dataGridViewCellStyle30;
             this.datagridview_proses.RowTemplate.Height = 39;
             this.datagridview_proses.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.datagridview_proses.Size = new System.Drawing.Size(525, 401);
+            this.datagridview_proses.Size = new System.Drawing.Size(525, 503);
             this.datagridview_proses.TabIndex = 103;
+            this.datagridview_proses.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.datagridview_proses_CellBeginEdit);
+            this.datagridview_proses.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagridview_proses_CellContentClick);
+            this.datagridview_proses.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagridview_proses_CellEndEdit);
             // 
             // ekle
             // 
@@ -150,69 +146,6 @@
             this.sira.Name = "sira";
             this.sira.Width = 73;
             // 
-            // button_temizle_isim
-            // 
-            this.button_temizle_isim.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.button_temizle_isim.BackColor = System.Drawing.Color.Brown;
-            this.button_temizle_isim.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_temizle_isim.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button_temizle_isim.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_temizle_isim.Font = new System.Drawing.Font("Yu Gothic", 10F);
-            this.button_temizle_isim.ForeColor = System.Drawing.Color.White;
-            this.button_temizle_isim.ImageKey = "icons8-broom-96.png";
-            this.button_temizle_isim.ImageList = this.ımageList1;
-            this.button_temizle_isim.Location = new System.Drawing.Point(657, 61);
-            this.button_temizle_isim.Name = "button_temizle_isim";
-            this.button_temizle_isim.Size = new System.Drawing.Size(41, 23);
-            this.button_temizle_isim.TabIndex = 102;
-            this.button_temizle_isim.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button_temizle_isim.UseVisualStyleBackColor = false;
-            this.button_temizle_isim.Click += new System.EventHandler(this.button_temizle_isim_Click);
-            // 
-            // ımageList1
-            // 
-            this.ımageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ımageList1.ImageStream")));
-            this.ımageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.ımageList1.Images.SetKeyName(0, "icons8-plus-math-90.png");
-            this.ımageList1.Images.SetKeyName(1, "icons8-delete-90.png");
-            this.ımageList1.Images.SetKeyName(2, "icons8-pencil-96.png");
-            this.ımageList1.Images.SetKeyName(3, "icons8-search-more-90.png");
-            this.ımageList1.Images.SetKeyName(4, "icons8-search-208.png");
-            this.ımageList1.Images.SetKeyName(5, "icons8-broom-96.png");
-            // 
-            // textbox_ara_kod
-            // 
-            this.textbox_ara_kod.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F);
-            this.textbox_ara_kod.ForeColor = System.Drawing.Color.Black;
-            this.textbox_ara_kod.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textbox_ara_kod.Location = new System.Drawing.Point(306, 61);
-            this.textbox_ara_kod.Name = "textbox_ara_kod";
-            this.textbox_ara_kod.Size = new System.Drawing.Size(139, 23);
-            this.textbox_ara_kod.TabIndex = 100;
-            this.textbox_ara_kod.TextChanged += new System.EventHandler(this.textbox_ara_kod_TextChanged);
-            // 
-            // textbox_ara_isim
-            // 
-            this.textbox_ara_isim.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F);
-            this.textbox_ara_isim.ForeColor = System.Drawing.Color.Black;
-            this.textbox_ara_isim.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textbox_ara_isim.Location = new System.Drawing.Point(457, 61);
-            this.textbox_ara_isim.Name = "textbox_ara_isim";
-            this.textbox_ara_isim.Size = new System.Drawing.Size(193, 23);
-            this.textbox_ara_isim.TabIndex = 98;
-            this.textbox_ara_isim.TextChanged += new System.EventHandler(this.textbox_ara_isim_TextChanged);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Righteous", 9.5F);
-            this.label3.Location = new System.Drawing.Point(303, 41);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 17);
-            this.label3.TabIndex = 95;
-            this.label3.Text = "Proses Kodu:";
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -223,26 +156,16 @@
             this.label8.TabIndex = 64;
             this.label8.Text = "Talimat İsmi";
             // 
-            // textbot_talimat_isim
+            // textbox_talimat_isim
             // 
-            this.textbot_talimat_isim.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textbot_talimat_isim.ForeColor = System.Drawing.Color.Black;
-            this.textbot_talimat_isim.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textbot_talimat_isim.Location = new System.Drawing.Point(41, 253);
-            this.textbot_talimat_isim.Name = "textbot_talimat_isim";
-            this.textbot_talimat_isim.Size = new System.Drawing.Size(211, 26);
-            this.textbot_talimat_isim.TabIndex = 63;
-            this.textbot_talimat_isim.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textbot_talimat_kod_KeyDown);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Righteous", 9.5F);
-            this.label1.Location = new System.Drawing.Point(454, 41);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 17);
-            this.label1.TabIndex = 91;
-            this.label1.Text = "Proses İsmi:";
+            this.textbox_talimat_isim.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textbox_talimat_isim.ForeColor = System.Drawing.Color.Black;
+            this.textbox_talimat_isim.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.textbox_talimat_isim.Location = new System.Drawing.Point(41, 253);
+            this.textbox_talimat_isim.Name = "textbox_talimat_isim";
+            this.textbox_talimat_isim.Size = new System.Drawing.Size(211, 26);
+            this.textbox_talimat_isim.TabIndex = 63;
+            this.textbox_talimat_isim.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textbot_talimat_kod_KeyDown);
             // 
             // panel_head
             // 
@@ -307,27 +230,69 @@
             this.label7.TabIndex = 48;
             this.label7.Text = "Talimat Kodu";
             // 
-            // textbot_talimat_kod
+            // textbox_talimat_kod
             // 
-            this.textbot_talimat_kod.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textbot_talimat_kod.ForeColor = System.Drawing.Color.Black;
-            this.textbot_talimat_kod.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textbot_talimat_kod.Location = new System.Drawing.Point(41, 172);
-            this.textbot_talimat_kod.Name = "textbot_talimat_kod";
-            this.textbot_talimat_kod.Size = new System.Drawing.Size(211, 26);
-            this.textbot_talimat_kod.TabIndex = 47;
-            this.textbot_talimat_kod.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textbot_talimat_kod_KeyDown);
+            this.textbox_talimat_kod.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textbox_talimat_kod.ForeColor = System.Drawing.Color.Black;
+            this.textbox_talimat_kod.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.textbox_talimat_kod.Location = new System.Drawing.Point(41, 172);
+            this.textbox_talimat_kod.Name = "textbox_talimat_kod";
+            this.textbox_talimat_kod.Size = new System.Drawing.Size(211, 26);
+            this.textbox_talimat_kod.TabIndex = 47;
+            this.textbox_talimat_kod.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textbot_talimat_kod_KeyDown);
+            // 
+            // ımageList2
+            // 
+            this.ımageList2.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ımageList2.ImageStream")));
+            this.ımageList2.TransparentColor = System.Drawing.Color.Transparent;
+            this.ımageList2.Images.SetKeyName(0, "add.png");
+            this.ımageList2.Images.SetKeyName(1, "edit.png");
+            this.ımageList2.Images.SetKeyName(2, "clear.png");
+            this.ımageList2.Images.SetKeyName(3, "delete.png");
+            this.ımageList2.Images.SetKeyName(4, "search.png");
+            this.ımageList2.Images.SetKeyName(5, "icons8-broom-96.png");
+            this.ımageList2.Images.SetKeyName(6, "icons8-search-208.png");
+            this.ımageList2.Images.SetKeyName(7, "icons8-plus-math-90.png");
+            this.ımageList2.Images.SetKeyName(8, "icons8-search-more-90.png");
+            this.ımageList2.Images.SetKeyName(9, "icons8-delete-90.png");
+            this.ımageList2.Images.SetKeyName(10, "icons8-pencil-96.png");
+            // 
+            // ımageList1
+            // 
+            this.ımageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ımageList1.ImageStream")));
+            this.ımageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.ımageList1.Images.SetKeyName(0, "icons8-plus-math-90.png");
+            this.ımageList1.Images.SetKeyName(1, "icons8-delete-90.png");
+            this.ımageList1.Images.SetKeyName(2, "icons8-pencil-96.png");
+            this.ımageList1.Images.SetKeyName(3, "icons8-search-more-90.png");
+            this.ımageList1.Images.SetKeyName(4, "icons8-search-208.png");
+            this.ımageList1.Images.SetKeyName(5, "icons8-broom-96.png");
+            // 
+            // checkbox_secili
+            // 
+            this.checkbox_secili.AutoSize = true;
+            this.checkbox_secili.Checked = true;
+            this.checkbox_secili.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkbox_secili.Font = new System.Drawing.Font("Righteous", 9.5F);
+            this.checkbox_secili.Location = new System.Drawing.Point(306, 37);
+            this.checkbox_secili.Name = "checkbox_secili";
+            this.checkbox_secili.Size = new System.Drawing.Size(106, 21);
+            this.checkbox_secili.TabIndex = 110;
+            this.checkbox_secili.Text = "Seçili Olanlar";
+            this.checkbox_secili.UseVisualStyleBackColor = true;
+            this.checkbox_secili.CheckedChanged += new System.EventHandler(this.checkbox_secili_CheckedChanged);
             // 
             // Add_Talimat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(836, 496);
+            this.ClientSize = new System.Drawing.Size(836, 572);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Add_Talimat";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add_Talimat";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Add_Talimat_FormClosed);
             this.Load += new System.EventHandler(this.Add_Talimat_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -342,21 +307,18 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textbot_talimat_isim;
+        private System.Windows.Forms.TextBox textbox_talimat_isim;
         private System.Windows.Forms.Panel panel_head;
         private System.Windows.Forms.Label label_head;
         private System.Windows.Forms.PictureBox pictureBox_close;
         private System.Windows.Forms.Button button_talimat_kaydet;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textbot_talimat_kod;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textbox_talimat_kod;
         private System.Windows.Forms.ImageList ımageList1;
-        private System.Windows.Forms.Button button_temizle_isim;
-        private System.Windows.Forms.TextBox textbox_ara_kod;
-        private System.Windows.Forms.TextBox textbox_ara_isim;
         private System.Windows.Forms.DataGridView datagridview_proses;
         private System.Windows.Forms.DataGridViewCheckBoxColumn ekle;
         private System.Windows.Forms.DataGridViewTextBoxColumn sira;
+        private System.Windows.Forms.ImageList ımageList2;
+        private System.Windows.Forms.CheckBox checkbox_secili;
     }
 }

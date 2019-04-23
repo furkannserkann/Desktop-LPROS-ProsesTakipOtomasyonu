@@ -31,7 +31,7 @@ namespace LPROS.Forms.Table.Add
                 label_head.Text = "Malzeme Güncelle";
                 button_kaydet.Text = "Malzeme Bilgilerini Güncelle";
                 textbox_isim.Text = _Selectad;
-                masktextbox_fiyat.Text = _Selectfiyat;
+                textbox_fiyat.Text = double.Parse(_Selectfiyat).ToString();
                 button_kaydet.Click += button_guncelle_Click;               
             }
             else
@@ -53,9 +53,9 @@ namespace LPROS.Forms.Table.Add
         private void MalzemeKaydet()
         {
             string isim = textbox_isim.Text;
-            string fiyat = masktextbox_fiyat.Text.Replace(" ", "");
+            string fiyat = textbox_fiyat.Text;
 
-            if (isim != "" && fiyat != ",")
+            if (isim != "" && fiyat != "")
             {
                 string _QueryIsim = "select * from Malzemeler Where adi=@parametre1";
 
@@ -69,7 +69,7 @@ namespace LPROS.Forms.Table.Add
                     MessageBox.Show("Kayıt Başarılı!", "Kayıt", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 
                     textbox_isim.Text = "";
-                    masktextbox_fiyat.Text = "000";
+                    textbox_fiyat.Text = "";
                     textbox_isim.Focus();
 
                     Items.panelMalzemeler.dataGridview.DataSource = Sc.GET_DATATABLE(SqlConnector.TableMalzemeler);
@@ -87,9 +87,9 @@ namespace LPROS.Forms.Table.Add
                 {
                     textbox_isim.Focus();
                 }
-                else if (masktextbox_fiyat.Text == "")
+                else if (textbox_fiyat.Text == "")
                 {
-                    masktextbox_fiyat.Focus();
+                    textbox_fiyat.Focus();
                 }
             }
         }
@@ -100,6 +100,11 @@ namespace LPROS.Forms.Table.Add
             {
                 MalzemeKaydet();
             }
+        }
+
+        private void textbox_fiyat_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
 
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
@@ -114,10 +119,10 @@ namespace LPROS.Forms.Table.Add
 
         private void MalzemeGuncelle()
         {
-            String ad = textbox_isim.Text, fiyat = masktextbox_fiyat.Text.Replace(" ", "");
+            String ad = textbox_isim.Text, fiyat = textbox_fiyat.Text;
             String _UpdateCode = "update Malzemeler set adi=@parametre1, fiyat=@parametre2 Where Id=@parametre3";
 
-            if (ad != "" && fiyat!= ",")
+            if (ad != "" && fiyat!= "")
             {
                 String _QueryKod = "select * from Malzemeler Where adi=@parametre1 and Id!=@parametre2";
 
@@ -143,7 +148,7 @@ namespace LPROS.Forms.Table.Add
                 if (ad == "")
                     textbox_isim.Focus();
                 else if (fiyat == "")
-                    masktextbox_fiyat.Focus();
+                    textbox_fiyat.Focus();
             }
         }
     }

@@ -56,7 +56,7 @@
             this.button_arama.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button_arama.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button_arama.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_arama.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button_arama.Font = new System.Drawing.Font("Righteous", 10F);
             this.button_arama.ForeColor = System.Drawing.Color.White;
             this.button_arama.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button_arama.ImageKey = "search.png";
@@ -101,20 +101,20 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.label4.Font = new System.Drawing.Font("Righteous", 9.5F);
             this.label4.Location = new System.Drawing.Point(849, 12);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(41, 16);
+            this.label4.Size = new System.Drawing.Size(43, 17);
             this.label4.TabIndex = 115;
             this.label4.Text = "Yetki:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.label5.Font = new System.Drawing.Font("Righteous", 9.5F);
             this.label5.Location = new System.Drawing.Point(655, 12);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(50, 16);
+            this.label5.Size = new System.Drawing.Size(49, 17);
             this.label5.TabIndex = 113;
             this.label5.Text = "Durum:";
             // 
@@ -126,7 +126,7 @@
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button3.Font = new System.Drawing.Font("Righteous", 10F);
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button3.ImageKey = "clear.png";
@@ -149,7 +149,7 @@
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button1.Font = new System.Drawing.Font("Righteous", 10F);
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button1.ImageKey = "search.png";
@@ -167,41 +167,41 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.label2.Font = new System.Drawing.Font("Righteous", 9.5F);
             this.label2.Location = new System.Drawing.Point(461, 12);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 16);
+            this.label2.Size = new System.Drawing.Size(54, 17);
             this.label2.TabIndex = 109;
             this.label2.Text = "Soyadı:";
             // 
             // textBox_soyisim
             // 
-            this.textBox_soyisim.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F);
+            this.textBox_soyisim.Font = new System.Drawing.Font("Montserrat", 10.5F);
             this.textBox_soyisim.ForeColor = System.Drawing.Color.Black;
             this.textBox_soyisim.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.textBox_soyisim.Location = new System.Drawing.Point(464, 31);
             this.textBox_soyisim.Name = "textBox_soyisim";
-            this.textBox_soyisim.Size = new System.Drawing.Size(131, 23);
+            this.textBox_soyisim.Size = new System.Drawing.Size(131, 25);
             this.textBox_soyisim.TabIndex = 108;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.label1.Font = new System.Drawing.Font("Righteous", 9.5F);
             this.label1.Location = new System.Drawing.Point(267, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(31, 16);
+            this.label1.Size = new System.Drawing.Size(32, 17);
             this.label1.TabIndex = 107;
             this.label1.Text = "Adı:";
             // 
             // textBox_isim
             // 
-            this.textBox_isim.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F);
+            this.textBox_isim.Font = new System.Drawing.Font("Montserrat", 10.5F);
             this.textBox_isim.ForeColor = System.Drawing.Color.Black;
             this.textBox_isim.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.textBox_isim.Location = new System.Drawing.Point(270, 31);
             this.textBox_isim.Name = "textBox_isim";
-            this.textBox_isim.Size = new System.Drawing.Size(131, 23);
+            this.textBox_isim.Size = new System.Drawing.Size(131, 25);
             this.textBox_isim.TabIndex = 106;
             // 
             // button_düzenle
@@ -212,7 +212,7 @@
             this.button_düzenle.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button_düzenle.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button_düzenle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_düzenle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button_düzenle.Font = new System.Drawing.Font("Righteous", 10F);
             this.button_düzenle.ForeColor = System.Drawing.Color.White;
             this.button_düzenle.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button_düzenle.ImageKey = "edit.png";
@@ -235,7 +235,7 @@
             this.button_sil.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button_sil.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button_sil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_sil.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button_sil.Font = new System.Drawing.Font("Righteous", 10F);
             this.button_sil.ForeColor = System.Drawing.Color.White;
             this.button_sil.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button_sil.ImageKey = "delete.png";
@@ -258,7 +258,7 @@
             this.button_ekle.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button_ekle.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button_ekle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_ekle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button_ekle.Font = new System.Drawing.Font("Righteous", 10F);
             this.button_ekle.ForeColor = System.Drawing.Color.White;
             this.button_ekle.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button_ekle.ImageKey = "add.png";
@@ -276,7 +276,7 @@
             // Combo_durumu
             // 
             this.Combo_durumu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Combo_durumu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.Combo_durumu.Font = new System.Drawing.Font("Montserrat", 10.5F);
             this.Combo_durumu.FormattingEnabled = true;
             this.Combo_durumu.Items.AddRange(new object[] {
             "",
@@ -284,19 +284,19 @@
             "Pasif"});
             this.Combo_durumu.Location = new System.Drawing.Point(658, 31);
             this.Combo_durumu.Name = "Combo_durumu";
-            this.Combo_durumu.Size = new System.Drawing.Size(141, 26);
+            this.Combo_durumu.Size = new System.Drawing.Size(141, 28);
             this.Combo_durumu.TabIndex = 189;
             // 
             // Combo_yetki
             // 
             this.Combo_yetki.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Combo_yetki.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.Combo_yetki.Font = new System.Drawing.Font("Montserrat", 10.5F);
             this.Combo_yetki.FormattingEnabled = true;
             this.Combo_yetki.Items.AddRange(new object[] {
             ""});
-            this.Combo_yetki.Location = new System.Drawing.Point(852, 28);
+            this.Combo_yetki.Location = new System.Drawing.Point(852, 31);
             this.Combo_yetki.Name = "Combo_yetki";
-            this.Combo_yetki.Size = new System.Drawing.Size(141, 26);
+            this.Combo_yetki.Size = new System.Drawing.Size(141, 28);
             this.Combo_yetki.TabIndex = 188;
             // 
             // PersonelController

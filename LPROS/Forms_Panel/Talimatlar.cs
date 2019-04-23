@@ -19,7 +19,7 @@ namespace LPROS.Forms_Panel
         }
 
         SqlConnector Sc = new SqlConnector();
-        String SelectedTalimatID = "";
+        public static String SelectedTalimatID = "";
 
         private void Talimatlar_Load(object sender, EventArgs e)
         {

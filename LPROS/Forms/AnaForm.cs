@@ -28,7 +28,68 @@ namespace LPROS
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            PanelFormLoad(new Siparis(), new SiparisControl());
+            label_kullanici_adsoyad.Text = User.ad + " " + User.soyad;
+            label_kullanici_yetkitipi.Text = User.yetki_tipi;
+
+            if (User.yetki_id == "1")
+            {
+                button_siprais.Visible = true;
+                button_hastanevedoktorlar.Visible = true;
+                button_protez.Visible = true;
+                button_talimatlar.Visible = true;
+                button_prosesler.Visible = true;
+                button_malzemeler.Visible = true;
+                button_renk.Visible = true;
+                button_personel.Visible = true;
+                button_departman.Visible = true;
+                button_barkod.Visible = true;
+                button_raporlar.Visible = true;
+
+                button_barkod.Location = new Point(9, 622);
+            }
+            else if (User.yetki_id == "2")
+            {
+                button_siprais.Visible = true;
+                button_hastanevedoktorlar.Visible = false;
+                button_protez.Visible = false;
+                button_talimatlar.Visible = false;
+                button_prosesler.Visible = false;
+                button_malzemeler.Visible = false;
+                button_renk.Visible = false;
+                button_personel.Visible = false;
+                button_departman.Visible = false;
+                button_barkod.Visible = false;
+                button_raporlar.Visible = false;
+
+                button_barkod.Location = new Point(9, 622);
+            }
+            else if (User.yetki_id == "3")
+            {
+                button_siprais.Visible = false;
+                button_hastanevedoktorlar.Visible = false;
+                button_protez.Visible = false;
+                button_talimatlar.Visible = false;
+                button_prosesler.Visible = false;
+                button_malzemeler.Visible = false;
+                button_renk.Visible = false;
+                button_personel.Visible = false;
+                button_departman.Visible = false;
+                button_barkod.Visible = true;
+                button_raporlar.Visible = false;
+
+                button_barkod.Location = new Point(9, 136);
+            }
+
+            if (User.yetki_id == "1" || User.yetki_id == "2")
+            {
+                PanelFormLoad(new Siparis(), new SiparisControl());
+            }
+            else if (User.yetki_id == "3")
+            {
+                MySetting.FormBarkod = new Barkod();
+                MySetting.FormBarkod.Show();
+                MySetting.isOpenBarkod = true;
+            }
         }
 
 
@@ -36,7 +97,14 @@ namespace LPROS
 
         private void button_exit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult Dr = MessageBox.Show("Çıkış Yapmak İstediğinize Emin misiniz?", "Çıkış", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
+            if (Dr == DialogResult.Yes)
+            {
+                if (MySetting.isOpenBarkod)
+                    MySetting.FormBarkod.Close();
+
+                this.Close();
+            }
         }
 
         private void button_siprais_Click(object sender, EventArgs e)
@@ -163,7 +231,7 @@ namespace LPROS
 
         private void button_renkyetki_Click(object sender, EventArgs e)
         {
-            SelectedFormPanel(button_renkyetki);
+            SelectedFormPanel(button_renk);
             PanelFormLoad(new YetkiRenk(), new YetkiRenkControl());
         }
 
@@ -198,6 +266,25 @@ namespace LPROS
         {
             SelectedFormPanel(button_talimatlar);
             PanelFormLoad(new Talimatlar(), new Talimat_Control());
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            DialogResult Dr = MessageBox.Show("Oturumu Kapatmak İstediğinize Emin misiniz?", "Oturum Kapatılıyor", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
+            if (Dr == DialogResult.Yes)
+            {
+                (new Login()).Show();
+
+                if (MySetting.isOpenBarkod)
+                    MySetting.FormBarkod.Close();
+
+                this.Close();
+            }
+        }
+        
+         private void button_minimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

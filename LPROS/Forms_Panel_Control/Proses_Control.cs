@@ -1,4 +1,6 @@
-﻿using LPROS.Forms.Table.Add;
+﻿using LPROS.Custom;
+using LPROS.Forms.Table.Add;
+using LPROS.Forms_Panel;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,9 +20,10 @@ namespace LPROS.Forms_Panel_Control
             InitializeComponent();
         }
 
+        SqlConnector Sc = new SqlConnector();
+
         private void Proses_Control_Load(object sender, EventArgs e)
         {
-            groupBox1.Paint += PaintBorderlessGroupBox1;
             groupBox3.Paint += PaintBorderlessGroupBox1;
         }
 
@@ -46,11 +49,111 @@ namespace LPROS.Forms_Panel_Control
 
         private void button_proses_guncelle_Click(object sender, EventArgs e)
         {
+            DataGridView Dtg = Items.panelProses.dataGridUst;
+
             Add_Proses addProses = new Add_Proses()
             {
-                isUpdate = true
+                isUpdate = true,
+                _SelectedId = Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["Id"].Value.ToString(),
+                _SelectedKod = Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["Kod"].Value.ToString(),
+                _SelectedIsim = Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["İsim"].Value.ToString(),
             };
             addProses.ShowDialog();
+        }
+
+        private void button_proses_sil_Click(object sender, EventArgs e)
+        {
+            DataGridView Dtg = Items.panelProses.dataGridUst;
+            string selectId = Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["id"].Value.ToString();
+
+            int TalimatProsesCount = int.Parse(Sc.GET_TEKDEGER("select count(*) from Talimat_Prosesleri where proses_id=@parametre1", new string[] { selectId }));
+
+            if (TalimatProsesCount > 0)
+            {
+                DialogResult Dr = MessageBox.Show("Prosesin Bağlı Olduğu Talimatlar Var!\nSilmek İstediğiniden Eminmisiniz!", "Dikkat", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
+                if (Dr == DialogResult.OK)
+                {
+                    if (Sc.QUERY_TABLE("delete from Proses where id=@parametre1", new String[] { selectId }))
+                    {
+                        MessageBox.Show("Silme İşlemi Başarılı!", "Silme İşlemi", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+
+                        Sc.QUERY_TABLE("delete from Talimat_Prosesleri where proses_id=@parametre1", new String[] { selectId });
+
+                        Items.panelProses.dataGridUst.DataSource = Sc.GET_DATATABLE(SqlConnector.TableProses);
+                        if (Items.panelProses.dataGridUst.Rows.Count > 0)
+                        {
+                            Prosesler.SelectedProsesID = Items.panelProses.dataGridUst.Rows[0].Cells[0].Value.ToString();
+                            Items.panelProses.dataGridAlt.DataSource = Sc.GET_DATATABLE(SqlConnector.TableMalzemelerByProsesid, new String[] { Prosesler.SelectedProsesID });
+                            Items.panelProses.dataGridAlt.Columns[0].Visible = false;
+                        }
+                    }
+                }
+            }
+            else
+            {
+                DialogResult Dr = MessageBox.Show("Seçilen Proses Siliniyor!", "Dikkat", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
+                if (Dr == DialogResult.OK)
+                {
+                    if (Sc.QUERY_TABLE("delete from Proses where id=@parametre1", new String[] { selectId }))
+                    {
+                        MessageBox.Show("Silme İşlemi Başarılı!", "Silme İşlemi", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+
+                        Items.panelProses.dataGridUst.DataSource = Sc.GET_DATATABLE(SqlConnector.TableProses);
+                        if (Items.panelProses.dataGridUst.Rows.Count > 0)
+                        {
+                            Prosesler.SelectedProsesID = Items.panelProses.dataGridUst.Rows[0].Cells[0].Value.ToString();
+                            Items.panelProses.dataGridAlt.DataSource = Sc.GET_DATATABLE(SqlConnector.TableMalzemelerByProsesid, new String[] { Prosesler.SelectedProsesID });
+                            Items.panelProses.dataGridAlt.Columns[0].Visible = false;
+                        }
+                    }
+                }
+            }
+        }
+
+        private bool _SearchProsesClear = false;
+        private void SearchProses()
+        {
+            if (!_SearchProsesClear)
+            {
+                String _Isim = textbox_ara_isim.Text, _Kod = textbox_ara_kod.Text;
+                Items.panelProses.dataGridUst.DataSource = Sc.GET_DATATABLE(SqlConnector.TableProses + " Where kod like '%'+@parametre1+'%' and isim like '%'+@parametre2+'%'", new String[] { _Kod, _Isim });
+
+                if (Items.panelProses.dataGridUst.Rows.Count > 0)
+                {
+                    Prosesler.SelectedProsesID = Items.panelProses.dataGridUst.Rows[0].Cells[0].Value.ToString();
+                    Items.panelProses.dataGridAlt.DataSource = Sc.GET_DATATABLE(SqlConnector.TableMalzemelerByProsesid, new String[] { Prosesler.SelectedProsesID });
+                    Items.panelProses.dataGridAlt.Columns[0].Visible = false;
+                }
+            }
+            else
+            {
+                if (textbox_ara_isim.Text != "" || textbox_ara_kod.Text != "")
+                {
+                    textbox_ara_isim.Text = "";
+                    textbox_ara_kod.Text = "";
+
+                    Items.panelProses.dataGridUst.DataSource = Sc.GET_DATATABLE(SqlConnector.TableProses);
+                    if (Items.panelProses.dataGridUst.Rows.Count > 0)
+                    {
+                        Prosesler.SelectedProsesID = Items.panelProses.dataGridUst.Rows[0].Cells[0].Value.ToString();
+                        Items.panelProses.dataGridAlt.DataSource = Sc.GET_DATATABLE(SqlConnector.TableMalzemelerByProsesid, new String[] { Prosesler.SelectedProsesID });
+                        Items.panelProses.dataGridAlt.Columns[0].Visible = false;
+                    }
+
+                    _SearchProsesClear = false;
+                }
+            }
+        }
+
+        private void textbox_ara_kod_TextChanged(object sender, EventArgs e)
+        {
+            SearchProses();
+        }
+
+        private void button_temizle_isim_Click(object sender, EventArgs e)
+        {
+            _SearchProsesClear = true;
+            SearchProses();
         }
     }
 }

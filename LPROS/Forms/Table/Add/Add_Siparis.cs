@@ -28,6 +28,12 @@ namespace LPROS.Forms.Table.Add
             datepicker_teslimat.MinDate = datepicker_siparis.Value.AddDays(1);
         }
 
+        private void textbox_hasta_adsoyad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar)
+                 && !char.IsSeparator(e.KeyChar);
+        }
+
         private void Add_Siparis_Load(object sender, EventArgs e)
         {
             new FormTasima(panel_head, label_head, this, pictureBox_close);
@@ -53,6 +59,7 @@ namespace LPROS.Forms.Table.Add
             combobox_renk.DisplayMember = "kodisim";
             combobox_renk.ValueMember = "id";
 
+            datepicker_teslimat.MinDate = datepicker_siparis.Value.AddDays(1);
 
             if (isUpdate)
             {
@@ -67,8 +74,6 @@ namespace LPROS.Forms.Table.Add
                 combobox_renk.SelectedValue = renk_id;
                 datepicker_siparis.Text = siparis_tarihi;
                 datepicker_teslimat.Text = teslimat_tarihi;
-
-                datepicker_teslimat.MinDate = datepicker_siparis.Value.AddDays(1);
 
                 button_kaydet.Click += button_guncelle_Click;
             }
@@ -94,24 +99,28 @@ namespace LPROS.Forms.Table.Add
                   hastane_id = combobox_hastane.SelectedValue.ToString(),
                   doktor_id = combobox_doktor.SelectedValue.ToString(),
                   renk_id = combobox_renk.SelectedValue.ToString(),
-                  siparis_tarihi = DateTime.Now.ToString("yyyy-MM-dd"),
+                  siparis_tarihi = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss"),
                   teslimat_tarihi = datepicker_teslimat.Value.ToString("yyyy-MM-dd");
 
             if (hasta_adsoyad != "")
             {
                 if (Sc.ADD_TABLE("Siparis", new String[] { "siparis_tarihi", "personel_id", "doktor_id", "protez_id", "hasta_ad_soyad", "teslim_tarihi", "renk_id" },
-                    new String[] { siparis_tarihi, User.id.ToString(), doktor_id, protez_id, hasta_adsoyad, teslimat_tarihi, renk_id }))
+                    new String[] { DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss"), User.id.ToString(), doktor_id, protez_id, hasta_adsoyad, teslimat_tarihi, renk_id }))
                 {
                     DataTable talimatCount = Sc.GET_DATATABLE("select * from Protez_Talimatlari where protez_id=@parametre1", new String[] { protez_id });
+                    string sipari_id = Sc.GET_TEKDEGER("select top 1 id from Siparis order by id desc", new string[] { });
 
+                    int sira = 1;
                     for (int i = 0; i < talimatCount.Rows.Count; i++)
                     {
                         DataTable prosesCount = Sc.GET_DATATABLE("select * from Talimat_Prosesleri where talimat_id=@parametre1", new String[] { talimatCount.Rows[i]["talimat_id"].ToString() });
 
                         for (int k = 0; k < prosesCount.Rows.Count; k++)
                         {
-                            Sc.ADD_TABLE("Anlik_Prosesler", new String[] { "talimat_id", "proses_id", "proses_sirasi", "personel_no", "siparis_id" },
-                                                         new String[] { talimatCount.Rows[i]["talimat_id"].ToString(), prosesCount.Rows[k]["proses_id"].ToString(), prosesCount.Rows[k]["sira"].ToString(), User.id.ToString() });
+                            Sc.ADD_TABLE("Anlik_Prosesler", new String[] { "talimat_id", "proses_id", "proses_sirasi", "siparis_id" },
+                                                         new String[] { talimatCount.Rows[i]["talimat_id"].ToString(), prosesCount.Rows[k]["proses_id"].ToString(), sira.ToString(), sipari_id });
+
+                            sira++;
                         }
                     }
                     MessageBox.Show("Kayıt Başarılı!", "Kayıt", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
@@ -191,6 +200,16 @@ namespace LPROS.Forms.Table.Add
                 combobox_doktor.DisplayMember = "adsoyad";
                 combobox_doktor.ValueMember = "ID";
             }
+        }
+
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == Keys.Escape)
+            {
+                this.Close();
+                return true;
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
         }
     }
 }

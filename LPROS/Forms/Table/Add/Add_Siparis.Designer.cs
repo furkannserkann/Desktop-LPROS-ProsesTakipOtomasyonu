@@ -157,6 +157,7 @@
             this.textbox_hasta_adsoyad.Name = "textbox_hasta_adsoyad";
             this.textbox_hasta_adsoyad.Size = new System.Drawing.Size(211, 26);
             this.textbox_hasta_adsoyad.TabIndex = 48;
+            this.textbox_hasta_adsoyad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textbox_hasta_adsoyad_KeyPress);
             // 
             // panel_head
             // 
@@ -223,7 +224,7 @@
             // datepicker_teslimat
             // 
             this.datepicker_teslimat.Font = new System.Drawing.Font("Yu Gothic", 10F);
-            this.datepicker_teslimat.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.datepicker_teslimat.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.datepicker_teslimat.Location = new System.Drawing.Point(49, 255);
             this.datepicker_teslimat.Name = "datepicker_teslimat";
             this.datepicker_teslimat.Size = new System.Drawing.Size(211, 29);

@@ -19,7 +19,7 @@ namespace LPROS.Forms_Panel
         }
 
         SqlConnector Sc = new SqlConnector();
-        String SelectedProsesID = "";
+        public static String SelectedProsesID = "";
 
         private void Prosesler_Load(object sender, EventArgs e)
         {

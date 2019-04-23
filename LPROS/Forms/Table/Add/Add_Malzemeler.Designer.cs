@@ -37,7 +37,7 @@
             this.textbox_isim = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.masktextbox_fiyat = new System.Windows.Forms.MaskedTextBox();
+            this.textbox_fiyat = new System.Windows.Forms.TextBox();
             this.panel_head.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_close)).BeginInit();
             this.panel1.SuspendLayout();
@@ -58,7 +58,7 @@
             // 
             this.label_head.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label_head.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label_head.Font = new System.Drawing.Font("Righteous", 12F);
             this.label_head.ForeColor = System.Drawing.Color.White;
             this.label_head.Location = new System.Drawing.Point(12, 0);
             this.label_head.Name = "label_head";
@@ -85,7 +85,7 @@
             this.button_kaydet.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button_kaydet.FlatAppearance.BorderSize = 0;
             this.button_kaydet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_kaydet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.button_kaydet.Font = new System.Drawing.Font("Righteous", 12F);
             this.button_kaydet.ForeColor = System.Drawing.Color.White;
             this.button_kaydet.Location = new System.Drawing.Point(48, 223);
             this.button_kaydet.Name = "button_kaydet";
@@ -98,31 +98,31 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.label7.Font = new System.Drawing.Font("Righteous", 10F);
             this.label7.Location = new System.Drawing.Point(45, 82);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(90, 16);
+            this.label7.Size = new System.Drawing.Size(92, 18);
             this.label7.TabIndex = 48;
             this.label7.Text = "Malzeme İsmi";
             // 
             // textbox_isim
             // 
-            this.textbox_isim.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.textbox_isim.Font = new System.Drawing.Font("Montserrat", 10.5F);
             this.textbox_isim.ForeColor = System.Drawing.Color.Black;
             this.textbox_isim.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.textbox_isim.Location = new System.Drawing.Point(48, 101);
             this.textbox_isim.Name = "textbox_isim";
-            this.textbox_isim.Size = new System.Drawing.Size(211, 24);
+            this.textbox_isim.Size = new System.Drawing.Size(211, 25);
             this.textbox_isim.TabIndex = 47;
             this.textbox_isim.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textbox_kayit_KeyDown);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.label4.Font = new System.Drawing.Font("Righteous", 10F);
             this.label4.Location = new System.Drawing.Point(45, 136);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 16);
+            this.label4.Size = new System.Drawing.Size(45, 18);
             this.label4.TabIndex = 42;
             this.label4.Text = "Fiyatı";
             // 
@@ -130,7 +130,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.masktextbox_fiyat);
+            this.panel1.Controls.Add(this.textbox_fiyat);
             this.panel1.Controls.Add(this.panel_head);
             this.panel1.Controls.Add(this.button_kaydet);
             this.panel1.Controls.Add(this.label7);
@@ -142,16 +142,16 @@
             this.panel1.Size = new System.Drawing.Size(311, 306);
             this.panel1.TabIndex = 44;
             // 
-            // masktextbox_fiyat
+            // textbox_fiyat
             // 
-            this.masktextbox_fiyat.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.masktextbox_fiyat.Location = new System.Drawing.Point(48, 155);
-            this.masktextbox_fiyat.Mask = "00000.0";
-            this.masktextbox_fiyat.Name = "masktextbox_fiyat";
-            this.masktextbox_fiyat.Size = new System.Drawing.Size(211, 24);
-            this.masktextbox_fiyat.TabIndex = 57;
-            this.masktextbox_fiyat.Text = "000";
-            this.masktextbox_fiyat.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textbox_kayit_KeyDown);
+            this.textbox_fiyat.Font = new System.Drawing.Font("Montserrat", 10.5F);
+            this.textbox_fiyat.ForeColor = System.Drawing.Color.Black;
+            this.textbox_fiyat.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.textbox_fiyat.Location = new System.Drawing.Point(48, 155);
+            this.textbox_fiyat.Name = "textbox_fiyat";
+            this.textbox_fiyat.Size = new System.Drawing.Size(211, 25);
+            this.textbox_fiyat.TabIndex = 58;
+            this.textbox_fiyat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textbox_fiyat_KeyPress);
             // 
             // Add_Malzemeler
             // 
@@ -181,6 +181,6 @@
         private System.Windows.Forms.TextBox textbox_isim;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.MaskedTextBox masktextbox_fiyat;
+        private System.Windows.Forms.TextBox textbox_fiyat;
     }
 }

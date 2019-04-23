@@ -20,7 +20,6 @@ namespace LPROS.Forms_Panel_Control
 
         private void Protez_Control_Load(object sender, EventArgs e)
         {
-            groupBox1.Paint += PaintBorderlessGroupBox1;
             groupBox3.Paint += PaintBorderlessGroupBox1;
         }
 

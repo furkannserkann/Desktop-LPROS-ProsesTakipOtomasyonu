@@ -71,12 +71,12 @@
             // 
             // textbox_isim
             // 
-            this.textbox_isim.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textbox_isim.Font = new System.Drawing.Font("Montserrat", 10.5F);
             this.textbox_isim.ForeColor = System.Drawing.Color.Black;
             this.textbox_isim.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.textbox_isim.Location = new System.Drawing.Point(48, 162);
             this.textbox_isim.Name = "textbox_isim";
-            this.textbox_isim.Size = new System.Drawing.Size(211, 26);
+            this.textbox_isim.Size = new System.Drawing.Size(211, 25);
             this.textbox_isim.TabIndex = 63;
             // 
             // panel_head
@@ -143,12 +143,12 @@
             // 
             // textbox_kod
             // 
-            this.textbox_kod.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textbox_kod.Font = new System.Drawing.Font("Montserrat", 10.5F);
             this.textbox_kod.ForeColor = System.Drawing.Color.Black;
             this.textbox_kod.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.textbox_kod.Location = new System.Drawing.Point(48, 94);
             this.textbox_kod.Name = "textbox_kod";
-            this.textbox_kod.Size = new System.Drawing.Size(211, 26);
+            this.textbox_kod.Size = new System.Drawing.Size(211, 25);
             this.textbox_kod.TabIndex = 47;
             // 
             // Add_Renk

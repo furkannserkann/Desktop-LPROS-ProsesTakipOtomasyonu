@@ -57,12 +57,12 @@
             // 
             // textBox_isim
             // 
-            this.textBox_isim.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textBox_isim.Font = new System.Drawing.Font("Montserrat", 10.5F);
             this.textBox_isim.ForeColor = System.Drawing.Color.Black;
             this.textBox_isim.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.textBox_isim.Location = new System.Drawing.Point(48, 138);
             this.textBox_isim.Name = "textBox_isim";
-            this.textBox_isim.Size = new System.Drawing.Size(211, 24);
+            this.textBox_isim.Size = new System.Drawing.Size(211, 25);
             this.textBox_isim.TabIndex = 63;
             // 
             // label2
@@ -77,7 +77,7 @@
             // 
             // textBox_adres
             // 
-            this.textBox_adres.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textBox_adres.Font = new System.Drawing.Font("Montserrat", 10.5F);
             this.textBox_adres.ForeColor = System.Drawing.Color.Black;
             this.textBox_adres.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.textBox_adres.Location = new System.Drawing.Point(48, 201);
@@ -150,12 +150,12 @@
             // 
             // textBox_kod
             // 
-            this.textBox_kod.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textBox_kod.Font = new System.Drawing.Font("Montserrat", 10.5F);
             this.textBox_kod.ForeColor = System.Drawing.Color.Black;
             this.textBox_kod.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.textBox_kod.Location = new System.Drawing.Point(48, 75);
             this.textBox_kod.Name = "textBox_kod";
-            this.textBox_kod.Size = new System.Drawing.Size(211, 24);
+            this.textBox_kod.Size = new System.Drawing.Size(211, 25);
             this.textBox_kod.TabIndex = 47;
             // 
             // panel1

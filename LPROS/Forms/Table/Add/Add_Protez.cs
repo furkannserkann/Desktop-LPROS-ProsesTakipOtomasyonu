@@ -18,6 +18,7 @@ namespace LPROS.Forms.Table.Add
             InitializeComponent();
         }
 
+        SqlConnector Sc = new SqlConnector();
         public bool isUpdate = false;
 
         private void Add_Protez_Load(object sender, EventArgs e)
@@ -28,6 +29,33 @@ namespace LPROS.Forms.Table.Add
             {
                 label_head.Text = "Protez Güncelle";
                 button_protez_kaydet.Text = "Protez Bilgilerini Güncelle";
+
+                checkbox_secili.Visible = true;
+
+                datagridview_talimat.DataSource = Sc.GET_DATATABLE(SqlConnector.TableTalimat + " where id=0 ");
+                datagridview_talimat.Columns["id"].Visible = false;
+            }
+            else
+            {
+                checkbox_secili.Visible = false;
+
+                datagridview_talimat.DataSource = Sc.GET_DATATABLE(SqlConnector.TableTalimat);
+                datagridview_talimat.Columns["id"].Visible = false;
+
+            }
+        }
+
+        private void checkbox_secili_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkbox_secili.Checked)
+            {
+                datagridview_talimat.DataSource = Sc.GET_DATATABLE(SqlConnector.TableTalimat + " where id=0 ");
+                datagridview_talimat.Columns["id"].Visible = false;
+            }
+            else
+            {
+                datagridview_talimat.DataSource = Sc.GET_DATATABLE(SqlConnector.TableTalimat);
+                datagridview_talimat.Columns["id"].Visible = false;
             }
         }
     }

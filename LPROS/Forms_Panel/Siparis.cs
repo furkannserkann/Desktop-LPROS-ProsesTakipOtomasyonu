@@ -31,8 +31,13 @@ namespace LPROS.Panel_Forms
                 dataGridview = datagridview_Siparis
             };
 
-            datagridview_Siparis.DataSource = Sc.GET_DATATABLE(SqlConnector.TableSiparis);
-            datagridview_Siparis.Columns[1].Visible = false;
+            datagridview_Siparis.DataSource = Sc.GET_DATATABLE(SqlConnector.TableSiparis + " where s.siparis_tarihi='" + DateTime.Now.ToString("yyyy/MM/dd") + "'");
+
+            if (datagridview_Siparis.Columns.Count > 2)
+            {
+                datagridview_Siparis.Columns[1].Visible = false;
+                datagridview_Siparis.Columns["Sipariş Tarihi"].DefaultCellStyle.Format = "yyyy/MM/dd HH:mm:ss";
+            }
         }
 
         private void datagridview_Siparis_CellClick(object sender, DataGridViewCellEventArgs e)

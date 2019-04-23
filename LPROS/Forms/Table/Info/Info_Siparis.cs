@@ -48,7 +48,13 @@ namespace LPROS.Forms.Table.Info
                 DataTable TableSiparis = Sc.GET_DATATABLE(siparistablosu, new string[] { siparisid });
 
                 datagridview_anlikproses.DataSource = Sc.GET_DATATABLE(SqlConnector.TableAnlikProsesBySiparis, new String[] { siparisid });
-                datagridview_anlikproses.Columns["Id"].Visible = false;
+
+                if (datagridview_anlikproses.Columns.Count > 2)
+                {
+                    datagridview_anlikproses.Columns["Id"].Visible = false;
+                    datagridview_anlikproses.Columns["Başlangıç Tarihi"].DefaultCellStyle.Format = "yyyy/MM/dd HH:mm:ss";
+                    datagridview_anlikproses.Columns["Bitiş Tarihi"].DefaultCellStyle.Format = "yyyy/MM/dd HH:mm:ss";
+                }
 
                 siparistarihi = DateTime.Parse(TableSiparis.Rows[0]["Sipariş Tarihi"].ToString());
                 teslimtarihi = DateTime.Parse(TableSiparis.Rows[0]["Teslim Tarihi"].ToString());
@@ -70,6 +76,16 @@ namespace LPROS.Forms.Table.Info
                 textbox_renk.Text = TableSiparis.Rows[0]["Renk"].ToString();
                 textbox_tmaliyet.Text = tmaliyet;
             }
+        }
+
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == Keys.Escape)
+            {
+                this.Close();
+                return true;
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
         }
     }
 }

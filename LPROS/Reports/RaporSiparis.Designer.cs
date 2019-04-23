@@ -28,156 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.label3 = new System.Windows.Forms.Label();
-            this.button9 = new System.Windows.Forms.Button();
-            this.dateTimePicker_teslimattarihi = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker_siparistarihi = new System.Windows.Forms.DateTimePicker();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox_fisno = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.datagridview_Siparis = new System.Windows.Forms.DataGridView();
+            this.checkbox_siparistarihibaslangic = new System.Windows.Forms.CheckBox();
+            this.checkbox_teslimattarihibaslangic = new System.Windows.Forms.CheckBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.datepicker_teslimatbitis = new System.Windows.Forms.DateTimePicker();
+            this.label11 = new System.Windows.Forms.Label();
+            this.datepicker_siparisbitis = new System.Windows.Forms.DateTimePicker();
+            this.checkbox_teslimatarasinda = new System.Windows.Forms.CheckBox();
+            this.checkbox_siparisarasinda = new System.Windows.Forms.CheckBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.combobox_protez = new System.Windows.Forms.ComboBox();
+            this.button_ara = new System.Windows.Forms.Button();
+            this.datepicker_teslimatbaslangic = new System.Windows.Forms.DateTimePicker();
+            this.datepicker_siparisbaslangic = new System.Windows.Forms.DateTimePicker();
+            this.label6 = new System.Windows.Forms.Label();
+            this.combobox_doktor = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.combobox_hastane = new System.Windows.Forms.ComboBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.datagridview_Siparis)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Montserrat", 9F);
-            this.label3.Location = new System.Drawing.Point(239, 8);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(72, 16);
-            this.label3.TabIndex = 73;
-            this.label3.Text = "Protez Tipi";
-            // 
-            // button9
-            // 
-            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-            this.button9.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Yu Gothic", 10F);
-            this.button9.ForeColor = System.Drawing.Color.White;
-            this.button9.Location = new System.Drawing.Point(702, 79);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(211, 34);
-            this.button9.TabIndex = 71;
-            this.button9.Text = "Raporu Göster";
-            this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button9.UseVisualStyleBackColor = false;
-            // 
-            // dateTimePicker_teslimattarihi
-            // 
-            this.dateTimePicker_teslimattarihi.Enabled = false;
-            this.dateTimePicker_teslimattarihi.Font = new System.Drawing.Font("Yu Gothic", 10F);
-            this.dateTimePicker_teslimattarihi.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker_teslimattarihi.Location = new System.Drawing.Point(472, 84);
-            this.dateTimePicker_teslimattarihi.Name = "dateTimePicker_teslimattarihi";
-            this.dateTimePicker_teslimattarihi.Size = new System.Drawing.Size(211, 29);
-            this.dateTimePicker_teslimattarihi.TabIndex = 69;
-            // 
-            // dateTimePicker_siparistarihi
-            // 
-            this.dateTimePicker_siparistarihi.Checked = false;
-            this.dateTimePicker_siparistarihi.Enabled = false;
-            this.dateTimePicker_siparistarihi.Font = new System.Drawing.Font("Yu Gothic", 10F);
-            this.dateTimePicker_siparistarihi.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker_siparistarihi.Location = new System.Drawing.Point(242, 84);
-            this.dateTimePicker_siparistarihi.Name = "dateTimePicker_siparistarihi";
-            this.dateTimePicker_siparistarihi.Size = new System.Drawing.Size(211, 29);
-            this.dateTimePicker_siparistarihi.TabIndex = 67;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Montserrat", 9F);
-            this.label7.Location = new System.Drawing.Point(9, 11);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(87, 16);
-            this.label7.TabIndex = 66;
-            this.label7.Text = "Fiş Numarası";
-            // 
-            // textBox_fisno
-            // 
-            this.textBox_fisno.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox_fisno.ForeColor = System.Drawing.Color.Black;
-            this.textBox_fisno.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textBox_fisno.Location = new System.Drawing.Point(12, 30);
-            this.textBox_fisno.Name = "textBox_fisno";
-            this.textBox_fisno.Size = new System.Drawing.Size(211, 26);
-            this.textBox_fisno.TabIndex = 64;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Montserrat", 9F);
-            this.label6.Location = new System.Drawing.Point(699, 8);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(51, 16);
-            this.label6.TabIndex = 63;
-            this.label6.Text = "Doktor";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Montserrat", 9F);
-            this.label5.Location = new System.Drawing.Point(469, 8);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(58, 16);
-            this.label5.TabIndex = 61;
-            this.label5.Text = "Hastane";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Yu Gothic", 10F);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(932, 79);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(211, 34);
-            this.button1.TabIndex = 74;
-            this.button1.Text = "Yazdır";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Montserrat", 8F);
-            this.checkBox1.Location = new System.Drawing.Point(242, 62);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(93, 19);
-            this.checkBox1.TabIndex = 75;
-            this.checkBox1.Text = "Sipariş Tarihi";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Font = new System.Drawing.Font("Montserrat", 8F);
-            this.checkBox2.Location = new System.Drawing.Point(472, 62);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(103, 19);
-            this.checkBox2.TabIndex = 77;
-            this.checkBox2.Text = "Teslimat Tarihi";
-            this.checkBox2.UseVisualStyleBackColor = true;
             // 
             // datagridview_Siparis
             // 
@@ -189,174 +66,343 @@
             this.datagridview_Siparis.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(230)))), ((int)(((byte)(201)))));
             this.datagridview_Siparis.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.datagridview_Siparis.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Sitka Banner", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datagridview_Siparis.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Sitka Banner", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datagridview_Siparis.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.datagridview_Siparis.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(230)))), ((int)(((byte)(201)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Yu Gothic", 9.1F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(7);
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.datagridview_Siparis.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(230)))), ((int)(((byte)(201)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Yu Gothic", 9.1F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(7);
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.datagridview_Siparis.DefaultCellStyle = dataGridViewCellStyle6;
             this.datagridview_Siparis.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.datagridview_Siparis.EnableHeadersVisualStyles = false;
-            this.datagridview_Siparis.Location = new System.Drawing.Point(0, 128);
+            this.datagridview_Siparis.Location = new System.Drawing.Point(0, 222);
             this.datagridview_Siparis.MultiSelect = false;
             this.datagridview_Siparis.Name = "datagridview_Siparis";
             this.datagridview_Siparis.ReadOnly = true;
             this.datagridview_Siparis.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(230)))), ((int)(((byte)(201)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datagridview_Siparis.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(230)))), ((int)(((byte)(201)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datagridview_Siparis.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.datagridview_Siparis.RowHeadersWidth = 35;
             this.datagridview_Siparis.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datagridview_Siparis.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datagridview_Siparis.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.datagridview_Siparis.RowTemplate.Height = 45;
             this.datagridview_Siparis.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.datagridview_Siparis.Size = new System.Drawing.Size(1155, 568);
+            this.datagridview_Siparis.Size = new System.Drawing.Size(1145, 474);
             this.datagridview_Siparis.TabIndex = 78;
+            // 
+            // checkbox_siparistarihibaslangic
+            // 
+            this.checkbox_siparistarihibaslangic.AutoSize = true;
+            this.checkbox_siparistarihibaslangic.Font = new System.Drawing.Font("Righteous", 9.5F);
+            this.checkbox_siparistarihibaslangic.Location = new System.Drawing.Point(15, 65);
+            this.checkbox_siparistarihibaslangic.Name = "checkbox_siparistarihibaslangic";
+            this.checkbox_siparistarihibaslangic.Size = new System.Drawing.Size(107, 21);
+            this.checkbox_siparistarihibaslangic.TabIndex = 160;
+            this.checkbox_siparistarihibaslangic.Text = "Sipariş Tarihi";
+            this.checkbox_siparistarihibaslangic.UseVisualStyleBackColor = true;
+            // 
+            // checkbox_teslimattarihibaslangic
+            // 
+            this.checkbox_teslimattarihibaslangic.AutoSize = true;
+            this.checkbox_teslimattarihibaslangic.Font = new System.Drawing.Font("Righteous", 9.5F);
+            this.checkbox_teslimattarihibaslangic.Location = new System.Drawing.Point(257, 65);
+            this.checkbox_teslimattarihibaslangic.Name = "checkbox_teslimattarihibaslangic";
+            this.checkbox_teslimattarihibaslangic.Size = new System.Drawing.Size(117, 21);
+            this.checkbox_teslimattarihibaslangic.TabIndex = 159;
+            this.checkbox_teslimattarihibaslangic.Text = "Teslimat Tarihi";
+            this.checkbox_teslimattarihibaslangic.UseVisualStyleBackColor = true;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Righteous", 9.5F);
+            this.label12.Location = new System.Drawing.Point(254, 151);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(130, 17);
+            this.label12.TabIndex = 158;
+            this.label12.Text = "Teslimat Tarihi Bitiş";
+            // 
+            // datepicker_teslimatbitis
+            // 
+            this.datepicker_teslimatbitis.Checked = false;
+            this.datepicker_teslimatbitis.Enabled = false;
+            this.datepicker_teslimatbitis.Font = new System.Drawing.Font("Yu Gothic", 10F);
+            this.datepicker_teslimatbitis.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.datepicker_teslimatbitis.Location = new System.Drawing.Point(257, 171);
+            this.datepicker_teslimatbitis.Name = "datepicker_teslimatbitis";
+            this.datepicker_teslimatbitis.Size = new System.Drawing.Size(211, 29);
+            this.datepicker_teslimatbitis.TabIndex = 157;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Righteous", 9.5F);
+            this.label11.Location = new System.Drawing.Point(13, 151);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(120, 17);
+            this.label11.TabIndex = 156;
+            this.label11.Text = "Sipariş Tarihi Bitiş";
+            // 
+            // datepicker_siparisbitis
+            // 
+            this.datepicker_siparisbitis.Checked = false;
+            this.datepicker_siparisbitis.Enabled = false;
+            this.datepicker_siparisbitis.Font = new System.Drawing.Font("Yu Gothic", 10F);
+            this.datepicker_siparisbitis.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.datepicker_siparisbitis.Location = new System.Drawing.Point(15, 171);
+            this.datepicker_siparisbitis.Name = "datepicker_siparisbitis";
+            this.datepicker_siparisbitis.Size = new System.Drawing.Size(211, 29);
+            this.datepicker_siparisbitis.TabIndex = 155;
+            // 
+            // checkbox_teslimatarasinda
+            // 
+            this.checkbox_teslimatarasinda.AutoSize = true;
+            this.checkbox_teslimatarasinda.Enabled = false;
+            this.checkbox_teslimatarasinda.Font = new System.Drawing.Font("Righteous", 7F);
+            this.checkbox_teslimatarasinda.Location = new System.Drawing.Point(257, 124);
+            this.checkbox_teslimatarasinda.Name = "checkbox_teslimatarasinda";
+            this.checkbox_teslimatarasinda.Size = new System.Drawing.Size(104, 17);
+            this.checkbox_teslimatarasinda.TabIndex = 154;
+            this.checkbox_teslimatarasinda.Text = "2 Tarih Arasında";
+            this.checkbox_teslimatarasinda.UseVisualStyleBackColor = true;
+            // 
+            // checkbox_siparisarasinda
+            // 
+            this.checkbox_siparisarasinda.AutoSize = true;
+            this.checkbox_siparisarasinda.Enabled = false;
+            this.checkbox_siparisarasinda.Font = new System.Drawing.Font("Righteous", 7F);
+            this.checkbox_siparisarasinda.Location = new System.Drawing.Point(16, 124);
+            this.checkbox_siparisarasinda.Name = "checkbox_siparisarasinda";
+            this.checkbox_siparisarasinda.Size = new System.Drawing.Size(104, 17);
+            this.checkbox_siparisarasinda.TabIndex = 153;
+            this.checkbox_siparisarasinda.Text = "2 Tarih Arasında";
+            this.checkbox_siparisarasinda.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Righteous", 9.5F);
+            this.label3.Location = new System.Drawing.Point(497, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(74, 17);
+            this.label3.TabIndex = 148;
+            this.label3.Text = "Protez Tipi";
+            // 
+            // combobox_protez
+            // 
+            this.combobox_protez.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combobox_protez.Font = new System.Drawing.Font("Montserrat", 11.25F);
+            this.combobox_protez.FormattingEnabled = true;
+            this.combobox_protez.Items.AddRange(new object[] {
+            "a",
+            "b",
+            "1",
+            "2",
+            "3",
+            "asd",
+            "asd",
+            "asd",
+            "as",
+            "da",
+            "sd"});
+            this.combobox_protez.Location = new System.Drawing.Point(500, 29);
+            this.combobox_protez.Name = "combobox_protez";
+            this.combobox_protez.Size = new System.Drawing.Size(211, 29);
+            this.combobox_protez.TabIndex = 147;
+            // 
+            // button_ara
+            // 
+            this.button_ara.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            this.button_ara.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_ara.FlatAppearance.BorderSize = 0;
+            this.button_ara.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_ara.Font = new System.Drawing.Font("Righteous", 12F);
+            this.button_ara.ForeColor = System.Drawing.Color.White;
+            this.button_ara.Location = new System.Drawing.Point(500, 150);
+            this.button_ara.Name = "button_ara";
+            this.button_ara.Size = new System.Drawing.Size(211, 50);
+            this.button_ara.TabIndex = 146;
+            this.button_ara.Text = "Raporu Göster";
+            this.button_ara.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button_ara.UseVisualStyleBackColor = false;
+            // 
+            // datepicker_teslimatbaslangic
+            // 
+            this.datepicker_teslimatbaslangic.Font = new System.Drawing.Font("Yu Gothic", 10F);
+            this.datepicker_teslimatbaslangic.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.datepicker_teslimatbaslangic.Location = new System.Drawing.Point(257, 89);
+            this.datepicker_teslimatbaslangic.Name = "datepicker_teslimatbaslangic";
+            this.datepicker_teslimatbaslangic.Size = new System.Drawing.Size(211, 29);
+            this.datepicker_teslimatbaslangic.TabIndex = 145;
+            // 
+            // datepicker_siparisbaslangic
+            // 
+            this.datepicker_siparisbaslangic.Checked = false;
+            this.datepicker_siparisbaslangic.Font = new System.Drawing.Font("Yu Gothic", 10F);
+            this.datepicker_siparisbaslangic.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.datepicker_siparisbaslangic.Location = new System.Drawing.Point(15, 89);
+            this.datepicker_siparisbaslangic.Name = "datepicker_siparisbaslangic";
+            this.datepicker_siparisbaslangic.Size = new System.Drawing.Size(211, 29);
+            this.datepicker_siparisbaslangic.TabIndex = 144;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Righteous", 9.5F);
+            this.label6.Location = new System.Drawing.Point(254, 9);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(50, 17);
+            this.label6.TabIndex = 140;
+            this.label6.Text = "Doktor";
+            // 
+            // combobox_doktor
+            // 
+            this.combobox_doktor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combobox_doktor.Font = new System.Drawing.Font("Montserrat", 11.25F);
+            this.combobox_doktor.FormattingEnabled = true;
+            this.combobox_doktor.Items.AddRange(new object[] {
+            "a",
+            "b",
+            "1",
+            "2",
+            "3",
+            "asd",
+            "asd",
+            "asd",
+            "as",
+            "da",
+            "sd"});
+            this.combobox_doktor.Location = new System.Drawing.Point(257, 29);
+            this.combobox_doktor.Name = "combobox_doktor";
+            this.combobox_doktor.Size = new System.Drawing.Size(211, 29);
+            this.combobox_doktor.TabIndex = 139;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Righteous", 9.5F);
+            this.label5.Location = new System.Drawing.Point(13, 9);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(60, 17);
+            this.label5.TabIndex = 138;
+            this.label5.Text = "Hastane";
+            // 
+            // combobox_hastane
+            // 
+            this.combobox_hastane.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combobox_hastane.Font = new System.Drawing.Font("Montserrat", 11.25F);
+            this.combobox_hastane.FormattingEnabled = true;
+            this.combobox_hastane.Items.AddRange(new object[] {
+            "a",
+            "b",
+            "1",
+            "2",
+            "3",
+            "asd",
+            "asd",
+            "asd",
+            "as",
+            "da",
+            "sd"});
+            this.combobox_hastane.Location = new System.Drawing.Point(16, 29);
+            this.combobox_hastane.Name = "combobox_hastane";
+            this.combobox_hastane.Size = new System.Drawing.Size(211, 29);
+            this.combobox_hastane.TabIndex = 137;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(759, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(374, 188);
+            this.pictureBox1.TabIndex = 161;
+            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Montserrat", 9F);
-            this.label1.Location = new System.Drawing.Point(9, 65);
+            this.label1.Font = new System.Drawing.Font("Righteous", 9.5F);
+            this.label1.Location = new System.Drawing.Point(884, 97);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 16);
-            this.label1.TabIndex = 80;
-            this.label1.Text = "Personel";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Montserrat", 9F);
-            this.label2.Location = new System.Drawing.Point(929, 8);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 16);
-            this.label2.TabIndex = 82;
-            this.label2.Text = "Renk";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox1.ForeColor = System.Drawing.Color.Black;
-            this.textBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textBox1.Location = new System.Drawing.Point(12, 87);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(211, 26);
-            this.textBox1.TabIndex = 83;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox2.ForeColor = System.Drawing.Color.Black;
-            this.textBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textBox2.Location = new System.Drawing.Point(242, 30);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(211, 26);
-            this.textBox2.TabIndex = 84;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox3.ForeColor = System.Drawing.Color.Black;
-            this.textBox3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textBox3.Location = new System.Drawing.Point(472, 30);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(211, 26);
-            this.textBox3.TabIndex = 85;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox4.ForeColor = System.Drawing.Color.Black;
-            this.textBox4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textBox4.Location = new System.Drawing.Point(702, 30);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(211, 26);
-            this.textBox4.TabIndex = 86;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox5.ForeColor = System.Drawing.Color.Black;
-            this.textBox5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textBox5.Location = new System.Drawing.Point(932, 30);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(211, 26);
-            this.textBox5.TabIndex = 87;
+            this.label1.Size = new System.Drawing.Size(129, 17);
+            this.label1.TabIndex = 162;
+            this.label1.Text = "Pasta Grafiği gelsin";
             // 
             // RaporSiparis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1155, 696);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label2);
+            this.ClientSize = new System.Drawing.Size(1145, 696);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.datagridview_Siparis);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.checkbox_siparistarihibaslangic);
+            this.Controls.Add(this.checkbox_teslimattarihibaslangic);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.datepicker_teslimatbitis);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.datepicker_siparisbitis);
+            this.Controls.Add(this.checkbox_teslimatarasinda);
+            this.Controls.Add(this.checkbox_siparisarasinda);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.dateTimePicker_teslimattarihi);
-            this.Controls.Add(this.dateTimePicker_siparistarihi);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox_fisno);
+            this.Controls.Add(this.combobox_protez);
+            this.Controls.Add(this.button_ara);
+            this.Controls.Add(this.datepicker_teslimatbaslangic);
+            this.Controls.Add(this.datepicker_siparisbaslangic);
             this.Controls.Add(this.label6);
+            this.Controls.Add(this.combobox_doktor);
             this.Controls.Add(this.label5);
+            this.Controls.Add(this.combobox_hastane);
+            this.Controls.Add(this.datagridview_Siparis);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "RaporSiparis";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RaporSiparis";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.datagridview_Siparis)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.DateTimePicker dateTimePicker_teslimattarihi;
-        private System.Windows.Forms.DateTimePicker dateTimePicker_siparistarihi;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox_fisno;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.DataGridView datagridview_Siparis;
+        private System.Windows.Forms.CheckBox checkbox_siparistarihibaslangic;
+        private System.Windows.Forms.CheckBox checkbox_teslimattarihibaslangic;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.DateTimePicker datepicker_teslimatbitis;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.DateTimePicker datepicker_siparisbitis;
+        private System.Windows.Forms.CheckBox checkbox_teslimatarasinda;
+        private System.Windows.Forms.CheckBox checkbox_siparisarasinda;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox combobox_protez;
+        private System.Windows.Forms.Button button_ara;
+        private System.Windows.Forms.DateTimePicker datepicker_teslimatbaslangic;
+        private System.Windows.Forms.DateTimePicker datepicker_siparisbaslangic;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox combobox_doktor;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox combobox_hastane;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
     }
 }

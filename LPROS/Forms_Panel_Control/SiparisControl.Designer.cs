@@ -31,24 +31,24 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SiparisControl));
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.button_temizle = new System.Windows.Forms.Button();
             this.ımageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.button1 = new System.Windows.Forms.Button();
-            this.datetimepicker_teslimtarihi = new System.Windows.Forms.DateTimePicker();
+            this.button_ara = new System.Windows.Forms.Button();
+            this.datepicker_teslimtarihi = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textbox_arahasta = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button_arama = new System.Windows.Forms.Button();
             this.button_düzenle = new System.Windows.Forms.Button();
-            this.textBox_isim = new System.Windows.Forms.TextBox();
-            this.datetimepicker = new System.Windows.Forms.DateTimePicker();
+            this.textbox_arafisno = new System.Windows.Forms.TextBox();
+            this.datepicker_siparistarihi = new System.Windows.Forms.DateTimePicker();
             this.button_ekle = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkbox_siparistarihi = new System.Windows.Forms.CheckBox();
+            this.checkbox_teslimattarihi = new System.Windows.Forms.CheckBox();
             this.button_sil = new System.Windows.Forms.Button();
+            this.combobox_proteztipi = new System.Windows.Forms.ComboBox();
+            this.combobox_renk = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label4
@@ -57,19 +57,9 @@
             this.label4.Font = new System.Drawing.Font("Righteous", 9F);
             this.label4.Location = new System.Drawing.Point(762, 47);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 16);
+            this.label4.Size = new System.Drawing.Size(38, 16);
             this.label4.TabIndex = 141;
-            this.label4.Text = "Doktor:";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Montserrat", 10.5F);
-            this.textBox2.ForeColor = System.Drawing.Color.Black;
-            this.textBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textBox2.Location = new System.Drawing.Point(863, 44);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(151, 25);
-            this.textBox2.TabIndex = 140;
+            this.label4.Text = "Renk:";
             // 
             // label5
             // 
@@ -77,41 +67,32 @@
             this.label5.Font = new System.Drawing.Font("Righteous", 9F);
             this.label5.Location = new System.Drawing.Point(762, 14);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(95, 16);
+            this.label5.Size = new System.Drawing.Size(71, 16);
             this.label5.TabIndex = 139;
-            this.label5.Text = "Kayıt Personeli:";
+            this.label5.Text = "Protez Tipi:";
             // 
-            // textBox3
+            // button_temizle
             // 
-            this.textBox3.Font = new System.Drawing.Font("Montserrat", 10.5F);
-            this.textBox3.ForeColor = System.Drawing.Color.Black;
-            this.textBox3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textBox3.Location = new System.Drawing.Point(863, 10);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(151, 25);
-            this.textBox3.TabIndex = 138;
-            // 
-            // button3
-            // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.button_temizle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.button3.BackColor = System.Drawing.Color.Brown;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Righteous", 10F);
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button3.ImageKey = "clear.png";
-            this.button3.ImageList = this.ımageList1;
-            this.button3.Location = new System.Drawing.Point(1045, 40);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(93, 28);
-            this.button3.TabIndex = 137;
-            this.button3.Text = "  Temizle";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button3.UseVisualStyleBackColor = false;
+            this.button_temizle.BackColor = System.Drawing.Color.Brown;
+            this.button_temizle.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_temizle.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button_temizle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_temizle.Font = new System.Drawing.Font("Righteous", 10F);
+            this.button_temizle.ForeColor = System.Drawing.Color.White;
+            this.button_temizle.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button_temizle.ImageKey = "clear.png";
+            this.button_temizle.ImageList = this.ımageList1;
+            this.button_temizle.Location = new System.Drawing.Point(1045, 40);
+            this.button_temizle.Name = "button_temizle";
+            this.button_temizle.Size = new System.Drawing.Size(93, 28);
+            this.button_temizle.TabIndex = 137;
+            this.button_temizle.Text = "  Temizle";
+            this.button_temizle.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button_temizle.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button_temizle.UseVisualStyleBackColor = false;
+            this.button_temizle.Click += new System.EventHandler(this.button_temizle_Click);
             // 
             // ımageList1
             // 
@@ -129,37 +110,38 @@
             this.ımageList1.Images.SetKeyName(9, "icons8-delete-90.png");
             this.ımageList1.Images.SetKeyName(10, "icons8-pencil-96.png");
             // 
-            // button1
+            // button_ara
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.button_ara.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.button1.BackColor = System.Drawing.Color.Brown;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Righteous", 10F);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button1.ImageKey = "search.png";
-            this.button1.ImageList = this.ımageList1;
-            this.button1.Location = new System.Drawing.Point(1045, 7);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(93, 28);
-            this.button1.TabIndex = 136;
-            this.button1.Text = "  Ara";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = false;
+            this.button_ara.BackColor = System.Drawing.Color.Brown;
+            this.button_ara.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_ara.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button_ara.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_ara.Font = new System.Drawing.Font("Righteous", 10F);
+            this.button_ara.ForeColor = System.Drawing.Color.White;
+            this.button_ara.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button_ara.ImageKey = "search.png";
+            this.button_ara.ImageList = this.ımageList1;
+            this.button_ara.Location = new System.Drawing.Point(1045, 7);
+            this.button_ara.Name = "button_ara";
+            this.button_ara.Size = new System.Drawing.Size(93, 28);
+            this.button_ara.TabIndex = 136;
+            this.button_ara.Text = "  Ara";
+            this.button_ara.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button_ara.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button_ara.UseVisualStyleBackColor = false;
+            this.button_ara.Click += new System.EventHandler(this.button_ara_Click);
             // 
-            // datetimepicker_teslimtarihi
+            // datepicker_teslimtarihi
             // 
-            this.datetimepicker_teslimtarihi.CalendarFont = new System.Drawing.Font("Fredoka One", 10F);
-            this.datetimepicker_teslimtarihi.Font = new System.Drawing.Font("Fredoka One", 9F);
-            this.datetimepicker_teslimtarihi.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.datetimepicker_teslimtarihi.Location = new System.Drawing.Point(600, 43);
-            this.datetimepicker_teslimtarihi.Name = "datetimepicker_teslimtarihi";
-            this.datetimepicker_teslimtarihi.Size = new System.Drawing.Size(142, 22);
-            this.datetimepicker_teslimtarihi.TabIndex = 135;
+            this.datepicker_teslimtarihi.CalendarFont = new System.Drawing.Font("Fredoka One", 10F);
+            this.datepicker_teslimtarihi.Font = new System.Drawing.Font("Fredoka One", 9F);
+            this.datepicker_teslimtarihi.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.datepicker_teslimtarihi.Location = new System.Drawing.Point(600, 43);
+            this.datepicker_teslimtarihi.Name = "datepicker_teslimtarihi";
+            this.datepicker_teslimtarihi.Size = new System.Drawing.Size(142, 22);
+            this.datepicker_teslimtarihi.TabIndex = 135;
             // 
             // label2
             // 
@@ -171,15 +153,16 @@
             this.label2.TabIndex = 133;
             this.label2.Text = "Hasta İsmi:";
             // 
-            // textBox1
+            // textbox_arahasta
             // 
-            this.textBox1.Font = new System.Drawing.Font("Montserrat", 10.5F);
-            this.textBox1.ForeColor = System.Drawing.Color.Black;
-            this.textBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textBox1.Location = new System.Drawing.Point(320, 42);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(131, 25);
-            this.textBox1.TabIndex = 132;
+            this.textbox_arahasta.Font = new System.Drawing.Font("Montserrat", 10.5F);
+            this.textbox_arahasta.ForeColor = System.Drawing.Color.Black;
+            this.textbox_arahasta.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.textbox_arahasta.Location = new System.Drawing.Point(320, 42);
+            this.textbox_arahasta.Name = "textbox_arahasta";
+            this.textbox_arahasta.Size = new System.Drawing.Size(131, 25);
+            this.textbox_arahasta.TabIndex = 132;
+            this.textbox_arahasta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textbox_arahasta_KeyPress);
             // 
             // label1
             // 
@@ -237,25 +220,26 @@
             this.button_düzenle.UseVisualStyleBackColor = false;
             this.button_düzenle.Click += new System.EventHandler(this.button_düzenle_Click);
             // 
-            // textBox_isim
+            // textbox_arafisno
             // 
-            this.textBox_isim.Font = new System.Drawing.Font("Montserrat", 10.5F);
-            this.textBox_isim.ForeColor = System.Drawing.Color.Black;
-            this.textBox_isim.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textBox_isim.Location = new System.Drawing.Point(320, 10);
-            this.textBox_isim.Name = "textBox_isim";
-            this.textBox_isim.Size = new System.Drawing.Size(131, 25);
-            this.textBox_isim.TabIndex = 130;
+            this.textbox_arafisno.Font = new System.Drawing.Font("Montserrat", 10.5F);
+            this.textbox_arafisno.ForeColor = System.Drawing.Color.Black;
+            this.textbox_arafisno.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.textbox_arafisno.Location = new System.Drawing.Point(320, 10);
+            this.textbox_arafisno.Name = "textbox_arafisno";
+            this.textbox_arafisno.Size = new System.Drawing.Size(131, 25);
+            this.textbox_arafisno.TabIndex = 130;
             // 
-            // datetimepicker
+            // datepicker_siparistarihi
             // 
-            this.datetimepicker.CalendarFont = new System.Drawing.Font("Fredoka One", 10F);
-            this.datetimepicker.Font = new System.Drawing.Font("Fredoka One", 9F);
-            this.datetimepicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.datetimepicker.Location = new System.Drawing.Point(600, 11);
-            this.datetimepicker.Name = "datetimepicker";
-            this.datetimepicker.Size = new System.Drawing.Size(142, 22);
-            this.datetimepicker.TabIndex = 128;
+            this.datepicker_siparistarihi.CalendarFont = new System.Drawing.Font("Fredoka One", 10F);
+            this.datepicker_siparistarihi.Font = new System.Drawing.Font("Fredoka One", 9F);
+            this.datepicker_siparistarihi.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.datepicker_siparistarihi.Location = new System.Drawing.Point(600, 11);
+            this.datepicker_siparistarihi.Name = "datepicker_siparistarihi";
+            this.datepicker_siparistarihi.Size = new System.Drawing.Size(142, 22);
+            this.datepicker_siparistarihi.TabIndex = 128;
+            this.datepicker_siparistarihi.ValueChanged += new System.EventHandler(this.datepicker_siparistarihi_ValueChanged);
             // 
             // button_ekle
             // 
@@ -280,29 +264,29 @@
             this.button_ekle.UseVisualStyleBackColor = false;
             this.button_ekle.Click += new System.EventHandler(this.button_ekle_Click);
             // 
-            // checkBox1
+            // checkbox_siparistarihi
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Checked = true;
-            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox1.Font = new System.Drawing.Font("Righteous", 9F);
-            this.checkBox1.Location = new System.Drawing.Point(491, 13);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(103, 20);
-            this.checkBox1.TabIndex = 142;
-            this.checkBox1.Text = "Sipariş Tarihi:";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkbox_siparistarihi.AutoSize = true;
+            this.checkbox_siparistarihi.Checked = true;
+            this.checkbox_siparistarihi.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkbox_siparistarihi.Font = new System.Drawing.Font("Righteous", 9F);
+            this.checkbox_siparistarihi.Location = new System.Drawing.Point(491, 13);
+            this.checkbox_siparistarihi.Name = "checkbox_siparistarihi";
+            this.checkbox_siparistarihi.Size = new System.Drawing.Size(103, 20);
+            this.checkbox_siparistarihi.TabIndex = 142;
+            this.checkbox_siparistarihi.Text = "Sipariş Tarihi:";
+            this.checkbox_siparistarihi.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // checkbox_teslimattarihi
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Font = new System.Drawing.Font("Righteous", 9F);
-            this.checkBox2.Location = new System.Drawing.Point(491, 46);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(99, 20);
-            this.checkBox2.TabIndex = 143;
-            this.checkBox2.Text = "Teslim Tarihi:";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkbox_teslimattarihi.AutoSize = true;
+            this.checkbox_teslimattarihi.Font = new System.Drawing.Font("Righteous", 9F);
+            this.checkbox_teslimattarihi.Location = new System.Drawing.Point(491, 46);
+            this.checkbox_teslimattarihi.Name = "checkbox_teslimattarihi";
+            this.checkbox_teslimattarihi.Size = new System.Drawing.Size(99, 20);
+            this.checkbox_teslimattarihi.TabIndex = 143;
+            this.checkbox_teslimattarihi.Text = "Teslim Tarihi:";
+            this.checkbox_teslimattarihi.UseVisualStyleBackColor = true;
             // 
             // button_sil
             // 
@@ -325,6 +309,51 @@
             this.button_sil.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button_sil.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button_sil.UseVisualStyleBackColor = false;
+            this.button_sil.Click += new System.EventHandler(this.button_sil_Click_1);
+            // 
+            // combobox_proteztipi
+            // 
+            this.combobox_proteztipi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combobox_proteztipi.Font = new System.Drawing.Font("Montserrat", 11.25F);
+            this.combobox_proteztipi.FormattingEnabled = true;
+            this.combobox_proteztipi.Items.AddRange(new object[] {
+            "a",
+            "b",
+            "1",
+            "2",
+            "3",
+            "asd",
+            "asd",
+            "asd",
+            "as",
+            "da",
+            "sd"});
+            this.combobox_proteztipi.Location = new System.Drawing.Point(839, 6);
+            this.combobox_proteztipi.Name = "combobox_proteztipi";
+            this.combobox_proteztipi.Size = new System.Drawing.Size(175, 29);
+            this.combobox_proteztipi.TabIndex = 145;
+            // 
+            // combobox_renk
+            // 
+            this.combobox_renk.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combobox_renk.Font = new System.Drawing.Font("Montserrat", 11.25F);
+            this.combobox_renk.FormattingEnabled = true;
+            this.combobox_renk.Items.AddRange(new object[] {
+            "a",
+            "b",
+            "1",
+            "2",
+            "3",
+            "asd",
+            "asd",
+            "asd",
+            "as",
+            "da",
+            "sd"});
+            this.combobox_renk.Location = new System.Drawing.Point(839, 39);
+            this.combobox_renk.Name = "combobox_renk";
+            this.combobox_renk.Size = new System.Drawing.Size(175, 29);
+            this.combobox_renk.TabIndex = 146;
             // 
             // SiparisControl
             // 
@@ -332,23 +361,23 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1150, 77);
+            this.Controls.Add(this.combobox_renk);
+            this.Controls.Add(this.combobox_proteztipi);
             this.Controls.Add(this.button_sil);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.checkbox_teslimattarihi);
+            this.Controls.Add(this.checkbox_siparistarihi);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.datetimepicker_teslimtarihi);
+            this.Controls.Add(this.button_temizle);
+            this.Controls.Add(this.button_ara);
+            this.Controls.Add(this.datepicker_teslimtarihi);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textbox_arahasta);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button_arama);
             this.Controls.Add(this.button_düzenle);
-            this.Controls.Add(this.textBox_isim);
-            this.Controls.Add(this.datetimepicker);
+            this.Controls.Add(this.textbox_arafisno);
+            this.Controls.Add(this.datepicker_siparistarihi);
             this.Controls.Add(this.button_ekle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SiparisControl";
@@ -363,23 +392,23 @@
         #endregion
 
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button_temizle;
         private System.Windows.Forms.ImageList ımageList1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DateTimePicker datetimepicker_teslimtarihi;
+        private System.Windows.Forms.Button button_ara;
+        private System.Windows.Forms.DateTimePicker datepicker_teslimtarihi;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textbox_arahasta;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button_arama;
         private System.Windows.Forms.Button button_düzenle;
-        private System.Windows.Forms.TextBox textBox_isim;
-        private System.Windows.Forms.DateTimePicker datetimepicker;
+        private System.Windows.Forms.TextBox textbox_arafisno;
+        private System.Windows.Forms.DateTimePicker datepicker_siparistarihi;
         private System.Windows.Forms.Button button_ekle;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox checkbox_siparistarihi;
+        private System.Windows.Forms.CheckBox checkbox_teslimattarihi;
         private System.Windows.Forms.Button button_sil;
+        private System.Windows.Forms.ComboBox combobox_proteztipi;
+        private System.Windows.Forms.ComboBox combobox_renk;
     }
 }

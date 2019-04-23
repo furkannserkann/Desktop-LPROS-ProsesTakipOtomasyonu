@@ -59,51 +59,51 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.label4.Location = new System.Drawing.Point(469, 53);
+            this.label4.Font = new System.Drawing.Font("Righteous", 10F);
+            this.label4.Location = new System.Drawing.Point(588, 17);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(105, 16);
+            this.label4.Size = new System.Drawing.Size(114, 18);
             this.label4.TabIndex = 95;
             this.label4.Text = "Maksimum Fiyat";
             // 
             // textBox4
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F);
+            this.textBox4.Font = new System.Drawing.Font("Montserrat", 10.5F);
             this.textBox4.ForeColor = System.Drawing.Color.Black;
             this.textBox4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textBox4.Location = new System.Drawing.Point(584, 46);
+            this.textBox4.Location = new System.Drawing.Point(591, 38);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(131, 23);
+            this.textBox4.Size = new System.Drawing.Size(131, 25);
             this.textBox4.TabIndex = 94;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.label5.Location = new System.Drawing.Point(265, 16);
+            this.label5.Font = new System.Drawing.Font("Righteous", 10F);
+            this.label5.Location = new System.Drawing.Point(264, 17);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(86, 16);
+            this.label5.Size = new System.Drawing.Size(87, 18);
             this.label5.TabIndex = 93;
             this.label5.Text = "Malzeme Adı";
             // 
             // textBox5
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F);
+            this.textBox5.Font = new System.Drawing.Font("Montserrat", 10.5F);
             this.textBox5.ForeColor = System.Drawing.Color.Black;
             this.textBox5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textBox5.Location = new System.Drawing.Point(268, 36);
+            this.textBox5.Location = new System.Drawing.Point(267, 38);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(131, 23);
+            this.textBox5.Size = new System.Drawing.Size(131, 25);
             this.textBox5.TabIndex = 92;
             // 
             // textBox1
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F);
+            this.textBox1.Font = new System.Drawing.Font("Montserrat", 10.5F);
             this.textBox1.ForeColor = System.Drawing.Color.Black;
             this.textBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textBox1.Location = new System.Drawing.Point(584, 9);
+            this.textBox1.Location = new System.Drawing.Point(438, 38);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(131, 23);
+            this.textBox1.Size = new System.Drawing.Size(131, 25);
             this.textBox1.TabIndex = 144;
             // 
             // button_malzeme_guncelle
@@ -114,7 +114,7 @@
             this.button_malzeme_guncelle.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button_malzeme_guncelle.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button_malzeme_guncelle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_malzeme_guncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button_malzeme_guncelle.Font = new System.Drawing.Font("Righteous", 10F);
             this.button_malzeme_guncelle.ForeColor = System.Drawing.Color.White;
             this.button_malzeme_guncelle.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button_malzeme_guncelle.ImageKey = "edit.png";
@@ -153,7 +153,7 @@
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button3.Font = new System.Drawing.Font("Righteous", 10F);
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button3.ImageKey = "clear.png";
@@ -176,7 +176,7 @@
             this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button4.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button4.Font = new System.Drawing.Font("Righteous", 10F);
             this.button4.ForeColor = System.Drawing.Color.White;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button4.ImageKey = "search.png";
@@ -199,7 +199,7 @@
             this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button5.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button5.Font = new System.Drawing.Font("Righteous", 10F);
             this.button5.ForeColor = System.Drawing.Color.White;
             this.button5.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button5.ImageKey = "delete.png";
@@ -222,7 +222,7 @@
             this.button_malzeme_ekle.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button_malzeme_ekle.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button_malzeme_ekle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_malzeme_ekle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button_malzeme_ekle.Font = new System.Drawing.Font("Righteous", 10F);
             this.button_malzeme_ekle.ForeColor = System.Drawing.Color.White;
             this.button_malzeme_ekle.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button_malzeme_ekle.ImageKey = "add.png";
@@ -240,10 +240,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.label1.Location = new System.Drawing.Point(469, 13);
+            this.label1.Font = new System.Drawing.Font("Righteous", 10F);
+            this.label1.Location = new System.Drawing.Point(435, 17);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 16);
+            this.label1.Size = new System.Drawing.Size(101, 18);
             this.label1.TabIndex = 145;
             this.label1.Text = "Minimum Fiyat";
             // 

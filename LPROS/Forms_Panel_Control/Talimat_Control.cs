@@ -1,4 +1,6 @@
-﻿using LPROS.Forms.Table.Add;
+﻿using LPROS.Custom;
+using LPROS.Forms.Table.Add;
+using LPROS.Forms_Panel;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,9 +20,10 @@ namespace LPROS.Forms_Panel_Control
             InitializeComponent();
         }
 
+        SqlConnector Sc = new SqlConnector();
+
         private void Talimat_Control_Load(object sender, EventArgs e)
         {
-            groupBox1.Paint += PaintBorderlessGroupBox1;
             groupBox3.Paint += PaintBorderlessGroupBox1;
         }
 
@@ -47,12 +50,114 @@ namespace LPROS.Forms_Panel_Control
 
         private void button_talimat_guncelle_Click(object sender, EventArgs e)
         {
+            DataGridView Dtg = Items.panelTalimat.dataGridUst;
+
             Add_Talimat addTalimat = new Add_Talimat()
             {
-                isUpdate = true
+                isUpdate = true,
+                _SelectedId = Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["Id"].Value.ToString(),
+                _SelectedIsim = Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["Talimat İsmi"].Value.ToString(),
+                _SelectedKod = Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["Talimat Kodu"].Value.ToString()
             };
 
             addTalimat.ShowDialog();
+        }
+
+        private void button_talimat_sil_Click(object sender, EventArgs e)
+        {
+            DataGridView Dtg = Items.panelTalimat.dataGridUst;
+            string selectId = Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["id"].Value.ToString();
+
+            int ProtezTalimatCount = int.Parse(Sc.GET_TEKDEGER("select count(*) from Protez_Talimatlari where talimat_id=@parametre1", new string[] { selectId }));
+
+            if (ProtezTalimatCount > 0)
+            {
+                DialogResult Dr = MessageBox.Show("Talimatın Bağlı Olduğu Protezler Var!\nSilmek İstediğiniden Eminmisiniz!", "Dikkat", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
+                if (Dr == DialogResult.OK)
+                {
+                    if (Sc.QUERY_TABLE("delete from Talimat where id=@parametre1", new String[] { selectId }))
+                    {
+                        MessageBox.Show("Silme İşlemi Başarılı!", "Silme İşlemi", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+
+                        Sc.QUERY_TABLE("delete from Protez_Talimatlari where talimat_id=@parametre1", new String[] { selectId });
+
+                        Items.panelTalimat.dataGridUst.DataSource = Sc.GET_DATATABLE(SqlConnector.TableTalimat);
+                        // proses listesini yenile
+                        if (Items.panelTalimat.dataGridUst.Rows.Count > 0)
+                        {
+                            Talimatlar.SelectedTalimatID = Items.panelTalimat.dataGridUst.Rows[0].Cells[0].Value.ToString();
+                            Items.panelTalimat.dataGridAlt.DataSource = Sc.GET_DATATABLE(SqlConnector.TableProsesByTalimatid, new String[] { Talimatlar.SelectedTalimatID });
+                            Items.panelTalimat.dataGridAlt.Columns[0].Visible = false;
+                        }
+                    }
+                }
+            }
+            else
+            {
+                DialogResult Dr = MessageBox.Show("Seçilen Talimat Siliniyor!", "Dikkat", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
+                if (Dr == DialogResult.OK)
+                {
+                    if (Sc.QUERY_TABLE("delete from Talimat where id=@parametre1", new String[] { selectId }))
+                    {
+                        MessageBox.Show("Silme İşlemi Başarılı!", "Silme İşlemi", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+
+                        Items.panelTalimat.dataGridUst.DataSource = Sc.GET_DATATABLE(SqlConnector.TableTalimat);
+                        if (Items.panelTalimat.dataGridUst.Rows.Count > 0)
+                        {
+                            Talimatlar.SelectedTalimatID = Items.panelTalimat.dataGridUst.Rows[0].Cells[0].Value.ToString();
+                            Items.panelTalimat.dataGridAlt.DataSource = Sc.GET_DATATABLE(SqlConnector.TableProsesByTalimatid, new String[] { Talimatlar.SelectedTalimatID });
+                            Items.panelTalimat.dataGridAlt.Columns[0].Visible = false;
+                        }
+                    }
+                }
+            }
+        }
+
+        private void textbox_ara_kod_TextChanged(object sender, EventArgs e)
+        {
+            SearchTalimat();
+        }
+
+        private bool _SearchTalimatClear = false;
+        private void SearchTalimat()
+        {
+            if (!_SearchTalimatClear)
+            {
+                String _Isim = textbox_ara_isim.Text, _Kod = textbox_ara_kod.Text;
+                Items.panelTalimat.dataGridUst.DataSource = Sc.GET_DATATABLE(SqlConnector.TableTalimat + " Where talimat_kodu like '%'+@parametre1+'%' and talimat_adi like '%'+@parametre2+'%'", new String[] { _Kod, _Isim });
+
+                if (Items.panelTalimat.dataGridUst.Rows.Count > 0)
+                {
+                    Talimatlar.SelectedTalimatID = Items.panelTalimat.dataGridUst.Rows[0].Cells[0].Value.ToString();
+                    Items.panelTalimat.dataGridAlt.DataSource = Sc.GET_DATATABLE(SqlConnector.TableProsesByTalimatid, new String[] { Talimatlar.SelectedTalimatID });
+                    Items.panelTalimat.dataGridAlt.Columns[0].Visible = false;
+                }
+            }
+            else
+            {
+                if (textbox_ara_isim.Text != "" || textbox_ara_kod.Text != "")
+                {
+                    textbox_ara_isim.Text = "";
+                    textbox_ara_kod.Text = "";
+
+                    Items.panelTalimat.dataGridUst.DataSource = Sc.GET_DATATABLE(SqlConnector.TableTalimat);
+
+                    if (Items.panelTalimat.dataGridUst.Rows.Count > 0)
+                    {
+                        Talimatlar.SelectedTalimatID = Items.panelTalimat.dataGridUst.Rows[0].Cells[0].Value.ToString();
+                        Items.panelTalimat.dataGridAlt.DataSource = Sc.GET_DATATABLE(SqlConnector.TableProsesByTalimatid, new String[] { Talimatlar.SelectedTalimatID });
+                        Items.panelTalimat.dataGridAlt.Columns[0].Visible = false;
+                    }
+
+                    _SearchTalimatClear = false;
+                }
+            }
+        }
+
+        private void button_temizle_isim_Click(object sender, EventArgs e)
+        {
+            _SearchTalimatClear = true;
+            SearchTalimat();
         }
     }
 }
