@@ -62,8 +62,8 @@ namespace LPROS.ControlPanelForms
                     protez_id = Sc.GET_TEKDEGER("select top 1 Id from Protez where adi=@parametre1", new string[] { Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["Protez Tipi"].Value.ToString() }),
                     hastane_id = Sc.GET_TEKDEGER("select top 1 Id from Hastane where ad=@parametre1", new string[] { Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["Hastane"].Value.ToString() }),
                     doktor_id = Sc.GET_TEKDEGER("select top 1 Id from Doktorlar where isim+' '+soyisim=@parametre1", new string[] { Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["Doktor"].Value.ToString() }),
-                    siparis_tarihi = Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["Sipariş Tarihi"].Value.ToString(),
-                    teslimat_tarihi = Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["Teslim Tarihi"].Value.ToString(),
+                    siparis_tarihi = DateTime.Parse(Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["Sipariş Tarihi"].Value.ToString()).ToString("dd/MM/yyyy 00:00:00"),
+                    teslimat_tarihi = DateTime.Parse(Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["Teslim Tarihi"].Value.ToString()).ToString("dd/MM/yyyy 00:00:00"),
                     renk_id = Sc.GET_TEKDEGER("select top 1 Id from Renk where isim=@parametre1", new string[] { Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["Renk"].Value.ToString() })
                 };
                 addSip.ShowDialog();
@@ -98,17 +98,17 @@ namespace LPROS.ControlPanelForms
                 }
                 else if (checkbox_siparistarihi.Checked && checkbox_teslimattarihi.Checked)
                 {
-                    query += " and s.siparis_tarihi=@parametre5 and s.teslim_tarihi=@parametre6 ";
+                    query += " and convert(DATE, s.siparis_tarihi)=@parametre5 and s.teslim_tarihi=@parametre6 ";
                     querydizi = new string[] { SFisno, SHasta_adsoyad, SProtez == "0" ? "" : SProtez, SRenk == "0" ? "" : SRenk, checkbox_siparistarihi.Checked ? SSiparisTarihi.ToString("yyyy/MM/dd") : "", checkbox_teslimattarihi.Checked ? STeslimatTarihi.ToString("yyyy/MM/dd") : "" };
                 }
                 else if (checkbox_siparistarihi.Checked)
                 {
-                    query += " and s.siparis_tarihi=@parametre5 ";
+                    query += " and convert(DATE, s.siparis_tarihi)=@parametre5 ";
                     querydizi = new string[] { SFisno, SHasta_adsoyad, SProtez == "0" ? "" : SProtez, SRenk == "0" ? "" : SRenk, checkbox_siparistarihi.Checked ? SSiparisTarihi.ToString("yyyy/MM/dd") : "" };
                 }
                 else if (checkbox_teslimattarihi.Checked)
                 {
-                    query += " and s.teslim_tarihi=@parametre5 ";
+                    query += " and convert(DATE, s.siparis_tarihi)=@parametre5 ";
                     querydizi = new string[] { SFisno, SHasta_adsoyad, SProtez == "0" ? "" : SProtez, SRenk == "0" ? "" : SRenk, checkbox_teslimattarihi.Checked ? STeslimatTarihi.ToString("yyyy/MM/dd") : "" };
                 }
 
@@ -124,7 +124,7 @@ namespace LPROS.ControlPanelForms
                 combobox_proteztipi.SelectedIndex = 0;
                 combobox_renk.SelectedIndex = 0;
 
-                Items.panelSiparis.dataGridview.DataSource = Sc.GET_DATATABLE(SqlConnector.TableSiparis + " where s.siparis_tarihi='" + DateTime.Now.ToString("yyyy/MM/dd") + "'");
+                Items.panelSiparis.dataGridview.DataSource = Sc.GET_DATATABLE(SqlConnector.TableSiparis + " where convert(DATE, s.siparis_tarihi)='" + DateTime.Now.ToString("yyyy/MM/dd") + "'");
                 _SearchSiparisClear = false;
 
             }
@@ -153,7 +153,7 @@ namespace LPROS.ControlPanelForms
                     if (Sc.QUERY_TABLE("delete from Siparis where id=@parametre1", new String[] { Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["id"].Value.ToString() }))
                     {
                         MessageBox.Show("Silme İşlemi Başarılı!", "Silme İşlemi", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                        Items.panelSiparis.dataGridview.DataSource = Sc.GET_DATATABLE(SqlConnector.TableSiparis);
+                        Items.panelSiparis.dataGridview.DataSource = Sc.GET_DATATABLE(SqlConnector.TableSiparis + " where convert(DATE, s.siparis_tarihi)='" + DateTime.Now.ToString("yyyy/MM/dd") + "'");
                     }
                 }
             }

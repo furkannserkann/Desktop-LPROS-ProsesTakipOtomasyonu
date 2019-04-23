@@ -31,7 +31,7 @@ namespace LPROS.Panel_Forms
                 dataGridview = datagridview_Siparis
             };
 
-            datagridview_Siparis.DataSource = Sc.GET_DATATABLE(SqlConnector.TableSiparis + " where s.siparis_tarihi='" + DateTime.Now.ToString("yyyy/MM/dd") + "'");
+            datagridview_Siparis.DataSource = Sc.GET_DATATABLE(SqlConnector.TableSiparis + " where convert(DATE, s.siparis_tarihi)='" + DateTime.Now.ToString("yyyy/MM/dd") + "'");
 
             if (datagridview_Siparis.Columns.Count > 2)
             {

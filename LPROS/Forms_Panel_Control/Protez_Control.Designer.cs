@@ -134,6 +134,7 @@
             this.button_protez_sil.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button_protez_sil.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button_protez_sil.UseVisualStyleBackColor = false;
+            this.button_protez_sil.Click += new System.EventHandler(this.button_protez_sil_Click);
             // 
             // button_protez_ekle
             // 

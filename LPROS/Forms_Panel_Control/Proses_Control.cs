@@ -65,50 +65,24 @@ namespace LPROS.Forms_Panel_Control
         {
             DataGridView Dtg = Items.panelProses.dataGridUst;
             string selectId = Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["id"].Value.ToString();
-
-            int TalimatProsesCount = int.Parse(Sc.GET_TEKDEGER("select count(*) from Talimat_Prosesleri where proses_id=@parametre1", new string[] { selectId }));
-
-            if (TalimatProsesCount > 0)
+            DialogResult Dr = MessageBox.Show("Seçilen Proses Siliniyor!", "Dikkat", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
+            if (Dr == DialogResult.OK)
             {
-                DialogResult Dr = MessageBox.Show("Prosesin Bağlı Olduğu Talimatlar Var!\nSilmek İstediğiniden Eminmisiniz!", "Dikkat", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
-                if (Dr == DialogResult.OK)
+                if (Sc.QUERY_TABLE("Update Proses set durum=0 where id=@parametre1", new String[] { selectId }))
                 {
-                    if (Sc.QUERY_TABLE("delete from Proses where id=@parametre1", new String[] { selectId }))
+                    MessageBox.Show("Silme İşlemi Başarılı!", "Silme İşlemi", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+
+                    Items.panelProses.dataGridUst.DataSource = Sc.GET_DATATABLE(SqlConnector.TableProses);
+                    if (Items.panelProses.dataGridUst.Rows.Count > 0)
                     {
-                        MessageBox.Show("Silme İşlemi Başarılı!", "Silme İşlemi", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-
-                        Sc.QUERY_TABLE("delete from Talimat_Prosesleri where proses_id=@parametre1", new String[] { selectId });
-
-                        Items.panelProses.dataGridUst.DataSource = Sc.GET_DATATABLE(SqlConnector.TableProses);
-                        if (Items.panelProses.dataGridUst.Rows.Count > 0)
-                        {
-                            Prosesler.SelectedProsesID = Items.panelProses.dataGridUst.Rows[0].Cells[0].Value.ToString();
-                            Items.panelProses.dataGridAlt.DataSource = Sc.GET_DATATABLE(SqlConnector.TableMalzemelerByProsesid, new String[] { Prosesler.SelectedProsesID });
-                            Items.panelProses.dataGridAlt.Columns[0].Visible = false;
-                        }
-                    }
-                }
-            }
-            else
-            {
-                DialogResult Dr = MessageBox.Show("Seçilen Proses Siliniyor!", "Dikkat", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
-                if (Dr == DialogResult.OK)
-                {
-                    if (Sc.QUERY_TABLE("delete from Proses where id=@parametre1", new String[] { selectId }))
-                    {
-                        MessageBox.Show("Silme İşlemi Başarılı!", "Silme İşlemi", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-
-                        Items.panelProses.dataGridUst.DataSource = Sc.GET_DATATABLE(SqlConnector.TableProses);
-                        if (Items.panelProses.dataGridUst.Rows.Count > 0)
-                        {
-                            Prosesler.SelectedProsesID = Items.panelProses.dataGridUst.Rows[0].Cells[0].Value.ToString();
-                            Items.panelProses.dataGridAlt.DataSource = Sc.GET_DATATABLE(SqlConnector.TableMalzemelerByProsesid, new String[] { Prosesler.SelectedProsesID });
-                            Items.panelProses.dataGridAlt.Columns[0].Visible = false;
-                        }
+                        Prosesler.SelectedProsesID = Items.panelProses.dataGridUst.Rows[0].Cells[0].Value.ToString();
+                        Items.panelProses.dataGridAlt.DataSource = Sc.GET_DATATABLE(SqlConnector.TableMalzemelerByProsesid, new String[] { Prosesler.SelectedProsesID });
+                        Items.panelProses.dataGridAlt.Columns[0].Visible = false;
                     }
                 }
             }
         }
+
 
         private bool _SearchProsesClear = false;
         private void SearchProses()
