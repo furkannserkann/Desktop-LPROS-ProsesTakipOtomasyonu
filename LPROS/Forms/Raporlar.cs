@@ -40,5 +40,29 @@ namespace LPROS.Forms
         {
             this.Close();
         }
+
+        private void button_ara_Click(object sender, EventArgs e)
+        {
+            //string queryCustom = "";
+            //string[] constArray = new string[] {};
+
+            //if (checkbox_siparistarihibaslangic.Checked)
+            //{
+            //    if (checkbox_siparisarasinda.Checked)
+            //    {
+            //        queryCustom = " and convert(DATE, s.siparis_tarihi) between @parametre" + parametreSirasi + " and @parametre" + (parametreSirasi + 1) + " ";
+            //        constArray = stringArrayBirlestir(constArray, new string[] { SSiparisTarihiBaslangic.ToString("yyyy/MM/dd"), SSiparisTarihiBitis.ToString("yyyy/MM/dd") });
+
+            //        parametreSirasi += 2;
+            //    }
+            //    else
+            //    {
+            //        queryCustom = " and sconvert(DATE, s.siparis_tarihi)=@parametre" + parametreSirasi + " ";
+            //        constArray = stringArrayBirlestir(constArray, new string[] { SSiparisTarihiBaslangic.ToString("yyyy/MM/dd") });
+
+            //        parametreSirasi += 1;
+            //    }
+            //}
+        }
     }
 }

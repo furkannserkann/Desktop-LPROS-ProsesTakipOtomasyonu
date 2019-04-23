@@ -98,17 +98,17 @@ namespace LPROS.ControlPanelForms
                 }
                 else if (checkbox_siparistarihi.Checked && checkbox_teslimattarihi.Checked)
                 {
-                    query += " and s.siparis_tarihi=@parametre5 and s.teslim_tarihi=@parametre6 ";
+                    query += " and convert(DATE, s.siparis_tarihi)=@parametre5 and s.teslim_tarihi=@parametre6 ";
                     querydizi = new string[] { SFisno, SHasta_adsoyad, SProtez == "0" ? "" : SProtez, SRenk == "0" ? "" : SRenk, checkbox_siparistarihi.Checked ? SSiparisTarihi.ToString("yyyy/MM/dd") : "", checkbox_teslimattarihi.Checked ? STeslimatTarihi.ToString("yyyy/MM/dd") : "" };
                 }
                 else if (checkbox_siparistarihi.Checked)
                 {
-                    query += " and s.siparis_tarihi=@parametre5 ";
+                    query += " and convert(DATE, s.siparis_tarihi)=@parametre5 ";
                     querydizi = new string[] { SFisno, SHasta_adsoyad, SProtez == "0" ? "" : SProtez, SRenk == "0" ? "" : SRenk, checkbox_siparistarihi.Checked ? SSiparisTarihi.ToString("yyyy/MM/dd") : "" };
                 }
                 else if (checkbox_teslimattarihi.Checked)
                 {
-                    query += " and s.teslim_tarihi=@parametre5 ";
+                    query += " and convert(DATE, s.siparis_tarihi)=@parametre5 ";
                     querydizi = new string[] { SFisno, SHasta_adsoyad, SProtez == "0" ? "" : SProtez, SRenk == "0" ? "" : SRenk, checkbox_teslimattarihi.Checked ? STeslimatTarihi.ToString("yyyy/MM/dd") : "" };
                 }
 
@@ -124,7 +124,7 @@ namespace LPROS.ControlPanelForms
                 combobox_proteztipi.SelectedIndex = 0;
                 combobox_renk.SelectedIndex = 0;
 
-                Items.panelSiparis.dataGridview.DataSource = Sc.GET_DATATABLE(SqlConnector.TableSiparis + " where s.siparis_tarihi='" + DateTime.Now.ToString("yyyy/MM/dd") + "'");
+                Items.panelSiparis.dataGridview.DataSource = Sc.GET_DATATABLE(SqlConnector.TableSiparis + " where convert(DATE, s.siparis_tarihi)='" + DateTime.Now.ToString("yyyy/MM/dd") + "'");
                 _SearchSiparisClear = false;
 
             }
