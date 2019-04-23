@@ -43,7 +43,29 @@ namespace LPROS.Forms_Panel
 
             if (e.ColumnIndex == senderGrid.Columns["ayrinti"].Index && e.RowIndex >= 0)
             {
-                (new Info_Personel()).ShowDialog();
+                Info_Personel ifp = new Info_Personel()
+                {
+                    _SelectedTc = datagridview_personel.Rows[e.RowIndex].Cells["TC Kimlik Numarası"].Value.ToString(),
+                    _SelectedIsim = datagridview_personel.Rows[e.RowIndex].Cells["Adı"].Value.ToString(),
+                    _SelectedSoyisim = datagridview_personel.Rows[e.RowIndex].Cells["Soyadı"].Value.ToString(),
+                    _SelectedKullaniciAdi = datagridview_personel.Rows[e.RowIndex].Cells["Kullanıcı Adı"].Value.ToString(),
+                    _SelectedSifre = datagridview_personel.Rows[e.RowIndex].Cells["sifre"].Value.ToString(),
+                    _SelectedEposta = datagridview_personel.Rows[e.RowIndex].Cells["E_Posta"].Value.ToString(),
+                    _SelectedAdres = datagridview_personel.Rows[e.RowIndex].Cells["Adres"].Value.ToString(),
+                    _SelectedSSKNo = datagridview_personel.Rows[e.RowIndex].Cells["SSK Numarası"].Value.ToString(),
+                    _SelectedSSKBas = datagridview_personel.Rows[e.RowIndex].Cells["SSK Başlangıç Tarihi"].Value.ToString(),
+                    _SelectediseGiris = datagridview_personel.Rows[e.RowIndex].Cells["İşe Giriş Tarihi"].Value.ToString(),
+                    _SelectedCinsiyet = datagridview_personel.Rows[e.RowIndex].Cells["Cinsiyet"].Value.ToString(),
+                    _SelectedDepartman = datagridview_personel.Rows[e.RowIndex].Cells["Departman"].Value.ToString(),
+                    _SelectedYetki = datagridview_personel.Rows[e.RowIndex].Cells["Yetki"].Value.ToString(),
+                    _SelectedMaas = datagridview_personel.Rows[e.RowIndex].Cells["Maaş"].Value.ToString(),
+                    _SelectedDurumu = datagridview_personel.Rows[e.RowIndex].Cells["Durumu"].Value.ToString(),
+                    _SelectedTelefon = datagridview_personel.Rows[e.RowIndex].Cells["Telefon Numarası"].Value.ToString(),
+                    _SelectedId = datagridview_personel.Rows[e.RowIndex].Cells["personel_no"].Value.ToString(),
+                    _SelectedGuvenlik = datagridview_personel.Rows[e.RowIndex].Cells["Güvenlik Sorusu"].Value.ToString(),
+                    _SelectedGuvenlikcvp = datagridview_personel.Rows[e.RowIndex].Cells["Güvenlik Sorusu Cevabı"].Value.ToString(),
+                };
+                ifp.ShowDialog();
             }
         }
     }

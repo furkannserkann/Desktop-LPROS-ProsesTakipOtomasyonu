@@ -18,7 +18,7 @@ namespace LPROS.Forms.Table.Add
             InitializeComponent();
         }
         public bool isUpdate = false;
-        public String _SelectedDurumu = "", _SelectedTc="", _SelectedMaas="", _SelectedTelefon="", _SelectedIsim = "",_SelectedSoyisim = "", _SelectedId = "",_SelectedKullaniciAdi,_SelectedSifre, _SelectedEposta, _SelectedAdres,_SelectedSSKNo,_SelectedSSKBas,_SelectediseGiris,_SelectedCinsiyet,_SelectedDepartman,_SelectedYetki;
+        public String _SelectedGuvenlikcvp="", _SelectedGuvenlik= "", _SelectedDurumu = "", _SelectedTc="", _SelectedMaas="", _SelectedTelefon="", _SelectedIsim = "",_SelectedSoyisim = "", _SelectedId = "",_SelectedKullaniciAdi,_SelectedSifre, _SelectedEposta, _SelectedAdres,_SelectedSSKNo,_SelectedSSKBas,_SelectediseGiris,_SelectedCinsiyet,_SelectedDepartman,_SelectedYetki;
 
         private void textBox_soyisim_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -121,6 +121,8 @@ namespace LPROS.Forms.Table.Add
                 textBox_maas.Text = _SelectedMaas;
                 textBox_telefon.Text = _SelectedTelefon;
                 Combo_durumu.Text = _SelectedDurumu;
+                combo_güvenlik.SelectedItem = _SelectedGuvenlik;
+                textBox_güvenlik.Text = _SelectedGuvenlikcvp;
                 Combo_durumu.Visible = true;
 
                 button_kaydet.Click += button_guncelle_Click;
@@ -162,6 +164,8 @@ namespace LPROS.Forms.Table.Add
             string cinsiyet = Combo_cinsiyet.SelectedValue == "Erkek" ? "E" : "K";
             string departman = Combo_departman.SelectedValue.ToString();
             string yetki = Combo_yetki.SelectedValue.ToString();
+            string güvenlik = combo_güvenlik.SelectedItem.ToString();
+            string güvenlikcvp = textBox_güvenlik.Text;
 
 
 
@@ -204,8 +208,8 @@ namespace LPROS.Forms.Table.Add
                     MessageBox.Show("Girilen Telefon Numarası Kayıtlı!", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     textBox_telefon.Focus();
                 }
-                else if (Sc.ADD_TABLE("Personel", new String[] { "tc", "ad", "soyad","maas","telefon", "ssk_no", "ssk_bas_tarih", "ise_giris_tarih", "adres", "cinsiyet", "departman_no", "e_posta", "kullanici_adi", "sifre", "yetki_id", "durumu" },
-                    new String[] { Tc, isim, Soyisim, maas ,ssk_no,telefon, sskbas, isegiris, adres, cinsiyet, departman, eposta, kullaniciadi, sifre, yetki, "1" }))
+                else if (Sc.ADD_TABLE("Personel", new String[] { "tc", "ad", "soyad","maas","telefon", "ssk_no", "ssk_bas_tarih", "ise_giris_tarih", "adres", "cinsiyet", "departman_no", "e_posta", "kullanici_adi", "sifre", "yetki_id", "durumu" ,"guvenlik_soru" ,"guvenlik_soru_cevap" },
+                    new String[] { Tc, isim, Soyisim, maas , telefon,ssk_no, sskbas, isegiris, adres, cinsiyet, departman, eposta, kullaniciadi, sifre, yetki, "1" , güvenlik,güvenlikcvp}))
                 {
                     MessageBox.Show("Kayıt Başarılı!", "Kayıt", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 
@@ -225,6 +229,8 @@ namespace LPROS.Forms.Table.Add
                     textBox_kullaniciadi.Text = "";
                     textBox_sifre.Text = "";
                     Combo_yetki.SelectedIndex = 0;
+                    combo_güvenlik.SelectedIndex = 0;
+                    textBox_güvenlik.Text = "";
 
 
 
@@ -265,11 +271,13 @@ namespace LPROS.Forms.Table.Add
             string departman = Combo_departman.SelectedValue.ToString();
             String durumu = Combo_durumu.SelectedItem=="Aktif"?"1":"0";
             string yetki = Combo_yetki.SelectedValue.ToString();
+            string güvenlik = combo_güvenlik.SelectedItem.ToString();
+            string güvenlikcvp = textBox_güvenlik.Text;
 
-            String _UpdateCode = "update Personel set ad=@parametre1, soyad=@parametre2, tc=@parametre3, ssk_no=@parametre4, ssk_bas_tarih=@parametre5, ise_giris_tarih=@parametre6, adres=@parametre7, cinsiyet=@parametre8, maas=@parametre9, durumu=@parametre10, departman_no=@parametre11,e_posta=@parametre12, kullanici_adi=@parametre13,sifre=@parametre14,yetki_id=@parametre15,telefon=@parametre16 Where personel_no=@parametre17";
+            String _UpdateCode = "update Personel set ad=@parametre1, soyad=@parametre2, tc=@parametre3, ssk_no=@parametre4, ssk_bas_tarih=@parametre5, ise_giris_tarih=@parametre6, adres=@parametre7, cinsiyet=@parametre8, maas=@parametre9, durumu=@parametre10, departman_no=@parametre11,e_posta=@parametre12, kullanici_adi=@parametre13,sifre=@parametre14,yetki_id=@parametre15,telefon=@parametre16, guvenlik_soru=@parametre17, guvenlik_soru_cevap=@parametre18 Where personel_no=@parametre19";
 
 
-            if (Tc != "" && isim != "" && Soyisim != "" && kullaniciadi != "" && sifre != "" && eposta != "" && ssk_no != "" && cinsiyet != "" && departman != "" && yetki != "" && maas != "" && telefon != "" && durumu != "")
+            if (Tc != "" && isim != "" && Soyisim != "" && kullaniciadi != "" && sifre != "" && eposta != "" && ssk_no != "" && cinsiyet != "" && departman != "" && yetki != "" && maas != "" && telefon != "" && durumu != "" && güvenlik!="" && güvenlikcvp !="")
             {
                 String _QueryTc = "select * from Personel Where tc=@parametre1 and personel_no!=@parametre2";
                 String _Querykullaniciadi = "select * from Personel Where kullanici_adi=@parametre1 and personel_no!=@parametre2";
@@ -303,7 +311,7 @@ namespace LPROS.Forms.Table.Add
                     MessageBox.Show("Girilen Telefon Numarası Kayıtlı!", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     textBox_telefon.Focus();
                 }
-                else if (Sc.QUERY_TABLE(_UpdateCode, new String[] { isim, Soyisim, Tc, ssk_no,sskbas,isegiris,adres,cinsiyet,maas.Replace(",", "."),durumu,departman,eposta,kullaniciadi,sifre,yetki,telefon, _SelectedId }))
+                else if (Sc.QUERY_TABLE(_UpdateCode, new String[] { isim, Soyisim, Tc, ssk_no,sskbas,isegiris,adres,cinsiyet,maas.Replace(",", "."),durumu,departman,eposta,kullaniciadi,sifre,yetki,telefon,güvenlik,güvenlikcvp, _SelectedId }))
                 {
                     MessageBox.Show("Personel Bilgileri Güncellendi!", "Kayıt", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     Items.panelPersonel.dataGridview.DataSource = Sc.GET_DATATABLE(SqlConnector.TablePersonel);

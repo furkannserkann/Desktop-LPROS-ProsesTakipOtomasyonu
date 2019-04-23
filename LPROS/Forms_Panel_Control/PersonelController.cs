@@ -60,6 +60,9 @@ namespace LPROS.Forms_Panel_Control
                 _SelectedDurumu = dtg.Rows[dtg.CurrentCell.RowIndex].Cells["Durumu"].Value.ToString(),
                 _SelectedTelefon = dtg.Rows[dtg.CurrentCell.RowIndex].Cells["Telefon Numarası"].Value.ToString(),
                 _SelectedId = dtg.Rows[dtg.CurrentCell.RowIndex].Cells["personel_no"].Value.ToString(),
+                _SelectedGuvenlik = dtg.Rows[dtg.CurrentCell.RowIndex].Cells["Güvenlik Sorusu"].Value.ToString(),
+                _SelectedGuvenlikcvp = dtg.Rows[dtg.CurrentCell.RowIndex].Cells["Güvenlik Sorusu Cevabı"].Value.ToString(),
+
 
             };
             adPer.ShowDialog();
@@ -96,7 +99,7 @@ namespace LPROS.Forms_Panel_Control
             Items.panelPersonel.dataGridview.DataSource = Sc.GET_DATATABLE(SqlConnector.TablePersonel + " where ad like '%'+@parametre1+'%' and soyad like '%'+@parametre2+'%' and durumu like '%'+@parametre3+'%' and yetki_id like '%'+@parametre4+'%'  ",
                 new String[] { textBox_isim.Text, textBox_soyisim.Text, Combo_durumu.SelectedIndex == 0 ? "" : Combo_durumu.SelectedIndex == 1 ? "1" : "0", (int)Combo_yetki.SelectedValue == 0 ? "" : Combo_yetki.SelectedValue.ToString() });
 
-            Items.panelPersonel.dataGridview.Columns[0].Visible = false;
+            //Items.panelPersonel.dataGridview.Columns[0].Visible = false;
         }
 
         private void PersonelController_Load(object sender, EventArgs e)
