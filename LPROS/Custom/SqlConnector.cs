@@ -37,7 +37,7 @@ namespace LPROS.Custom
             {
                 return "SELECT personel_no, tc as [TC Kimlik Numarası], ad as [Adı], soyad as [Soyadı], telefon as [Telefon Numarası] ,(CASE WHEN cinsiyet = 'E' THEN 'Erkek' ELSE 'Kadın' END) as [Cinsiyet], ssk_no [SSK Numarası],adres as [Adres], " +
                     " d.isim as [Departman], e_posta as [E_Posta], kullanici_adi as [Kullanıcı Adı], maas as [Maaş], sifre, " +
-                    " y.yetki_turu as [Yetki], ssk_bas_tarih as [SSK Başlangıç Tarihi] , ise_giris_tarih as [İşe Giriş Tarihi], (CASE WHEN durumu = 1 THEN 'Aktif' ELSE 'Pasif' END) as [Durumu] from Personel as p " +
+                    " y.yetki_turu as [Yetki], ssk_bas_tarih as [SSK Başlangıç Tarihi] , ise_giris_tarih as [İşe Giriş Tarihi], (CASE WHEN durumu = 1 THEN 'Aktif' ELSE 'Pasif' END) as [Durumu], guvenlik_soru as [Güvenlik Sorusu], guvenlik_soru_cevap as [Güvenlik Sorusu Cevabı] from Personel as p " +
                     " inner join Departman as d on d.id = p.departman_no "+
                     " inner join Yetkiler as y on y.id = p.yetki_id";
             }
