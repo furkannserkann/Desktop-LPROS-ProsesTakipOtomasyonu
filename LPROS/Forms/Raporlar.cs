@@ -22,13 +22,13 @@ namespace LPROS.Forms
         }
 
         SqlConnector Sc = new SqlConnector();
-        double gelir, mgider,pgider;
+        double gelir, mgider,pgider, top, kar, masraf;
         string pasta_string;
         DataTable tek;
 
         private void Raporlar_Load(object sender, EventArgs e)
         {
-
+            ara();
         }
 
         private void Raporlar_FormClosed(object sender, FormClosedEventArgs e)
@@ -48,60 +48,7 @@ namespace LPROS.Forms
 
         private void button_ara_Click(object sender, EventArgs e)
         {
-
-
-            if (checkBox1.Checked)
-            {
-                DataTable tmaliyet = Sc.GET_DATATABLE("select teslim as [Tarih], sum([Gelir]) as [Gelir], (sum([Gider]) +(select sum(maas / 30) " +
-              " from Personel where ise_giris_tarih < @parametre1 and durumu = 1)) as [Gider], " +
-              " sum([Gelir])-(sum([Gider]) + (select sum(maas / 30) from Personel where ise_giris_tarih < @parametre1 and durumu = 1)) as [Kar] from( " +
-              "   Select s.teslim_tarihi as [teslim], " +
-              "   (select sum(m.fiyat * pm.adet) as [Toplam Fiyat] from Malzemeler as m " +
-              "   inner join Proses_Malzemeleri as pm on pm.malzeme_id = m.id " +
-              "   inner join Talimat_Prosesleri as tp on pm.proses_id = tp.proses_id " +
-              "   inner join Protez_Talimatlari as pt on pt.talimat_id = tp.talimat_id " +
-              "   where pt.protez_id = s.protez_id) as [Gider], " +
-              " (select sum(m.fiyat * pm.adet) as [Toplam Fiyat] from Malzemeler as m " +
-              " inner join Proses_Malzemeleri as pm on pm.malzeme_id = m.id " +
-              " inner join Talimat_Prosesleri as tp on pm.proses_id = tp.proses_id " +
-              " inner join Protez_Talimatlari as pt on pt.talimat_id = tp.talimat_id " +
-              " where pt.protez_id = s.protez_id) *1.28 as [Gelir] " +
-              " from Siparis as s) m " +
-              " group by teslim  having [teslim] between @parametre1 and @parametre2 order by teslim ", new string[] { datepicker_tarihbas.Value.ToString("yyyy/MM/dd"), datepicker_tarihson.Value.ToString("yyyy/MM/dd") });
-
-                datagridview_Siparis.DataSource = tmaliyet;
-
-
-
-            }
-            else
-            {
-                DataTable tmaliyet = Sc.GET_DATATABLE("select teslim as [Tarih], sum([Gelir]) as [Gelir], (sum([Gider]) +(select sum(maas / 30) " +
-                    " from Personel where ise_giris_tarih < @parametre1 and durumu = 1)) as [Gider], " +
-                    " sum([Gelir])-(sum([Gider]) + (select sum(maas / 30) from Personel where ise_giris_tarih < @parametre1 and durumu = 1)) as [Kar] from( " +
-                    "   Select s.teslim_tarihi as [teslim], " +
-                    "   (select sum(m.fiyat * pm.adet) as [Toplam Fiyat] from Malzemeler as m " +
-                    "   inner join Proses_Malzemeleri as pm on pm.malzeme_id = m.id " +
-                    "   inner join Talimat_Prosesleri as tp on pm.proses_id = tp.proses_id " +
-                    "   inner join Protez_Talimatlari as pt on pt.talimat_id = tp.talimat_id " +
-                    "   where pt.protez_id = s.protez_id) as [Gider], " +
-                    " (select sum(m.fiyat * pm.adet) as [Toplam Fiyat] from Malzemeler as m " +
-                    " inner join Proses_Malzemeleri as pm on pm.malzeme_id = m.id " +
-                    " inner join Talimat_Prosesleri as tp on pm.proses_id = tp.proses_id " +
-                    " inner join Protez_Talimatlari as pt on pt.talimat_id = tp.talimat_id " +
-                    " where pt.protez_id = s.protez_id) *1.28 as [Gelir] " +
-                    " from Siparis as s) m " +
-                    " group by teslim  having [teslim]=@parametre1 order by teslim ", new string[] { datepicker_tarihbas.Value.ToString("yyyy/MM/dd") });
-
-                datagridview_Siparis.DataSource = tmaliyet;
-
-            
-            }
-            foreach (var series in chart1.Series)
-            {
-                series.Points.Clear();
-            }
-            chek();
+            ara();
         }
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
@@ -173,52 +120,103 @@ namespace LPROS.Forms
                 tek = Sc.GET_DATATABLE(pasta_string, new string[] { datepicker_tarihbas.Value.ToString("yyyy/MM/dd") });
             }
 
-             
 
-            gelir = Convert.ToDouble(tek.Rows[0][0].ToString());
-            mgider = Convert.ToDouble(tek.Rows[0][1].ToString());
-            pgider = Convert.ToDouble(tek.Rows[0][2].ToString());
-            
-            double top, kar,masraf;
-            top = pgider + mgider;
-            kar = gelir - top;
-            masraf = gelir - kar;
-            if (checkBox2.Checked)
+
+            if (tek.Rows[0][0].ToString() != "" && tek.Rows[0][1].ToString() != "" && tek.Rows[0][2].ToString() != "")
             {
-                chart1.Series["PASTA"].Points.Add(gelir);
-                chart1.Series["PASTA"].Points.Add(pgider + mgider);
+                gelir = Convert.ToDouble(tek.Rows[0][0].ToString());
+                mgider = Convert.ToDouble(tek.Rows[0][1].ToString());
+                pgider = Convert.ToDouble(tek.Rows[0][2].ToString());
 
-                chart1.Series["PASTA"].Points[0].AxisLabel = "Toplam Gelir=" + gelir + " ₺";                
-                chart1.Series["PASTA"].Points[1].AxisLabel = "Toplam Gider=" + top + " ₺";
+                top = pgider + mgider;
+                kar = gelir - top;
+                masraf = gelir - kar;
+                if (checkBox2.Checked)
+                {
+                    chart1.Series["PASTA"].Points.Add(gelir);
+                    chart1.Series["PASTA"].Points.Add(pgider + mgider);
 
-                chart1.Series["PASTA"].Points[0].Color = Color.FromArgb(178, 8, 55); 
-                chart1.Series["PASTA"].Points[1].Color = Color.White;
+                    chart1.Series["PASTA"].Points[0].AxisLabel = "Toplam Gelir=" + gelir + " ₺";
+                    chart1.Series["PASTA"].Points[1].AxisLabel = "Toplam Gider=" + top + " ₺";
+
+                    chart1.Series["PASTA"].Points[0].Color = Color.FromArgb(178, 8, 55);
+                    chart1.Series["PASTA"].Points[1].Color = Color.White;
+                }
+                else
+                {
+                    chart1.Series["PASTA"].Points.Add(masraf);
+                    chart1.Series["PASTA"].Points.Add(kar);
+                    chart1.Series["PASTA"].Points.Add(pgider);
+                    chart1.Series["PASTA"].Points.Add(mgider);
+
+                    chart1.Series["PASTA"].Points[0].AxisLabel = "Masraf=" + masraf + " ₺";
+                    chart1.Series["PASTA"].Points[1].AxisLabel = "Kar=" + kar + " ₺";
+                    chart1.Series["PASTA"].Points[2].AxisLabel = "Personel Gider=" + pgider + " ₺";
+                    chart1.Series["PASTA"].Points[3].AxisLabel = "Maliyet=" + mgider + " ₺";
+
+                    chart1.Series["PASTA"].Points[0].Color = Color.RoyalBlue;
+                    chart1.Series["PASTA"].Points[1].Color = Color.Aqua;
+                    chart1.Series["PASTA"].Points[2].Color = Color.Red;
+                    chart1.Series["PASTA"].Points[3].Color = Color.Orange;
+
+                }
+            }
+        }
+        void ara()
+        {
+            if (checkBox1.Checked)
+            {
+                DataTable tmaliyet = Sc.GET_DATATABLE("select teslim as [Tarih], sum([Gelir]) as [Gelir], (sum([Gider]) +(select sum(maas / 30) " +
+              " from Personel where ise_giris_tarih < @parametre1 and durumu = 1)) as [Gider], " +
+              " sum([Gelir])-(sum([Gider]) + (select sum(maas / 30) from Personel where ise_giris_tarih < @parametre1 and durumu = 1)) as [Kar] from( " +
+              "   Select s.teslim_tarihi as [teslim], " +
+              "   (select sum(m.fiyat * pm.adet) as [Toplam Fiyat] from Malzemeler as m " +
+              "   inner join Proses_Malzemeleri as pm on pm.malzeme_id = m.id " +
+              "   inner join Talimat_Prosesleri as tp on pm.proses_id = tp.proses_id " +
+              "   inner join Protez_Talimatlari as pt on pt.talimat_id = tp.talimat_id " +
+              "   where pt.protez_id = s.protez_id) as [Gider], " +
+              " (select sum(m.fiyat * pm.adet) as [Toplam Fiyat] from Malzemeler as m " +
+              " inner join Proses_Malzemeleri as pm on pm.malzeme_id = m.id " +
+              " inner join Talimat_Prosesleri as tp on pm.proses_id = tp.proses_id " +
+              " inner join Protez_Talimatlari as pt on pt.talimat_id = tp.talimat_id " +
+              " where pt.protez_id = s.protez_id) *1.28 as [Gelir] " +
+              " from Siparis as s) m " +
+              " group by teslim  having [teslim] between @parametre1 and @parametre2 order by teslim ", new string[] { datepicker_tarihbas.Value.ToString("yyyy/MM/dd"), datepicker_tarihson.Value.ToString("yyyy/MM/dd") });
+
+                datagridview_Siparis.DataSource = tmaliyet;
+
+
+
             }
             else
             {
-                chart1.Series["PASTA"].Points.Add(masraf);
-                chart1.Series["PASTA"].Points.Add(kar);
-                chart1.Series["PASTA"].Points.Add(pgider);
-                chart1.Series["PASTA"].Points.Add(mgider);
+                DataTable tmaliyet = Sc.GET_DATATABLE("select teslim as [Tarih], sum([Gelir]) as [Gelir], (sum([Gider]) +(select sum(maas / 30) " +
+                    " from Personel where ise_giris_tarih < @parametre1 and durumu = 1)) as [Gider], " +
+                    " sum([Gelir])-(sum([Gider]) + (select sum(maas / 30) from Personel where ise_giris_tarih < @parametre1 and durumu = 1)) as [Kar] from( " +
+                    "   Select s.teslim_tarihi as [teslim], " +
+                    "   (select sum(m.fiyat * pm.adet) as [Toplam Fiyat] from Malzemeler as m " +
+                    "   inner join Proses_Malzemeleri as pm on pm.malzeme_id = m.id " +
+                    "   inner join Talimat_Prosesleri as tp on pm.proses_id = tp.proses_id " +
+                    "   inner join Protez_Talimatlari as pt on pt.talimat_id = tp.talimat_id " +
+                    "   where pt.protez_id = s.protez_id) as [Gider], " +
+                    " (select sum(m.fiyat * pm.adet) as [Toplam Fiyat] from Malzemeler as m " +
+                    " inner join Proses_Malzemeleri as pm on pm.malzeme_id = m.id " +
+                    " inner join Talimat_Prosesleri as tp on pm.proses_id = tp.proses_id " +
+                    " inner join Protez_Talimatlari as pt on pt.talimat_id = tp.talimat_id " +
+                    " where pt.protez_id = s.protez_id) *1.28 as [Gelir] " +
+                    " from Siparis as s) m " +
+                    " group by teslim  having [teslim]=@parametre1 order by teslim ", new string[] { datepicker_tarihbas.Value.ToString("yyyy/MM/dd") });
 
-                chart1.Series["PASTA"].Points[0].AxisLabel = "Masraf=" + masraf + " ₺";
-                chart1.Series["PASTA"].Points[1].AxisLabel = "Kar=" + kar + " ₺";
-                chart1.Series["PASTA"].Points[2].AxisLabel = "Personel Gider=" + pgider + " ₺";
-                chart1.Series["PASTA"].Points[3].AxisLabel = "Maliyet=" + mgider + " ₺";
+                datagridview_Siparis.DataSource = tmaliyet;
 
-                chart1.Series["PASTA"].Points[0].Color = Color.RoyalBlue;
-                chart1.Series["PASTA"].Points[1].Color = Color.Aqua;
-                chart1.Series["PASTA"].Points[2].Color = Color.Red;
-                chart1.Series["PASTA"].Points[3].Color = Color.Orange;
 
             }
+            foreach (var series in chart1.Series)
+            {
+                series.Points.Clear();
+            }
+            chek();
 
         }
-
-
-
-
-
-
     }
 }
