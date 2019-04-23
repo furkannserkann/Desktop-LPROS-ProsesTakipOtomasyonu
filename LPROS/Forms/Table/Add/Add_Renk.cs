@@ -63,7 +63,7 @@ namespace LPROS.Forms.Table.Add
                     MessageBox.Show("Girilen İsim Kayıtlı!", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     textbox_isim.Focus();
                 }
-                else if (Sc.ADD_TABLE("Renk", new String[] { "kod", "isim" }, new String[] { kod, isim }))
+                else if (Sc.ADD_TABLE("Renk", new String[] { "kod", "isim", "durum" }, new String[] { kod, isim, "1" }))
                 {
                     MessageBox.Show("Kayıt Başarılı!", "Kayıt", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 

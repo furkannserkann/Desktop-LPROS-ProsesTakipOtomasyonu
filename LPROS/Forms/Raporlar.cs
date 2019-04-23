@@ -29,7 +29,7 @@ namespace LPROS.Forms
         private void Raporlar_Load(object sender, EventArgs e)
         {
             ara();
-            datepicker_tarihson.MinDate = datepicker_tarihbas.Value;
+            datepicker_tarihson.MinDate = datepicker_tarihbas.Value.AddDays(1);
         }
 
         private void Raporlar_FormClosed(object sender, FormClosedEventArgs e)
@@ -58,7 +58,7 @@ namespace LPROS.Forms
 
         private void datepicker_tarihbas_ValueChanged(object sender, EventArgs e)
         {
-            datepicker_tarihson.MinDate = datepicker_tarihbas.Value;
+            datepicker_tarihson.MinDate = datepicker_tarihbas.Value.AddDays(1);
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -140,8 +140,8 @@ namespace LPROS.Forms
                     chart1.Series["PASTA"].Points[0].AxisLabel = "Toplam Gelir=" + gelir + " ₺";
                     chart1.Series["PASTA"].Points[1].AxisLabel = "Toplam Gider=" + top + " ₺";
 
-                    chart1.Series["PASTA"].Points[0].Color = Color.FromArgb(178, 8, 55);
-                    chart1.Series["PASTA"].Points[1].Color = Color.White;
+                    chart1.Series["PASTA"].Points[0].Color = ColorTranslator.FromHtml("#9C27B0");
+                    chart1.Series["PASTA"].Points[1].Color = ColorTranslator.FromHtml("#E91E63");
                 }
                 else
                 {
@@ -155,10 +155,10 @@ namespace LPROS.Forms
                     chart1.Series["PASTA"].Points[2].AxisLabel = "Personel Gider=" + pgider + " ₺";
                     chart1.Series["PASTA"].Points[3].AxisLabel = "Maliyet=" + mgider + " ₺";
 
-                    chart1.Series["PASTA"].Points[0].Color = Color.RoyalBlue;
-                    chart1.Series["PASTA"].Points[1].Color = Color.Aqua;
-                    chart1.Series["PASTA"].Points[2].Color = Color.Red;
-                    chart1.Series["PASTA"].Points[3].Color = Color.Orange;
+                    chart1.Series["PASTA"].Points[0].Color = ColorTranslator.FromHtml("#3F51B5");
+                    chart1.Series["PASTA"].Points[1].Color = ColorTranslator.FromHtml("#009688");
+                    chart1.Series["PASTA"].Points[2].Color = ColorTranslator.FromHtml("#FF5722");
+                    chart1.Series["PASTA"].Points[3].Color = ColorTranslator.FromHtml("#9C27B0");
 
                 }
             }

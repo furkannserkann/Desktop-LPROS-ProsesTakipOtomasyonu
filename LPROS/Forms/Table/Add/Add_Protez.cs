@@ -282,7 +282,7 @@ namespace LPROS.Forms.Table.Add
                     MessageBox.Show("Girilen İsim Kayıtlı!", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     textbot_protez_isim.Focus();
                 }
-                else if (Sc.ADD_TABLE("Protez", new String[] { "kod", "adi" }, new String[] { kod, isim }))
+                else if (Sc.ADD_TABLE("Protez", new String[] { "kod", "adi", "durum" }, new String[] { kod, isim, "1" }))
                 {
                     String SelectTalimatId = Sc.GET_TEKDEGER("select Id from Protez where kod=@parametre1", new String[] { kod });
 

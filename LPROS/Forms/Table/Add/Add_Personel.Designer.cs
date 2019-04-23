@@ -30,6 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Add_Personel));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.combo_güvenlik = new System.Windows.Forms.ComboBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.textBox_güvenlik = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.Combo_durumu = new System.Windows.Forms.ComboBox();
             this.durum = new System.Windows.Forms.Label();
@@ -67,10 +71,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.Combo_yetki = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.textBox_güvenlik = new System.Windows.Forms.TextBox();
-            this.combo_güvenlik = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel_head.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_close)).BeginInit();
@@ -124,6 +124,52 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(674, 660);
             this.panel1.TabIndex = 42;
+            // 
+            // combo_güvenlik
+            // 
+            this.combo_güvenlik.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combo_güvenlik.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F);
+            this.combo_güvenlik.FormattingEnabled = true;
+            this.combo_güvenlik.Items.AddRange(new object[] {
+            "ANNENIZIN KIZLIK SOYADI?",
+            "DOGUM YERINIZ ?",
+            "ILK EVCIL HAYVANINIZ ?",
+            "EN SEVDIGINIZ YIYECEK?",
+            "EN SEVDIGINIZ RENK?"});
+            this.combo_güvenlik.Location = new System.Drawing.Point(392, 469);
+            this.combo_güvenlik.Name = "combo_güvenlik";
+            this.combo_güvenlik.Size = new System.Drawing.Size(211, 25);
+            this.combo_güvenlik.TabIndex = 193;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Righteous", 9.5F);
+            this.label18.Location = new System.Drawing.Point(389, 502);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(149, 17);
+            this.label18.TabIndex = 192;
+            this.label18.Text = "Güvenlik Sorusu Cevabı";
+            // 
+            // textBox_güvenlik
+            // 
+            this.textBox_güvenlik.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F);
+            this.textBox_güvenlik.ForeColor = System.Drawing.Color.Black;
+            this.textBox_güvenlik.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.textBox_güvenlik.Location = new System.Drawing.Point(392, 522);
+            this.textBox_güvenlik.Name = "textBox_güvenlik";
+            this.textBox_güvenlik.Size = new System.Drawing.Size(211, 23);
+            this.textBox_güvenlik.TabIndex = 191;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Righteous", 9.5F);
+            this.label17.Location = new System.Drawing.Point(389, 448);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(104, 17);
+            this.label17.TabIndex = 190;
+            this.label17.Text = "Güvenlik Sorusu";
             // 
             // label16
             // 
@@ -262,6 +308,7 @@
             this.textBox_sifre.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.textBox_sifre.Location = new System.Drawing.Point(47, 297);
             this.textBox_sifre.Name = "textBox_sifre";
+            this.textBox_sifre.PasswordChar = '*';
             this.textBox_sifre.Size = new System.Drawing.Size(211, 23);
             this.textBox_sifre.TabIndex = 143;
             // 
@@ -550,52 +597,6 @@
             this.label4.Size = new System.Drawing.Size(54, 17);
             this.label4.TabIndex = 42;
             this.label4.Text = "Soyisim";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Righteous", 9.5F);
-            this.label17.Location = new System.Drawing.Point(389, 448);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(104, 17);
-            this.label17.TabIndex = 190;
-            this.label17.Text = "Güvenlik Sorusu";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Righteous", 9.5F);
-            this.label18.Location = new System.Drawing.Point(389, 502);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(149, 17);
-            this.label18.TabIndex = 192;
-            this.label18.Text = "Güvenlik Sorusu Cevabı";
-            // 
-            // textBox_güvenlik
-            // 
-            this.textBox_güvenlik.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F);
-            this.textBox_güvenlik.ForeColor = System.Drawing.Color.Black;
-            this.textBox_güvenlik.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textBox_güvenlik.Location = new System.Drawing.Point(392, 522);
-            this.textBox_güvenlik.Name = "textBox_güvenlik";
-            this.textBox_güvenlik.Size = new System.Drawing.Size(211, 23);
-            this.textBox_güvenlik.TabIndex = 191;
-            // 
-            // combo_güvenlik
-            // 
-            this.combo_güvenlik.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.combo_güvenlik.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F);
-            this.combo_güvenlik.FormattingEnabled = true;
-            this.combo_güvenlik.Items.AddRange(new object[] {
-            "ANNENIZIN KIZLIK SOYADI?",
-            "DOGUM YERINIZ ?",
-            "ILK EVCIL HAYVANINIZ ?",
-            "EN SEVDIGINIZ YIYECEK?",
-            "EN SEVDIGINIZ RENK?"});
-            this.combo_güvenlik.Location = new System.Drawing.Point(392, 469);
-            this.combo_güvenlik.Name = "combo_güvenlik";
-            this.combo_güvenlik.Size = new System.Drawing.Size(211, 25);
-            this.combo_güvenlik.TabIndex = 193;
             // 
             // Add_Personel
             // 

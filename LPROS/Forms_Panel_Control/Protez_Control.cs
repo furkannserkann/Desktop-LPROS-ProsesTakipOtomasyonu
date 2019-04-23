@@ -48,36 +48,41 @@ namespace LPROS.Forms_Panel_Control
         private void button_protez_guncelle_Click(object sender, EventArgs e)
         {
             DataGridView Dtg = Items.panelProtez.dataGridUst;
-
-            Add_Protez addProtez = new Add_Protez()
+            if (Dtg.Rows.Count > 0)
             {
-                isUpdate = true,
-                _SelectedId = Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["Id"].Value.ToString(),
-                _SelectedKod = Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["Kod"].Value.ToString(),
-                _SelectedIsim = Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["İsim"].Value.ToString()
-            };
-            addProtez.ShowDialog();
+                Add_Protez addProtez = new Add_Protez()
+                {
+                    isUpdate = true,
+                    _SelectedId = Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["Id"].Value.ToString(),
+                    _SelectedKod = Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["Kod"].Value.ToString(),
+                    _SelectedIsim = Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["İsim"].Value.ToString()
+                };
+                addProtez.ShowDialog();
+            }
         }
 
         SqlConnector Sc = new SqlConnector();
         private void button_protez_sil_Click(object sender, EventArgs e)
         {
             DataGridView Dtg = Items.panelProtez.dataGridUst;
-            string selectId = Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["id"].Value.ToString();
-
-            DialogResult Dr = MessageBox.Show("Seçilen Proses Siliniyor!", "Dikkat", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
-            if (Dr == DialogResult.OK)
+            if (Dtg.Rows.Count > 0)
             {
-                if (Sc.QUERY_TABLE("update Protez set durum=0 where id=@parametre1", new String[] { selectId }))
-                {
-                    MessageBox.Show("Silme İşlemi Başarılı!", "Silme İşlemi", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                string selectId = Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["id"].Value.ToString();
 
-                    Items.panelProtez.dataGridUst.DataSource = Sc.GET_DATATABLE(SqlConnector.TableProtez);
-                    if (Items.panelProtez.dataGridUst.Rows.Count > 0)
+                DialogResult Dr = MessageBox.Show("Seçilen Proses Siliniyor!", "Dikkat", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
+                if (Dr == DialogResult.OK)
+                {
+                    if (Sc.QUERY_TABLE("update Protez set durum=0 where id=@parametre1", new String[] { selectId }))
                     {
-                        Protezler.SelectedProtezid = Items.panelProtez.dataGridUst.Rows[0].Cells[0].Value.ToString();
-                        Items.panelProtez.dataGridAlt.DataSource = Sc.GET_DATATABLE(SqlConnector.TableTalimatByProtezid, new String[] { Protezler.SelectedProtezid });
-                        Items.panelProtez.dataGridAlt.Columns[0].Visible = false;
+                        MessageBox.Show("Silme İşlemi Başarılı!", "Silme İşlemi", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+
+                        Items.panelProtez.dataGridUst.DataSource = Sc.GET_DATATABLE(SqlConnector.TableProtez);
+                        if (Items.panelProtez.dataGridUst.Rows.Count > 0)
+                        {
+                            Protezler.SelectedProtezid = Items.panelProtez.dataGridUst.Rows[0].Cells[0].Value.ToString();
+                            Items.panelProtez.dataGridAlt.DataSource = Sc.GET_DATATABLE(SqlConnector.TableTalimatByProtezid, new String[] { Protezler.SelectedProtezid });
+                            Items.panelProtez.dataGridAlt.Columns[0].Visible = false;
+                        }
                     }
                 }
             }

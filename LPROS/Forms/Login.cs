@@ -147,7 +147,7 @@ namespace LPROS
                     {
                         this.LABEL_NOT_LOGIN_INFO.Text = USERNAME_OR_PASSWORD_FALSE;
                         this.LABEL_NOT_LOGIN_INFO.Visible = true;
-                        this.TEXT_PASSWORD.Text = "Şifre";
+                        this.TEXT_PASSWORD.Text = "";
                         this.TEXT_PASSWORD.PasswordChar = '\0';
                     }
                 }

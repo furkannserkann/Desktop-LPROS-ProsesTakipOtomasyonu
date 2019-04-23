@@ -111,10 +111,10 @@ namespace LPROS.Forms.Table.Add
                     {
                         if ((Boolean)datagridview_malzeme.Rows[i].Cells[0].EditedFormattedValue)
                         {
-                            Sc.ADD_TABLE("Proses_Malzemeleri", new String[] { "proses_id", "malzeme_id", "adet" },
+                            Sc.ADD_TABLE("Proses_Malzemeleri", new String[] { "proses_id", "malzeme_id", "adet", "durum" },
                                 new String[] { SelectProsesId,
                                     datagridview_malzeme.Rows[i].Cells["id"].Value.ToString(),
-                                    datagridview_malzeme.Rows[i].Cells["adet"].Value.ToString() });
+                                    datagridview_malzeme.Rows[i].Cells["adet"].Value.ToString(), "1" });
                         }
                     }
 

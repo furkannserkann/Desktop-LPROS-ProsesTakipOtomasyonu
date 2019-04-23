@@ -54,8 +54,7 @@ namespace LPROS.Forms.Table.Add
 
         private void Combo_yetki_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
-            if (Combo_yetki.ValueMember !="" && (int)Combo_yetki.SelectedValue == 4)
+            if (Combo_yetki.ValueMember != "" && (int)Combo_yetki.SelectedValue == 4)
             {
                 textBox_kullaniciadi.Enabled = false;
                 textBox_sifre.Enabled = false;
@@ -78,14 +77,14 @@ namespace LPROS.Forms.Table.Add
                 soyisim = textBox_soyisim.Text;
 
             if (textBox_isim.Text == "" && textBox_soyisim.Text == "")
-                textBox_kullaniciadi.Text = null;
+                textBox_kullaniciadi.Text = "";
             else
             {
                 textBox_kullaniciadi.Text = isim + (soyisim != "" ? textBox_soyisim.Text.Substring(0, 1) : "") +
-                (DateTime.Now.Day.ToString().Length == 1 ? "0" + DateTime.Now.Day.ToString() : DateTime.Now.Day.ToString()) +
-                (DateTime.Now.Month.ToString().Length == 1 ? "0" + DateTime.Now.Month.ToString() : DateTime.Now.Month.ToString()) +
-                DateTime.Now.Year.ToString();
+                (DateTime.Now.Day.ToString().Length == 1 ? "0" + DateTime.Now.Day.ToString() : DateTime.Now.Day.ToString());
             }
+
+            textBox_kullaniciadi.Text = textBox_kullaniciadi.Text.ToLower();
         }
 
         private void Add_Personel_Load(object sender, EventArgs e)
@@ -271,7 +270,7 @@ namespace LPROS.Forms.Table.Add
             string departman = Combo_departman.SelectedValue.ToString();
             String durumu = Combo_durumu.SelectedItem=="Aktif"?"1":"0";
             string yetki = Combo_yetki.SelectedValue.ToString();
-            string güvenlik = combo_güvenlik.SelectedItem.ToString();
+            string güvenlik = combo_güvenlik.SelectedItem!=null ? combo_güvenlik.SelectedItem.ToString() : "";
             string güvenlikcvp = textBox_güvenlik.Text;
 
             String _UpdateCode = "update Personel set ad=@parametre1, soyad=@parametre2, tc=@parametre3, ssk_no=@parametre4, ssk_bas_tarih=@parametre5, ise_giris_tarih=@parametre6, adres=@parametre7, cinsiyet=@parametre8, maas=@parametre9, durumu=@parametre10, departman_no=@parametre11,e_posta=@parametre12, kullanici_adi=@parametre13,sifre=@parametre14,yetki_id=@parametre15,telefon=@parametre16, guvenlik_soru=@parametre17, guvenlik_soru_cevap=@parametre18 Where personel_no=@parametre19";

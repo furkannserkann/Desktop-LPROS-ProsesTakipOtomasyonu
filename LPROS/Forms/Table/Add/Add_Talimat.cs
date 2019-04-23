@@ -182,10 +182,10 @@ namespace LPROS.Forms.Table.Add
                     {
                         if ((Boolean)datagridview_proses.Rows[i].Cells[0].EditedFormattedValue)
                         {
-                            Sc.ADD_TABLE("Talimat_Prosesleri", new String[] { "proses_id", "talimat_id", "sira" },
+                            Sc.ADD_TABLE("Talimat_Prosesleri", new String[] { "proses_id", "talimat_id", "sira", "durum" },
                                 new String[] { (String)datagridview_proses.Rows[i].Cells[2].Value.ToString(),
                                     (String)SelectTalimatId.ToString(),
-                                    datagridview_proses.Rows[i].Cells[1].Value.ToString() });
+                                    datagridview_proses.Rows[i].Cells[1].Value.ToString(), "1" });
                         }
                     }
 

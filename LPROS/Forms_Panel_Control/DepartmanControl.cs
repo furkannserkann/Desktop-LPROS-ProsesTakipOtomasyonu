@@ -88,15 +88,18 @@ namespace LPROS.Forms_Panel_Control
 
         private void button_guncelle_departman_Click(object sender, EventArgs e)
         {
-            DataGridView Dtg = Items.panelDepartman.dataGridUst;
-            Add_Departman addDep = new Add_Departman()
+            if (Items.panelDepartman.dataGridUst.Rows.Count > 0)
             {
-                isUpdate = true,
-                _SelectedId = Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["id"].Value.ToString(),
-                _SelectedIsim = Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["İsim"].Value.ToString()
-            };
+                DataGridView Dtg = Items.panelDepartman.dataGridUst;
+                Add_Departman addDep = new Add_Departman()
+                {
+                    isUpdate = true,
+                    _SelectedId = Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["id"].Value.ToString(),
+                    _SelectedIsim = Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["İsim"].Value.ToString()
+                };
 
-            addDep.ShowDialog();
+                addDep.ShowDialog();
+            }
         }
 
         private void textbox_ara_departmanisim_TextChanged(object sender, EventArgs e)
@@ -110,7 +113,7 @@ namespace LPROS.Forms_Panel_Control
             if (!_SearchDepartmanClear)
             {
                 String _Isim = textbox_ara_departmanisim.Text;
-                Items.panelDepartman.dataGridUst.DataSource = Sc.GET_DATATABLE(SqlConnector.TableDepartman + " Where isim like '%'+@parametre1+'%'", new String[] { _Isim });
+                Items.panelDepartman.dataGridUst.DataSource = Sc.GET_DATATABLE(SqlConnector.TableDepartman + " and isim like '%'+@parametre1+'%'", new String[] { _Isim });
             }
             else
             {
@@ -132,15 +135,18 @@ namespace LPROS.Forms_Panel_Control
 
         private void button_sil_departman_Click(object sender, EventArgs e)
         {
-            DialogResult Dr = MessageBox.Show("Seçilen Departman Siliniyor!", "Silme İşlemi", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
-            if (Dr == DialogResult.OK)
+            if (Items.panelDepartman.dataGridUst.Rows.Count > 0)
             {
-                DataGridView Dtg = Items.panelDepartman.dataGridUst;
-
-                if (Sc.QUERY_TABLE("delete from Departman where id=@parametre1", new String[] { Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells[0].Value.ToString() }))
+                DialogResult Dr = MessageBox.Show("Seçilen Departman Siliniyor!", "Silme İşlemi", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
+                if (Dr == DialogResult.OK)
                 {
-                    MessageBox.Show("Silme İşlemi Başarılı!", "Silme İşlemi", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                    Items.panelDepartman.dataGridUst.DataSource = Sc.GET_DATATABLE(SqlConnector.TableDepartman);
+                    DataGridView Dtg = Items.panelDepartman.dataGridUst;
+
+                    if (Sc.QUERY_TABLE("Update Departman set durum=0 where id=@parametre1", new String[] { Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells[0].Value.ToString() }))
+                    {
+                        MessageBox.Show("Silme İşlemi Başarılı!", "Silme İşlemi", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        Items.panelDepartman.dataGridUst.DataSource = Sc.GET_DATATABLE(SqlConnector.TableDepartman);
+                    }
                 }
             }
         }

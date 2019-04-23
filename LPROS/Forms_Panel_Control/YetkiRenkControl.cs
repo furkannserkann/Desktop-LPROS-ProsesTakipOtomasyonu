@@ -36,30 +36,35 @@ namespace LPROS.Forms_Panel_Control
         private void button_renk_guncelle_Click(object sender, EventArgs e)
         {
             DataGridView Dtg = Items.panelYetkiRenk.dataGridview;
-
-            Add_Renk addRenk = new Add_Renk()
+            if (Dtg.Rows.Count > 0)
             {
-                isUpdate = true,
-                _SelectedIsim = Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["İsim"].Value.ToString(),
-                _SelectedKod = Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["Renk Kodu"].Value.ToString(),
-                _SelectedId = Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["id"].Value.ToString()
-            };
+                Add_Renk addRenk = new Add_Renk()
+                {
+                    isUpdate = true,
+                    _SelectedIsim = Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["İsim"].Value.ToString(),
+                    _SelectedKod = Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["Renk Kodu"].Value.ToString(),
+                    _SelectedId = Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["id"].Value.ToString()
+                };
 
-            addRenk.ShowDialog();
+                addRenk.ShowDialog();
+            }
         }
 
         SqlConnector Sc = new SqlConnector();
         private void button5_Click(object sender, EventArgs e)
         {
-            DialogResult Dr = MessageBox.Show("Seçilen Renk Siliniyor!", "Silme İşlemi", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
-            if (Dr == DialogResult.OK)
+            if (Items.panelYetkiRenk.dataGridview.Rows.Count > 0)
             {
-                DataGridView Dtg = Items.panelYetkiRenk.dataGridview;
-
-                if (Sc.QUERY_TABLE("delete from Renk where id=@parametre1", new String[] { Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells[0].Value.ToString() }))
+                DialogResult Dr = MessageBox.Show("Seçilen Renk Siliniyor!", "Silme İşlemi", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
+                if (Dr == DialogResult.OK)
                 {
-                    MessageBox.Show("Silme İşlemi Başarılı!", "Silme İşlemi", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                    Items.panelYetkiRenk.dataGridview.DataSource = Sc.GET_DATATABLE(SqlConnector.TableRenk);
+                    DataGridView Dtg = Items.panelYetkiRenk.dataGridview;
+
+                    if (Sc.QUERY_TABLE("Update Renk set durum=0 where id=@parametre1", new String[] { Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells[0].Value.ToString() }))
+                    {
+                        MessageBox.Show("Silme İşlemi Başarılı!", "Silme İşlemi", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        Items.panelYetkiRenk.dataGridview.DataSource = Sc.GET_DATATABLE(SqlConnector.TableRenk);
+                    }
                 }
             }
         }

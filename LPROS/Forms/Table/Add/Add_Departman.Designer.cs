@@ -92,7 +92,6 @@
             this.button_kaydet.Text = "Departmanı Kaydet";
             this.button_kaydet.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button_kaydet.UseVisualStyleBackColor = false;
-            this.button_kaydet.Click += new System.EventHandler(this.button_kaydet_Click_1);
             // 
             // label7
             // 

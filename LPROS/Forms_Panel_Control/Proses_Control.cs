@@ -51,33 +51,40 @@ namespace LPROS.Forms_Panel_Control
         {
             DataGridView Dtg = Items.panelProses.dataGridUst;
 
-            Add_Proses addProses = new Add_Proses()
+            if (Dtg.Rows.Count > 0)
             {
-                isUpdate = true,
-                _SelectedId = Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["Id"].Value.ToString(),
-                _SelectedKod = Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["Kod"].Value.ToString(),
-                _SelectedIsim = Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["İsim"].Value.ToString(),
-            };
-            addProses.ShowDialog();
+                Add_Proses addProses = new Add_Proses()
+                {
+                    isUpdate = true,
+                    _SelectedId = Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["Id"].Value.ToString(),
+                    _SelectedKod = Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["Kod"].Value.ToString(),
+                    _SelectedIsim = Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["İsim"].Value.ToString(),
+                };
+                addProses.ShowDialog();
+            }
         }
 
         private void button_proses_sil_Click(object sender, EventArgs e)
         {
             DataGridView Dtg = Items.panelProses.dataGridUst;
-            string selectId = Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["id"].Value.ToString();
-            DialogResult Dr = MessageBox.Show("Seçilen Proses Siliniyor!", "Dikkat", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
-            if (Dr == DialogResult.OK)
-            {
-                if (Sc.QUERY_TABLE("Update Proses set durum=0 where id=@parametre1", new String[] { selectId }))
-                {
-                    MessageBox.Show("Silme İşlemi Başarılı!", "Silme İşlemi", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 
-                    Items.panelProses.dataGridUst.DataSource = Sc.GET_DATATABLE(SqlConnector.TableProses);
-                    if (Items.panelProses.dataGridUst.Rows.Count > 0)
+            if (Dtg.Rows.Count > 0)
+            {
+                string selectId = Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["id"].Value.ToString();
+                DialogResult Dr = MessageBox.Show("Seçilen Proses Siliniyor!", "Dikkat", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
+                if (Dr == DialogResult.OK)
+                {
+                    if (Sc.QUERY_TABLE("Update Proses set durum=0 where id=@parametre1", new String[] { selectId }))
                     {
-                        Prosesler.SelectedProsesID = Items.panelProses.dataGridUst.Rows[0].Cells[0].Value.ToString();
-                        Items.panelProses.dataGridAlt.DataSource = Sc.GET_DATATABLE(SqlConnector.TableMalzemelerByProsesid, new String[] { Prosesler.SelectedProsesID });
-                        Items.panelProses.dataGridAlt.Columns[0].Visible = false;
+                        MessageBox.Show("Silme İşlemi Başarılı!", "Silme İşlemi", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+
+                        Items.panelProses.dataGridUst.DataSource = Sc.GET_DATATABLE(SqlConnector.TableProses);
+                        if (Items.panelProses.dataGridUst.Rows.Count > 0)
+                        {
+                            Prosesler.SelectedProsesID = Items.panelProses.dataGridUst.Rows[0].Cells[0].Value.ToString();
+                            Items.panelProses.dataGridAlt.DataSource = Sc.GET_DATATABLE(SqlConnector.TableMalzemelerByProsesid, new String[] { Prosesler.SelectedProsesID });
+                            Items.panelProses.dataGridAlt.Columns[0].Visible = false;
+                        }
                     }
                 }
             }
@@ -90,7 +97,7 @@ namespace LPROS.Forms_Panel_Control
             if (!_SearchProsesClear)
             {
                 String _Isim = textbox_ara_isim.Text, _Kod = textbox_ara_kod.Text;
-                Items.panelProses.dataGridUst.DataSource = Sc.GET_DATATABLE(SqlConnector.TableProses + " Where kod like '%'+@parametre1+'%' and isim like '%'+@parametre2+'%'", new String[] { _Kod, _Isim });
+                Items.panelProses.dataGridUst.DataSource = Sc.GET_DATATABLE(SqlConnector.TableProses + " and kod like '%'+@parametre1+'%' and isim like '%'+@parametre2+'%'", new String[] { _Kod, _Isim });
 
                 if (Items.panelProses.dataGridUst.Rows.Count > 0)
                 {

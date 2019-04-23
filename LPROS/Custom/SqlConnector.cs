@@ -50,7 +50,7 @@ namespace LPROS.Custom
                     "(CASE WHEN durumu = 1 THEN 'Aktif' ELSE 'Aktif Değil' END) as [Durumu], " +
                     "e_posta as [E_Posta], y.yetki_turu as [Yetki] from Personel as p " +
                     "inner join Yetkiler as y on y.id = p.yetki_id " +
-                    "where departman_no=@parametre1 ";
+                    "where departman_no=@parametre1";
             }
         }
         public static String TableHastane
@@ -73,28 +73,28 @@ namespace LPROS.Custom
         {
             get
             {
-                return "select id, kod as [Kod], adi as [İsim] from Protez where durum=1";
+                return "select id, kod as [Kod], adi as [İsim] from Protez where durum=1 ";
             }
         }
         public static String TableTalimat
         {
             get
             {
-                return "select id, talimat_kodu as [Talimat Kodu], talimat_adi as [Talimat İsmi] from Talimat where durum=1";
+                return "select id, talimat_kodu as [Talimat Kodu], talimat_adi as [Talimat İsmi] from Talimat where durum=1 ";
             }
         }
         public static String TableProses
         {
             get
             {
-                return "select id, kod as [Kod], isim as [İsim] from Proses where durum=1";
+                return "select id, kod as [Kod], isim as [İsim] from Proses where durum=1 ";
             }
         }
         public static String TableDepartman
         {
             get
             {
-                return "select id, isim as [İsim] from Departman";
+                return "select id, isim as [İsim] from Departman where durum=1 ";
             }
         }
         public static String TableRenk

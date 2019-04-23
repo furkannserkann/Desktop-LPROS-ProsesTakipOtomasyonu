@@ -32,28 +32,34 @@ namespace LPROS.Forms_Panel_Control
 
         private void button_malzeme_guncelle_Click(object sender, EventArgs e)
         {
-            DataGridView Dtg = Items.panelMalzemeler.dataGridview;
-            Add_Malzemeler addMalzeme = new Add_Malzemeler()
+            if (Items.panelMalzemeler.dataGridview.Rows.Count > 0)
             {
-                isUpdate = true,
-                _Selectid = Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["Id"].Value.ToString(),
-                _Selectad = Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["Adı"].Value.ToString(),
-                _Selectfiyat = Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["Fiyat"].Value.ToString()
-            };
-            addMalzeme.ShowDialog();
+                DataGridView Dtg = Items.panelMalzemeler.dataGridview;
+                Add_Malzemeler addMalzeme = new Add_Malzemeler()
+                {
+                    isUpdate = true,
+                    _Selectid = Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["Id"].Value.ToString(),
+                    _Selectad = Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["Adı"].Value.ToString(),
+                    _Selectfiyat = Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["Fiyat"].Value.ToString()
+                };
+                addMalzeme.ShowDialog();
+            }
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            DialogResult Dr = MessageBox.Show("Seçilen Malzeme Siliniyor!", "Silme İşlemi", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
-            if (Dr == DialogResult.OK)
+            if (Items.panelMalzemeler.dataGridview.Rows.Count > 0)
             {
-                DataGridView Dtg = Items.panelMalzemeler.dataGridview;
-
-                if (Sc.QUERY_TABLE("delete from Malzemeler where Id=@parametre1", new String[] { Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells[0].Value.ToString() }))
+                DialogResult Dr = MessageBox.Show("Seçilen Malzeme Siliniyor!", "Silme İşlemi", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
+                if (Dr == DialogResult.OK)
                 {
-                    MessageBox.Show("Silme İşlemi Başarılı!", "Silme İşlemi", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                    Items.panelMalzemeler.dataGridview.DataSource = Sc.GET_DATATABLE(SqlConnector.TableMalzemeler);
+                    DataGridView Dtg = Items.panelMalzemeler.dataGridview;
+
+                    if (Sc.QUERY_TABLE("delete from Malzemeler where Id=@parametre1", new String[] { Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells[0].Value.ToString() }))
+                    {
+                        MessageBox.Show("Silme İşlemi Başarılı!", "Silme İşlemi", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        Items.panelMalzemeler.dataGridview.DataSource = Sc.GET_DATATABLE(SqlConnector.TableMalzemeler);
+                    }
                 }
             }
         }

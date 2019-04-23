@@ -59,7 +59,7 @@ namespace LPROS.Forms.Table.Add
                     MessageBox.Show("Girilen İsim Kayıtlı!", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     textbox_isim.Focus();
                 }
-                else if (Sc.ADD_TABLE("Departman", new String[] { "isim" }, new String[] { isim }))
+                else if (Sc.ADD_TABLE("Departman", new String[] { "isim", "durum" }, new String[] { isim, "1" }))
                 {
                     MessageBox.Show("Kayıt Başarılı!", "Kayıt", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 
@@ -129,11 +129,6 @@ namespace LPROS.Forms.Table.Add
                 return true;
             }
             return base.ProcessCmdKey(ref msg, keyData);
-        }
-
-        private void button_kaydet_Click_1(object sender, EventArgs e)
-        {
-
         }
 
         private void textBox_kayit_KeyDown(object sender, KeyEventArgs e)

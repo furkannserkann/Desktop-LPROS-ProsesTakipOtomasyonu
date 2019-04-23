@@ -91,32 +91,37 @@ namespace LPROS.Forms_Panel_Control
 
         private void button_sil_Click(object sender, EventArgs e)
         {
-            DialogResult Dr = MessageBox.Show("Seçilen Hastane Siliniyor!", "Silme İşlemi", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
-            if (Dr == DialogResult.OK)
+            if (Items.panelHastaneDoktor.dataGridUst.Rows.Count > 0)
             {
-                DataGridView Dtg = Items.panelHastaneDoktor.dataGridUst;
-
-                if (Sc.QUERY_TABLE("delete from Hastane where id=@parametre1", new String[] { Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["ID"].Value.ToString() }))
+                DialogResult Dr = MessageBox.Show("Seçilen Hastane Siliniyor!", "Silme İşlemi", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
+                if (Dr == DialogResult.OK)
                 {
-                    MessageBox.Show("Silme İşlemi Başarılı!", "Silme İşlemi", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                    Items.panelHastaneDoktor.dataGridUst.DataSource = Sc.GET_DATATABLE(SqlConnector.TableHastane);
+                    DataGridView Dtg = Items.panelHastaneDoktor.dataGridUst;
+
+                    if (Sc.QUERY_TABLE("delete from Hastane where id=@parametre1", new String[] { Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["ID"].Value.ToString() }))
+                    {
+                        MessageBox.Show("Silme İşlemi Başarılı!", "Silme İşlemi", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        Items.panelHastaneDoktor.dataGridUst.DataSource = Sc.GET_DATATABLE(SqlConnector.TableHastane);
+                    }
                 }
             }
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            DialogResult Dr = MessageBox.Show("Seçilen Doktor Siliniyor!", "Silme İşlemi", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
-            if (Dr == DialogResult.OK)
+            if (Items.panelHastaneDoktor.dataGridAlt.Rows.Count > 0)
             {
-
-                DataGridView Dtg2 = Items.panelHastaneDoktor.dataGridUst;
-                DataGridView Dtg = Items.panelHastaneDoktor.dataGridAlt;
-
-                if (Sc.QUERY_TABLE("delete from Doktorlar where id=@parametre1", new String[] { Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["ID"].Value.ToString() }))
+                DialogResult Dr = MessageBox.Show("Seçilen Doktor Siliniyor!", "Silme İşlemi", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
+                if (Dr == DialogResult.OK)
                 {
-                    MessageBox.Show("Silme İşlemi Başarılı!", "Silme İşlemi", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                    Items.panelHastaneDoktor.dataGridAlt.DataSource = Sc.GET_DATATABLE(SqlConnector.TableDoktorByHastaneid, new String[] { Dtg2.Rows[Dtg2.CurrentCell.RowIndex].Cells["ID"].Value.ToString() });
+                    DataGridView Dtg2 = Items.panelHastaneDoktor.dataGridUst;
+                    DataGridView Dtg = Items.panelHastaneDoktor.dataGridAlt;
+
+                    if (Sc.QUERY_TABLE("delete from Doktorlar where id=@parametre1", new String[] { Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["ID"].Value.ToString() }))
+                    {
+                        MessageBox.Show("Silme İşlemi Başarılı!", "Silme İşlemi", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        Items.panelHastaneDoktor.dataGridAlt.DataSource = Sc.GET_DATATABLE(SqlConnector.TableDoktorByHastaneid, new String[] { Dtg2.Rows[Dtg2.CurrentCell.RowIndex].Cells["ID"].Value.ToString() });
+                    }
                 }
             }
         }

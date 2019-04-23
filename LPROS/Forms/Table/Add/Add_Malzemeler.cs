@@ -64,7 +64,7 @@ namespace LPROS.Forms.Table.Add
                     MessageBox.Show("Girilen İsim Kayıtlı!", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     textbox_isim.Focus();
                 }
-                else if (Sc.ADD_TABLE("Malzemeler", new String[] { "adi", "fiyat" }, new String[] { isim, double.Parse(fiyat.Replace(" ", "").Replace(".", ",")).ToString() }))
+                else if (Sc.ADD_TABLE("Malzemeler", new String[] { "adi", "fiyat", "durum" }, new String[] { isim, double.Parse(fiyat.Replace(" ", "").Replace(".", ",")).ToString(), "1" }))
                 {
                     MessageBox.Show("Kayıt Başarılı!", "Kayıt", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 
