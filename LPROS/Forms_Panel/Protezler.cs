@@ -19,7 +19,7 @@ namespace LPROS.Forms_Panel
         }
 
         SqlConnector Sc = new SqlConnector();
-        String SelectedProtezid = "";
+        public static String SelectedProtezid = "";
 
         private void Protezler_Load(object sender, EventArgs e)
         {

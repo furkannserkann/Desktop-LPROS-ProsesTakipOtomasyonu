@@ -383,9 +383,12 @@ namespace LPROS.Forms.Table.Add
                     MessageBox.Show("Talimat Bilgileri Güncellendi!", "Kayıt", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     Items.panelTalimat.dataGridUst.DataSource = Sc.GET_DATATABLE(SqlConnector.TableTalimat);
 
-                    Talimatlar.SelectedTalimatID = Items.panelTalimat.dataGridUst.Rows[0].Cells[0].Value.ToString();
-                    Items.panelTalimat.dataGridAlt.DataSource = Sc.GET_DATATABLE(SqlConnector.TableProsesByTalimatid, new String[] { Talimatlar.SelectedTalimatID });
-                    Items.panelTalimat.dataGridAlt.Columns[0].Visible = false;
+                    if (Items.panelTalimat.dataGridUst.Rows.Count > 0)
+                    {
+                        Talimatlar.SelectedTalimatID = Items.panelTalimat.dataGridUst.Rows[0].Cells[0].Value.ToString();
+                        Items.panelTalimat.dataGridAlt.DataSource = Sc.GET_DATATABLE(SqlConnector.TableProsesByTalimatid, new String[] { Talimatlar.SelectedTalimatID });
+                        Items.panelTalimat.dataGridAlt.Columns[0].Visible = false;
+                    }
 
                     this.Close();
                 }

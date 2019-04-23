@@ -30,25 +30,25 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Add_Protez));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel_head = new System.Windows.Forms.Panel();
             this.label_head = new System.Windows.Forms.Label();
             this.pictureBox_close = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.checkbox_secili = new System.Windows.Forms.CheckBox();
             this.datagridview_talimat = new System.Windows.Forms.DataGridView();
             this.ekle = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.sira = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ımageList1 = new System.Windows.Forms.ImageList(this.components);
             this.label8 = new System.Windows.Forms.Label();
             this.textbot_protez_isim = new System.Windows.Forms.TextBox();
             this.button_protez_kaydet = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.textbot_protez_kod = new System.Windows.Forms.TextBox();
-            this.checkbox_secili = new System.Windows.Forms.CheckBox();
+            this.ımageList1 = new System.Windows.Forms.ImageList(this.components);
             this.panel_head.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_close)).BeginInit();
             this.panel1.SuspendLayout();
@@ -109,62 +109,80 @@
             this.panel1.Size = new System.Drawing.Size(836, 572);
             this.panel1.TabIndex = 44;
             // 
+            // checkbox_secili
+            // 
+            this.checkbox_secili.AutoSize = true;
+            this.checkbox_secili.Checked = true;
+            this.checkbox_secili.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkbox_secili.Font = new System.Drawing.Font("Righteous", 9.5F);
+            this.checkbox_secili.Location = new System.Drawing.Point(306, 37);
+            this.checkbox_secili.Name = "checkbox_secili";
+            this.checkbox_secili.Size = new System.Drawing.Size(106, 21);
+            this.checkbox_secili.TabIndex = 115;
+            this.checkbox_secili.Text = "Seçili Olanlar";
+            this.checkbox_secili.UseVisualStyleBackColor = true;
+            this.checkbox_secili.Visible = false;
+            this.checkbox_secili.CheckedChanged += new System.EventHandler(this.checkbox_secili_CheckedChanged);
+            // 
             // datagridview_talimat
             // 
             this.datagridview_talimat.AllowUserToAddRows = false;
             this.datagridview_talimat.AllowUserToDeleteRows = false;
             this.datagridview_talimat.AllowUserToResizeColumns = false;
             this.datagridview_talimat.AllowUserToResizeRows = false;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datagridview_talimat.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datagridview_talimat.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
             this.datagridview_talimat.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.datagridview_talimat.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.datagridview_talimat.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(230)))), ((int)(((byte)(201)))));
             this.datagridview_talimat.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Righteous", 10F);
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datagridview_talimat.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Righteous", 10F);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datagridview_talimat.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.datagridview_talimat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.datagridview_talimat.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ekle,
             this.sira});
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(230)))), ((int)(((byte)(201)))));
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Fredoka One", 10F);
-            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle18.Padding = new System.Windows.Forms.Padding(7, 3, 7, 3);
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.datagridview_talimat.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(230)))), ((int)(((byte)(201)))));
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Fredoka One", 10F);
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle13.Padding = new System.Windows.Forms.Padding(7, 3, 7, 3);
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.datagridview_talimat.DefaultCellStyle = dataGridViewCellStyle13;
             this.datagridview_talimat.EnableHeadersVisualStyles = false;
             this.datagridview_talimat.Location = new System.Drawing.Point(306, 64);
             this.datagridview_talimat.MultiSelect = false;
             this.datagridview_talimat.Name = "datagridview_talimat";
             this.datagridview_talimat.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(230)))), ((int)(((byte)(201)))));
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datagridview_talimat.RowHeadersDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(230)))), ((int)(((byte)(201)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datagridview_talimat.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.datagridview_talimat.RowHeadersWidth = 35;
             this.datagridview_talimat.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datagridview_talimat.RowsDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datagridview_talimat.RowsDefaultCellStyle = dataGridViewCellStyle15;
             this.datagridview_talimat.RowTemplate.Height = 39;
             this.datagridview_talimat.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.datagridview_talimat.Size = new System.Drawing.Size(525, 477);
             this.datagridview_talimat.TabIndex = 114;
+            this.datagridview_talimat.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.datagridview_talimat_CellBeginEdit);
+            this.datagridview_talimat.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagridview_talimat_CellContentClick);
+            this.datagridview_talimat.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagridview_talimat_CellEndEdit);
             // 
             // ekle
             // 
@@ -177,17 +195,6 @@
             this.sira.HeaderText = "Sıra";
             this.sira.Name = "sira";
             this.sira.Width = 73;
-            // 
-            // ımageList1
-            // 
-            this.ımageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ımageList1.ImageStream")));
-            this.ımageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.ımageList1.Images.SetKeyName(0, "icons8-plus-math-90.png");
-            this.ımageList1.Images.SetKeyName(1, "icons8-delete-90.png");
-            this.ımageList1.Images.SetKeyName(2, "icons8-pencil-96.png");
-            this.ımageList1.Images.SetKeyName(3, "icons8-search-more-90.png");
-            this.ımageList1.Images.SetKeyName(4, "icons8-search-208.png");
-            this.ımageList1.Images.SetKeyName(5, "icons8-broom-96.png");
             // 
             // label8
             // 
@@ -224,6 +231,7 @@
             this.button_protez_kaydet.Text = "Protez Kaydet";
             this.button_protez_kaydet.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button_protez_kaydet.UseVisualStyleBackColor = false;
+            this.button_protez_kaydet.Click += new System.EventHandler(this.button_protez_kaydet_Click);
             // 
             // label7
             // 
@@ -245,20 +253,16 @@
             this.textbot_protez_kod.Size = new System.Drawing.Size(211, 26);
             this.textbot_protez_kod.TabIndex = 104;
             // 
-            // checkbox_secili
+            // ımageList1
             // 
-            this.checkbox_secili.AutoSize = true;
-            this.checkbox_secili.Checked = true;
-            this.checkbox_secili.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkbox_secili.Font = new System.Drawing.Font("Righteous", 9.5F);
-            this.checkbox_secili.Location = new System.Drawing.Point(306, 37);
-            this.checkbox_secili.Name = "checkbox_secili";
-            this.checkbox_secili.Size = new System.Drawing.Size(106, 21);
-            this.checkbox_secili.TabIndex = 115;
-            this.checkbox_secili.Text = "Seçili Olanlar";
-            this.checkbox_secili.UseVisualStyleBackColor = true;
-            this.checkbox_secili.Visible = false;
-            this.checkbox_secili.CheckedChanged += new System.EventHandler(this.checkbox_secili_CheckedChanged);
+            this.ımageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ımageList1.ImageStream")));
+            this.ımageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.ımageList1.Images.SetKeyName(0, "icons8-plus-math-90.png");
+            this.ımageList1.Images.SetKeyName(1, "icons8-delete-90.png");
+            this.ımageList1.Images.SetKeyName(2, "icons8-pencil-96.png");
+            this.ımageList1.Images.SetKeyName(3, "icons8-search-more-90.png");
+            this.ımageList1.Images.SetKeyName(4, "icons8-search-208.png");
+            this.ımageList1.Images.SetKeyName(5, "icons8-broom-96.png");
             // 
             // Add_Protez
             // 
@@ -270,6 +274,7 @@
             this.Name = "Add_Protez";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add_Protez";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Add_Protez_FormClosed);
             this.Load += new System.EventHandler(this.Add_Protez_Load);
             this.panel_head.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_close)).EndInit();

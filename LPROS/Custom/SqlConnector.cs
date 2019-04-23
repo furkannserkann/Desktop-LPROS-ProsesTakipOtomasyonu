@@ -73,21 +73,21 @@ namespace LPROS.Custom
         {
             get
             {
-                return "select id, kod as [Kod], adi as [İsim] from Protez";
+                return "select id, kod as [Kod], adi as [İsim] from Protez where durum=1";
             }
         }
         public static String TableTalimat
         {
             get
             {
-                return "select id, talimat_kodu as [Talimat Kodu], talimat_adi as [Talimat İsmi] from Talimat";
+                return "select id, talimat_kodu as [Talimat Kodu], talimat_adi as [Talimat İsmi] from Talimat where durum=1";
             }
         }
         public static String TableProses
         {
             get
             {
-                return "select id, kod as [Kod], isim as [İsim] from Proses";
+                return "select id, kod as [Kod], isim as [İsim] from Proses where durum=1";
             }
         }
         public static String TableDepartman

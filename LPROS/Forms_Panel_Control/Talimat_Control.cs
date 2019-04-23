@@ -68,46 +68,19 @@ namespace LPROS.Forms_Panel_Control
             DataGridView Dtg = Items.panelTalimat.dataGridUst;
             string selectId = Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["id"].Value.ToString();
 
-            int ProtezTalimatCount = int.Parse(Sc.GET_TEKDEGER("select count(*) from Protez_Talimatlari where talimat_id=@parametre1", new string[] { selectId }));
-
-            if (ProtezTalimatCount > 0)
+            DialogResult Dr = MessageBox.Show("Seçilen Talimat Siliniyor!", "Dikkat", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
+            if (Dr == DialogResult.OK)
             {
-                DialogResult Dr = MessageBox.Show("Talimatın Bağlı Olduğu Protezler Var!\nSilmek İstediğiniden Eminmisiniz!", "Dikkat", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
-                if (Dr == DialogResult.OK)
+                if (Sc.QUERY_TABLE("Update Talimat set durum=0 where id=@parametre1", new String[] { selectId }))
                 {
-                    if (Sc.QUERY_TABLE("delete from Talimat where id=@parametre1", new String[] { selectId }))
+                    MessageBox.Show("Silme İşlemi Başarılı!", "Silme İşlemi", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+
+                    Items.panelTalimat.dataGridUst.DataSource = Sc.GET_DATATABLE(SqlConnector.TableTalimat);
+                    if (Items.panelTalimat.dataGridUst.Rows.Count > 0)
                     {
-                        MessageBox.Show("Silme İşlemi Başarılı!", "Silme İşlemi", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-
-                        Sc.QUERY_TABLE("delete from Protez_Talimatlari where talimat_id=@parametre1", new String[] { selectId });
-
-                        Items.panelTalimat.dataGridUst.DataSource = Sc.GET_DATATABLE(SqlConnector.TableTalimat);
-                        // proses listesini yenile
-                        if (Items.panelTalimat.dataGridUst.Rows.Count > 0)
-                        {
-                            Talimatlar.SelectedTalimatID = Items.panelTalimat.dataGridUst.Rows[0].Cells[0].Value.ToString();
-                            Items.panelTalimat.dataGridAlt.DataSource = Sc.GET_DATATABLE(SqlConnector.TableProsesByTalimatid, new String[] { Talimatlar.SelectedTalimatID });
-                            Items.panelTalimat.dataGridAlt.Columns[0].Visible = false;
-                        }
-                    }
-                }
-            }
-            else
-            {
-                DialogResult Dr = MessageBox.Show("Seçilen Talimat Siliniyor!", "Dikkat", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
-                if (Dr == DialogResult.OK)
-                {
-                    if (Sc.QUERY_TABLE("delete from Talimat where id=@parametre1", new String[] { selectId }))
-                    {
-                        MessageBox.Show("Silme İşlemi Başarılı!", "Silme İşlemi", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-
-                        Items.panelTalimat.dataGridUst.DataSource = Sc.GET_DATATABLE(SqlConnector.TableTalimat);
-                        if (Items.panelTalimat.dataGridUst.Rows.Count > 0)
-                        {
-                            Talimatlar.SelectedTalimatID = Items.panelTalimat.dataGridUst.Rows[0].Cells[0].Value.ToString();
-                            Items.panelTalimat.dataGridAlt.DataSource = Sc.GET_DATATABLE(SqlConnector.TableProsesByTalimatid, new String[] { Talimatlar.SelectedTalimatID });
-                            Items.panelTalimat.dataGridAlt.Columns[0].Visible = false;
-                        }
+                        Talimatlar.SelectedTalimatID = Items.panelTalimat.dataGridUst.Rows[0].Cells[0].Value.ToString();
+                        Items.panelTalimat.dataGridAlt.DataSource = Sc.GET_DATATABLE(SqlConnector.TableProsesByTalimatid, new String[] { Talimatlar.SelectedTalimatID });
+                        Items.panelTalimat.dataGridAlt.Columns[0].Visible = false;
                     }
                 }
             }

@@ -133,7 +133,7 @@ namespace LPROS.Forms.Table.Add
                     combobox_hastane.SelectedIndex = 0;
                     combobox_renk.SelectedIndex = 0;
 
-                    Items.panelSiparis.dataGridview.DataSource = Sc.GET_DATATABLE(SqlConnector.TableSiparis);
+                    Items.panelSiparis.dataGridview.DataSource = Sc.GET_DATATABLE(SqlConnector.TableSiparis + " where convert(DATE, s.siparis_tarihi)='" + DateTime.Now.ToString("yyyy/MM/dd") + "'");
                 }
                 else
                 {
@@ -175,7 +175,7 @@ namespace LPROS.Forms.Table.Add
                 else if (Sc.QUERY_TABLE(_UpdateCode, new String[] { Udoktor, Uprotezid, Uhasta_adsoyad, Uteslimat_tarihi.ToString("yyyy/MM/dd"), Urenk, Ufisno }))
                 {
                     MessageBox.Show("Sipariş Bilgileri Güncellendi!", "Kayıt", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                    Items.panelSiparis.dataGridview.DataSource = Sc.GET_DATATABLE(SqlConnector.TableSiparis);
+                    Items.panelSiparis.dataGridview.DataSource = Sc.GET_DATATABLE(SqlConnector.TableSiparis + " where convert(DATE, s.siparis_tarihi)='" + DateTime.Now.ToString("yyyy/MM/dd") + "'");
                     this.Close();
                 }
                 else

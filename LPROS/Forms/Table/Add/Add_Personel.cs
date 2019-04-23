@@ -204,8 +204,8 @@ namespace LPROS.Forms.Table.Add
                     MessageBox.Show("Girilen Telefon Numarası Kayıtlı!", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     textBox_telefon.Focus();
                 }
-                else if (Sc.ADD_TABLE("Personel", new String[] { "tc", "ad", "soyad","maas","telefon", "ssk_no", "ssk_bas_tarih", "ise_giris_tarih", "adres", "cinsiyet", "departman_no", "e_posta", "kullanici_adi", "sifre", "yetki_id" },
-                    new String[] { Tc, isim, Soyisim, maas ,ssk_no,telefon, sskbas, isegiris, adres, cinsiyet, departman, eposta, kullaniciadi, sifre, yetki }))
+                else if (Sc.ADD_TABLE("Personel", new String[] { "tc", "ad", "soyad","maas","telefon", "ssk_no", "ssk_bas_tarih", "ise_giris_tarih", "adres", "cinsiyet", "departman_no", "e_posta", "kullanici_adi", "sifre", "yetki_id", "durumu" },
+                    new String[] { Tc, isim, Soyisim, maas ,ssk_no,telefon, sskbas, isegiris, adres, cinsiyet, departman, eposta, kullaniciadi, sifre, yetki, "1" }))
                 {
                     MessageBox.Show("Kayıt Başarılı!", "Kayıt", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 
