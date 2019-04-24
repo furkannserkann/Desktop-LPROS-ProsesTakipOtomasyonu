@@ -28,7 +28,10 @@ namespace LPROS.Forms
 
         private void Raporlar_Load(object sender, EventArgs e)
         {
-            ara();
+            //ara();
+            datepicker_tarihbas.MaxDate = DateTime.Now.AddDays(-1);
+            datepicker_tarihson.MaxDate = DateTime.Now;
+            datepicker_tarihbas.Value = DateTime.Now.AddDays(-10);
             datepicker_tarihson.MinDate = datepicker_tarihbas.Value.AddDays(1);
         }
 

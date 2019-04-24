@@ -86,10 +86,17 @@ namespace LPROS.Forms_Panel_Control
                 {
                     DataGridView Dtg = Items.panelPersonel.dataGridview;
 
-                    if (Sc.QUERY_TABLE("delete from Personel where personel_no=@parametre1", new String[] { Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["personel_no"].Value.ToString() }))
+                    if (User.id != Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["personel_no"].Value.ToString())
                     {
-                        MessageBox.Show("Silme İşlemi Başarılı!", "Silme İşlemi", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                        Items.panelPersonel.dataGridview.DataSource = Sc.GET_DATATABLE(SqlConnector.TablePersonel);
+                        if (Sc.QUERY_TABLE("delete from Personel where personel_no=@parametre1", new String[] { Dtg.Rows[Dtg.CurrentCell.RowIndex].Cells["personel_no"].Value.ToString() }))
+                        {
+                            MessageBox.Show("Silme İşlemi Başarılı!", "Silme İşlemi", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                            Items.panelPersonel.dataGridview.DataSource = Sc.GET_DATATABLE(SqlConnector.TablePersonel);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Oturum Kullanıcısı Silinemez!", "Silme İşlemi", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     }
                 }
             }

@@ -101,7 +101,7 @@ namespace LPROS.Custom
         {
             get
             {
-                return "select id, kod as [Renk Kodu], isim as [İsim] from Renk";
+                return "select id, kod as [Renk Kodu], isim as [İsim] from Renk where durum=1 ";
             }
         }
         public static String TableYetki
@@ -115,7 +115,7 @@ namespace LPROS.Custom
         {
             get
             {
-                return "select Id, adi as [Adı], fiyat as [Fiyat] from Malzemeler";
+                return "select Id, adi as [Adı], fiyat as [Fiyat] from Malzemeler where durum=1 ";
             }
         }
         public static String TableMalzemelerByProsesid

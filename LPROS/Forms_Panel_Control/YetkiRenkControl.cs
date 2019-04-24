@@ -77,7 +77,7 @@ namespace LPROS.Forms_Panel_Control
         {
             DataGridView Dtg = Items.panelYetkiRenk.dataGridview;
     
-            Items.panelYetkiRenk.dataGridview.DataSource = Sc.GET_DATATABLE(SqlConnector.TableRenk + " where kod like '%'+@parametre1+'%' and isim like '%'+@parametre2+'%'  ", new String[] { Renkkod.Text, Renkismi.Text });
+            Items.panelYetkiRenk.dataGridview.DataSource = Sc.GET_DATATABLE(SqlConnector.TableRenk + " and kod like '%'+@parametre1+'%' and isim like '%'+@parametre2+'%'  ", new String[] { Renkkod.Text, Renkismi.Text });
 
             Items.panelYetkiRenk.dataGridview.Columns[0].Visible = false;
         }
