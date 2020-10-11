@@ -11,5 +11,3 @@ LPROS okul projesi olarak hazırlanan bir projedir. Diş Protez Laboratuvarı il
 ![](https://user-images.githubusercontent.com/25348044/74868164-e27f8900-5366-11ea-93c1-1304c446284a.png)
 ![](https://user-images.githubusercontent.com/25348044/74868174-e4e1e300-5366-11ea-8aac-6ffca22dee8f.png)
 ![](https://user-images.githubusercontent.com/25348044/74868186-e7dcd380-5366-11ea-8464-84516d73e57b.png)
-
-### Ekren görüntüleri Issues sekmesinde mevcut.
